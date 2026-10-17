@@ -10,185 +10,265 @@
   img{max-width:100%}
   [hidden]{display:none!important}
 </style>
-<title>Nine at Disney World</title>
+<!--ARTIFACT-HEAD-START-->
+<title>Mike &amp; Inge's Christmas Disney Spectacular</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Nunito:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 
 <style>
-/* Layout: one column, a vertical time-spine per day; deadline board up top, credit ledger at the base. */
+/* Layout: a night-sky hero, then a vertical time-spine per day; gift-tag deadlines, ledger at the base. */
 :root{
-  --bg:#F6F8FA; --surface:#FFFFFF; --surface-2:#EFF3F7;
-  --fg:#141F2B; --muted:#5B6878; --line:#DCE3EB;
-  --accent:#A65F06; --accent-soft:#FBEFDD;
-  --green:#1C5340; --green-soft:#E1F0EA;
-  --alert:#A82018; --alert-soft:#FBE6E4;
-  --display:"Fraunces",Georgia,"Times New Roman",serif;
-  --body:"Figtree","Segoe UI",system-ui,sans-serif;
+  --bg:#FBF8F2; --surface:#FFFFFF; --surface-2:#F4EFE5;
+  --fg:#16243A; --muted:#5E6B7E; --line:#E4DBCB;
+  --gold:#9C6E12; --gold-soft:#FBF0D8;
+  --green:#1A5C3A; --green-soft:#E4F1E9;
+  --red:#A3202C; --red-soft:#FBE7E6;
+  --sky-1:#0B1526; --sky-2:#1C3157; --sky-3:#38406E;
+  --star:#FFE9A8; --snow:#FFFFFF;
+  --display:"Cinzel Decorative",Georgia,serif;
+  --body:"Nunito","Segoe UI",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0D1620; --surface:#15202C; --surface-2:#1C2937;
-  --fg:#E7EDF4; --muted:#93A2B3; --line:#27333F;
-  --accent:#F0A93B; --accent-soft:#2B2113;
-  --green:#56B294; --green-soft:#12271F;
-  --alert:#F48078; --alert-soft:#2C1615;
+  --bg:#0B1526; --surface:#132033; --surface-2:#1B2B42;
+  --fg:#EFEAE0; --muted:#9BAABF; --line:#27384F;
+  --gold:#F2B739; --gold-soft:#2A2113;
+  --green:#4FB587; --green-soft:#11291F;
+  --red:#F0757F; --red-soft:#2C1517;
+  --sky-1:#060D1A; --sky-2:#132544; --sky-3:#27315A;
   color-scheme:dark;
 }}
 :root[data-theme="dark"]{
-  --bg:#0D1620; --surface:#15202C; --surface-2:#1C2937;
-  --fg:#E7EDF4; --muted:#93A2B3; --line:#27333F;
-  --accent:#F0A93B; --accent-soft:#2B2113;
-  --green:#56B294; --green-soft:#12271F;
-  --alert:#F48078; --alert-soft:#2C1615;
+  --bg:#0B1526; --surface:#132033; --surface-2:#1B2B42;
+  --fg:#EFEAE0; --muted:#9BAABF; --line:#27384F;
+  --gold:#F2B739; --gold-soft:#2A2113;
+  --green:#4FB587; --green-soft:#11291F;
+  --red:#F0757F; --red-soft:#2C1517;
+  --sky-1:#060D1A; --sky-2:#132544; --sky-3:#27315A;
   color-scheme:dark;
 }
 
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.55;margin:0;-webkit-font-smoothing:antialiased}
-.wrap{max-width:60rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:2.25rem 4rem}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;font-weight:600;letter-spacing:-.01em}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.58;margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:62rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.5rem 4rem}
+h1,h2,h3{text-wrap:balance;margin:0}
 p{margin:0}
-a{color:var(--accent)}
+a{color:var(--gold)}
 .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
 
-/* ---- masthead ---- */
-.mast{border-bottom:2px solid var(--fg);padding-bottom:1.25rem;display:flex;flex-direction:column;gap:.6rem}
-.eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.mast h1{font-size:clamp(2rem,6.5vw,3.1rem);line-height:1.04}
-.mast .sub{color:var(--muted);font-size:1.02rem;max-width:40rem}
-.facts{display:flex;flex-wrap:wrap;gap:.4rem .5rem;margin-top:.35rem}
-.fact{font-family:var(--mono);font-size:.72rem;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:.2rem .6rem;color:var(--muted)}
+/* ---------- hero ---------- */
+.hero{position:relative;border-radius:14px;overflow:hidden;background:linear-gradient(170deg,var(--sky-1) 0%,var(--sky-2) 58%,var(--sky-3) 100%);padding:2.4rem 1.4rem 0;margin-bottom:2.5rem;isolation:isolate}
+.hero .stars,.hero .castle,.hero .snow{position:absolute;left:0;right:0;pointer-events:none}
+.hero .stars{top:0;height:62%;z-index:0}
+.hero .star{position:absolute;background:var(--star);border-radius:50%;opacity:.85}
+.hero .castle{bottom:0;z-index:1;display:block;width:100%;height:auto;opacity:.95}
+.hero .snow{top:0;bottom:0;z-index:2;overflow:hidden}
+.flake{position:absolute;top:-12px;background:var(--snow);border-radius:50%;opacity:.75;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(420px) translateX(14px);opacity:0}}
+@media (prefers-reduced-motion:reduce){.flake{animation:none;display:none}}
 
-section{margin-top:2.75rem}
-.sechead{display:flex;align-items:baseline;gap:.65rem;flex-wrap:wrap;margin-bottom:1rem}
-.sechead h2{font-size:1.45rem}
-.sechead .note{color:var(--muted);font-size:.85rem}
+.hero-inner{position:relative;z-index:3;text-align:center;padding-bottom:5.5rem}
+.hero .kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--star);opacity:.9}
+.hero h1{font-family:var(--display);font-weight:900;color:#FFF3D4;font-size:clamp(1.65rem,5.4vw,3rem);line-height:1.14;margin:.7rem auto .6rem;max-width:18ch;text-shadow:0 0 26px rgba(255,205,100,.35)}
+.hero .amp{color:var(--star)}
+.hero .tag{color:#D9E2F2;font-size:1rem;max-width:40rem;margin:0 auto;opacity:.95}
+.garland{display:flex;justify-content:center;gap:.5rem;margin:.9rem 0 0}
+.bauble{width:9px;height:9px;border-radius:50%}
+.b1{background:#E04A54}.b2{background:#F2B739}.b3{background:#4FB587}.b4{background:#E04A54}.b5{background:#F2B739}
 
-/* ---- deadlines ---- */
-.deadlines{display:grid;gap:.75rem}
-.dl{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--muted);border-radius:4px;padding:1rem 1.1rem}
-.dl.now{border-left-color:var(--alert);background:var(--alert-soft)}
-.dl.soon{border-left-color:var(--accent);background:var(--accent-soft)}
+.facts{display:flex;flex-wrap:wrap;gap:.4rem .5rem;justify-content:center;margin-top:1.1rem}
+.fact{font-family:var(--mono);font-size:.7rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,233,168,.3);border-radius:999px;padding:.24rem .65rem;color:#F0E6D2}
+
+/* ---------- sections ---------- */
+section{margin-top:2.9rem}
+.sechead{text-align:center;margin-bottom:1.3rem}
+.sechead h2{font-family:var(--display);font-weight:700;font-size:clamp(1.3rem,3.6vw,1.75rem);color:var(--fg)}
+.orn{display:flex;align-items:center;justify-content:center;gap:.7rem;margin:.45rem auto 0;max-width:22rem;color:var(--gold)}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+.orn span{font-size:.8rem;letter-spacing:.3em}
+.sechead .note{display:block;color:var(--muted);font-size:.85rem;margin-top:.55rem;max-width:44rem;margin-inline:auto}
+
+/* ---------- gift-tag deadlines ---------- */
+.deadlines{display:grid;gap:.85rem}
+.dl{position:relative;display:grid;grid-template-columns:7.6rem 1fr;gap:1rem;background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--muted);border-radius:4px 12px 12px 4px;padding:1rem 1.15rem}
+.dl.now{border-left-color:var(--red);background:var(--red-soft)}
+.dl.soon{border-left-color:var(--gold);background:var(--gold-soft)}
+.dl.later{border-left-color:var(--green);background:var(--green-soft)}
 .dl .when{font-family:var(--mono);font-size:.78rem;font-weight:600;line-height:1.35}
-.dl .when small{display:block;font-weight:400;color:var(--muted);font-size:.72rem;margin-top:.15rem}
-.dl h3{font-size:1rem;font-family:var(--body);font-weight:700;margin-bottom:.25rem}
+.dl .when small{display:block;font-weight:400;color:var(--muted);font-size:.71rem;margin-top:.18rem}
+.dl h3{font-size:1rem;font-weight:800;margin-bottom:.3rem}
 .dl p{font-size:.88rem;color:var(--muted)}
-.dl .tag{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:.12rem .45rem;border-radius:3px;margin-bottom:.4rem}
-.tag.red{background:var(--alert);color:#fff}
-.tag.amber{background:var(--accent);color:#fff}
-.tag.grey{background:var(--muted);color:var(--bg)}
+.dl .pill{display:inline-block;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.14rem .5rem;border-radius:999px;margin-bottom:.45rem;color:#fff}
+.pill.red{background:var(--red)}.pill.gold{background:var(--gold)}.pill.green{background:var(--green)}
 @media(max-width:34rem){.dl{grid-template-columns:1fr;gap:.5rem}}
 
-/* ---- glance table ---- */
-.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+/* ---------- tables ---------- */
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
 table{border-collapse:collapse;width:100%;min-width:40rem;font-size:.86rem}
-th,td{text-align:left;padding:.6rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
-th{font-family:var(--mono);font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--surface-2)}
+th,td{text-align:left;padding:.62rem .85rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--surface-2)}
 tbody tr:last-child td{border-bottom:none}
 td.day{font-family:var(--mono);font-weight:600;white-space:nowrap}
-td .park{font-weight:700}
-.hrs{font-family:var(--mono);font-size:.78rem;color:var(--muted);white-space:nowrap}
+td .park{font-weight:800}
+.hrs{font-family:var(--mono);font-size:.77rem;color:var(--muted);white-space:nowrap}
 
-/* ---- reasoning callout ---- */
-.why{background:var(--green-soft);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:4px;padding:1.1rem 1.2rem;display:grid;gap:.7rem}
-.why h3{font-family:var(--body);font-size:.95rem;font-weight:700}
-.why ul{margin:0;padding-left:1.1rem;display:grid;gap:.45rem;font-size:.89rem}
+/* ---------- why ---------- */
+.why{background:var(--green-soft);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:4px 12px 12px 4px;padding:1.15rem 1.25rem;display:grid;gap:.7rem}
+.why h3{font-size:.97rem;font-weight:800}
+.why ul{margin:0;padding-left:1.15rem;display:grid;gap:.5rem;font-size:.89rem}
 .why li::marker{color:var(--green)}
 
-/* ---- day cards ---- */
-.day-card{background:var(--surface);border:1px solid var(--line);border-radius:5px;margin-bottom:1.1rem;overflow:hidden}
-.day-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem .9rem;padding:1rem 1.2rem;background:var(--surface-2);border-bottom:1px solid var(--line)}
-.day-top .dnum{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.day-top h3{font-size:1.3rem;flex:1 1 auto;min-width:0}
-.day-top .open{font-family:var(--mono);font-size:.76rem;color:var(--muted);white-space:nowrap}
+/* ---------- day cards ---------- */
+.day-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:1.15rem;overflow:hidden}
+.day-top{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem .85rem;padding:.95rem 1.2rem;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.day-top .orb{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:.72rem;font-weight:600;color:#fff;background:var(--gold);flex:0 0 auto}
+.day-top .orb.rest{background:var(--green)}
+.day-top .dnum{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.day-top h3{font-family:var(--display);font-weight:700;font-size:1.22rem;flex:1 1 auto;min-width:0}
+.day-top .open{font-family:var(--mono);font-size:.75rem;color:var(--muted);white-space:nowrap}
 .day-body{padding:1.1rem 1.2rem;display:grid;gap:1rem}
 
-.spine{display:grid;gap:0;border-left:2px solid var(--line);margin-left:.35rem}
-.slot{display:grid;grid-template-columns:5.2rem 1fr;gap:.9rem;padding:.55rem 0 .55rem 1rem;position:relative}
+.spine{display:grid;border-left:2px solid var(--line);margin-left:.35rem}
+.slot{display:grid;grid-template-columns:5.4rem 1fr;gap:.9rem;padding:.55rem 0 .55rem 1rem;position:relative}
 .slot::before{content:"";position:absolute;left:-5px;top:.95rem;width:8px;height:8px;border-radius:50%;background:var(--line)}
-.slot.key::before{background:var(--accent)}
+.slot.key::before{background:var(--gold)}
 .slot.meal::before{background:var(--green)}
-.slot .t{font-family:var(--mono);font-size:.76rem;font-weight:600;color:var(--muted);padding-top:.1rem}
+.slot.drive::before{background:var(--red)}
+.slot .t{font-family:var(--mono);font-size:.75rem;font-weight:600;color:var(--muted);padding-top:.12rem}
 .slot .what{font-size:.9rem;min-width:0}
-.slot .what b{font-weight:700}
+.slot .what b{font-weight:800}
 .slot .what span{color:var(--muted)}
 
 .rowgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.8rem}
-.mini{background:var(--surface-2);border:1px solid var(--line);border-radius:4px;padding:.75rem .85rem;min-width:0}
-.mini h4{font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem;font-weight:500}
+.mini{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:.78rem .88rem;min-width:0}
+.mini h4{font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .35rem;font-weight:500}
 .mini p{font-size:.85rem}
-.mini .credit{font-family:var(--mono);font-size:.72rem;color:var(--accent);font-weight:600;display:block;margin-top:.2rem}
+.mini .credit{font-family:var(--mono);font-size:.71rem;color:var(--gold);font-weight:600;display:block;margin-top:.22rem}
 
 .optout{font-size:.84rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.7rem}
-.optout b{color:var(--fg);font-weight:600}
+.optout b{color:var(--fg);font-weight:700}
 
-/* ---- ledger ---- */
+/* ---------- ledger ---------- */
 .ledger{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:.8rem;margin-bottom:1rem}
-.lcard{background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:.9rem 1rem}
-.lcard .n{font-family:var(--mono);font-size:1.7rem;font-weight:600;line-height:1;color:var(--accent)}
-.lcard .lab{font-size:.82rem;color:var(--muted);margin-top:.3rem}
-.lcard .eq{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:.45rem;padding-top:.45rem;border-top:1px solid var(--line)}
+.lcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:.95rem 1rem;text-align:center}
+.lcard .n{font-family:var(--mono);font-size:1.75rem;font-weight:600;line-height:1;color:var(--gold)}
+.lcard .lab{font-size:.82rem;color:var(--muted);margin-top:.32rem}
+.lcard .eq{font-family:var(--mono);font-size:.69rem;color:var(--muted);margin-top:.45rem;padding-top:.45rem;border-top:1px solid var(--line)}
 
-/* ---- notes ---- */
+/* ---------- notes ---------- */
 .notes{display:grid;gap:.9rem}
-.note-item{display:grid;grid-template-columns:auto 1fr;gap:.8rem;align-items:start;font-size:.89rem}
-.note-item .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--surface-2);border:1px solid var(--line);border-radius:3px;padding:.2rem .5rem;white-space:nowrap}
+.note-item{display:grid;grid-template-columns:auto 1fr;gap:.85rem;align-items:start;font-size:.89rem}
+.note-item .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);background:var(--gold-soft);border:1px solid var(--line);border-radius:999px;padding:.22rem .6rem;white-space:nowrap}
 @media(max-width:34rem){.note-item{grid-template-columns:1fr;gap:.3rem}.note-item .k{justify-self:start}}
 
-footer{margin-top:3rem;padding-top:1.1rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}
+footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);text-align:center}
+.candy{height:5px;border-radius:999px;margin-bottom:1.2rem;background:repeating-linear-gradient(45deg,var(--red) 0 10px,#fff 10px 20px);opacity:.65}
 </style>
-
+<!--ARTIFACT-HEAD-END-->
 </head>
 <body>
+<!--ARTIFACT-BODY-START-->
+
 <div class="wrap">
 
-  <header class="mast">
-    <div class="eyebrow">Walt Disney World · December 19–24, 2026</div>
-    <h1>Nine at Disney World</h1>
-    <p class="sub">Four park days built around one hard constraint: Magic Kingdom closes at 6:00&nbsp;PM on two of them. Everything else follows from that.</p>
-    <div class="facts">
-      <span class="fact">9 guests</span>
-      <span class="fact">Saratoga Springs · 2 × 2-BR suite</span>
-      <span class="fact">5 nights</span>
-      <span class="fact">4-day Park Hopper</span>
-      <span class="fact">Disney Dining Plan</span>
-      <span class="fact">Crowd level 8–10 of 10</span>
+  <header class="hero">
+    <div class="stars" aria-hidden="true">
+      <i class="star" style="left:6%;top:18%;width:3px;height:3px"></i>
+      <i class="star" style="left:14%;top:44%;width:2px;height:2px"></i>
+      <i class="star" style="left:23%;top:12%;width:2px;height:2px"></i>
+      <i class="star" style="left:31%;top:33%;width:3px;height:3px"></i>
+      <i class="star" style="left:42%;top:9%;width:2px;height:2px"></i>
+      <i class="star" style="left:52%;top:27%;width:2px;height:2px"></i>
+      <i class="star" style="left:61%;top:14%;width:3px;height:3px"></i>
+      <i class="star" style="left:70%;top:38%;width:2px;height:2px"></i>
+      <i class="star" style="left:78%;top:20%;width:2px;height:2px"></i>
+      <i class="star" style="left:88%;top:31%;width:3px;height:3px"></i>
+      <i class="star" style="left:94%;top:11%;width:2px;height:2px"></i>
     </div>
+    <div class="snow" aria-hidden="true">
+      <i class="flake" style="left:8%;width:4px;height:4px;animation-duration:9s;animation-delay:0s"></i>
+      <i class="flake" style="left:19%;width:3px;height:3px;animation-duration:12s;animation-delay:1.4s"></i>
+      <i class="flake" style="left:29%;width:5px;height:5px;animation-duration:10s;animation-delay:3s"></i>
+      <i class="flake" style="left:38%;width:3px;height:3px;animation-duration:13s;animation-delay:.6s"></i>
+      <i class="flake" style="left:47%;width:4px;height:4px;animation-duration:11s;animation-delay:2.2s"></i>
+      <i class="flake" style="left:57%;width:3px;height:3px;animation-duration:14s;animation-delay:4s"></i>
+      <i class="flake" style="left:66%;width:5px;height:5px;animation-duration:9.5s;animation-delay:1s"></i>
+      <i class="flake" style="left:75%;width:3px;height:3px;animation-duration:12.5s;animation-delay:2.8s"></i>
+      <i class="flake" style="left:84%;width:4px;height:4px;animation-duration:10.5s;animation-delay:.3s"></i>
+      <i class="flake" style="left:92%;width:3px;height:3px;animation-duration:13.5s;animation-delay:3.6s"></i>
+    </div>
+
+    <div class="hero-inner">
+      <div class="kicker">Walt Disney World &middot; December 19&ndash;24, 2026</div>
+      <h1>Mike <span class="amp">&amp;</span> Inge's Christmas Disney Spectacular</h1>
+      <div class="garland" aria-hidden="true">
+        <i class="bauble b1"></i><i class="bauble b2"></i><i class="bauble b3"></i><i class="bauble b4"></i><i class="bauble b5"></i>
+      </div>
+      <p class="tag">Nine of us, four park days, and one stubborn fact: Magic Kingdom closes at 6:00&nbsp;PM on two of them. Everything else follows from that.</p>
+      <div class="facts">
+        <span class="fact">9 guests</span>
+        <span class="fact">Saratoga Springs &middot; 2 &times; 2-BR suite</span>
+        <span class="fact">5 nights</span>
+        <span class="fact">4-day Park Hopper</span>
+        <span class="fact">Disney Dining Plan</span>
+        <span class="fact">Driving ourselves</span>
+      </div>
+    </div>
+
+    <svg class="castle" viewBox="0 0 800 150" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+      <g fill="#0A1120" opacity="0.92">
+        <rect x="150" y="96" width="500" height="54"/>
+        <polygon points="196,96 212,52 228,96"/><rect x="202" y="96" width="20" height="54"/>
+        <polygon points="256,96 276,34 296,96"/><rect x="264" y="96" width="24" height="54"/>
+        <polygon points="368,96 400,0 432,96"/><rect x="380" y="78" width="40" height="72"/>
+        <polygon points="504,96 524,34 544,96"/><rect x="512" y="96" width="24" height="54"/>
+        <polygon points="572,96 588,52 604,96"/><rect x="578" y="96" width="20" height="54"/>
+        <polygon points="326,96 342,60 358,96"/><polygon points="442,96 458,60 474,96"/>
+        <path d="M384 150v-34a16 16 0 0 1 32 0v34z"/>
+      </g>
+      <g fill="#FFE9A8" opacity="0.85">
+        <circle cx="400" cy="6" r="3"/>
+        <rect x="392" y="96" width="7" height="9" rx="1.5"/><rect x="403" y="96" width="7" height="9" rx="1.5"/>
+        <rect x="270" y="110" width="6" height="8" rx="1.5"/><rect x="520" y="110" width="6" height="8" rx="1.5"/>
+        <rect x="206" y="114" width="5" height="7" rx="1.5"/><rect x="584" y="114" width="5" height="7" rx="1.5"/>
+      </g>
+    </svg>
   </header>
 
   <section>
     <div class="sechead">
-      <h2>Book these first</h2>
+      <h2>Book These First</h2>
+      <div class="orn"><span>&#10052;</span></div>
       <span class="note">Three dates decide how good this trip is. Two of them are this week.</span>
     </div>
     <div class="deadlines">
 
       <div class="dl now">
-        <div class="when">TODAY<small>Oct 16 · already open</small></div>
+        <div class="when">TODAY<small>Oct 16 &middot; already open</small></div>
         <div>
-          <span class="tag red">Selling out now</span>
-          <h3>Candlelight Processional dining package — Mon Dec 21</h3>
-          <p>Packages opened Oct 14 for the whole season and are going fast. This is the one booking you can make <em>before</em> your 60-day window, so grab it now. Ask for <b>Biergarten</b>, around 4:30–5:00&nbsp;PM, with the <b>6:45&nbsp;PM</b> show. One table-service credit, family-style German at shared long tables — which is why it handles nine people better than almost anything else on property.</p>
+          <span class="pill red">Selling out now</span>
+          <h3>Candlelight Processional dining package &mdash; Mon Dec 21</h3>
+          <p>Packages opened Oct 14 for the whole season and are going fast. This is the one booking you can make <em>before</em> your 60-day window, so grab it now. Ask for <b>Biergarten</b>, around 4:30&ndash;5:00&nbsp;PM, with the <b>6:45&nbsp;PM</b> show. One table-service credit, family-style German at shared long tables &mdash; which is why it handles nine people better than almost anything else on property.</p>
         </div>
       </div>
 
       <div class="dl soon">
         <div class="when">MON OCT 20<small>6:00 AM ET sharp</small></div>
         <div>
-          <span class="tag amber">4 days out</span>
-          <h3>All other dining — your 60-day window opens</h3>
-          <p>Because you're on a resort package, you book your <b>entire stay</b> in one sitting, not day by day. Christmas-week tables vanish in minutes. Call <b class="mono">(407) 939-3463</b> and ask for <b>Group Dining</b> — the app and website cap online bookings at 8 guests, and you're 9.</p>
+          <span class="pill gold">4 days out</span>
+          <h3>All other dining &mdash; the 60-day window opens</h3>
+          <p>Because this is a resort package, you book the <b>entire stay</b> in one sitting, not day by day. Christmas-week tables vanish in minutes. Call <b class="mono">(407) 939-3463</b> and ask for <b>Group Dining</b> &mdash; the app and website cap online bookings at 8 guests, and we're 9.</p>
         </div>
       </div>
 
-      <div class="dl">
+      <div class="dl later">
         <div class="when">SAT DEC 12<small>7:00 AM ET</small></div>
         <div>
-          <span class="tag grey">Set a reminder</span>
+          <span class="pill green">Set a reminder</span>
           <h3>Lightning Lane Multi Pass</h3>
-          <p>Seven days before check-in you can buy and book for the full stay at once. At crowd level 8–10 this is close to mandatory — budget roughly <b>$35–45 per person per day</b>, so on the order of <b>$1,300–1,600</b> for nine people across four days. Verify current pricing in My Disney Experience.</p>
+          <p>Seven days before check-in you can buy and book for the full stay at once. At crowd level 8&ndash;10 this is close to mandatory &mdash; budget roughly <b>$35&ndash;45 per person per day</b>, so on the order of <b>$1,300&ndash;1,600</b> for nine people across four days. Verify current pricing in My Disney Experience.</p>
         </div>
       </div>
 
@@ -197,56 +277,57 @@ footer{margin-top:3rem;padding-top:1.1rem;border-top:1px solid var(--line);font-
 
   <section>
     <div class="sechead">
-      <h2>The week at a glance</h2>
-      <span class="note">Published hours — Disney adjusts these, so re-check in the app in December.</span>
+      <h2>The Week at a Glance</h2>
+      <div class="orn"><span>&#10052;</span></div>
+      <span class="note">Published hours &mdash; Disney adjusts these, so re-check in the app in December.</span>
     </div>
     <div class="scroll">
       <table>
         <thead>
-          <tr><th>Day</th><th>Park</th><th>Hours</th><th>Table service</th><th>Why this day</th></tr>
+          <tr><th>Day</th><th>Park</th><th>Hours</th><th>Getting there</th><th>Table service</th></tr>
         </thead>
         <tbody>
           <tr>
             <td class="day">Sat 19</td>
             <td><span class="park">Arrival</span><br><span class="hrs">no park</span></td>
-            <td class="hrs">—</td>
+            <td class="hrs">&mdash;</td>
+            <td class="hrs">Drive from MCO</td>
             <td>The Turf Club <span class="hrs">(resort)</span></td>
-            <td>Settle in, grab mugs, walk to Disney Springs.</td>
           </tr>
           <tr>
             <td class="day">Sun 20</td>
             <td><span class="park">Animal Kingdom</span></td>
-            <td class="hrs">8:00a – 6:00p<br>EE 7:30a</td>
+            <td class="hrs">8:00a &ndash; 6:00p<br>EE 7:30a</td>
+            <td class="hrs">Drive &middot; 15 min</td>
             <td>Tusker House <span class="hrs">(lunch)</span></td>
-            <td>Closes earliest — kindest first full day. MK is on a party night.</td>
           </tr>
           <tr>
             <td class="day">Mon 21</td>
             <td><span class="park">EPCOT</span></td>
-            <td class="hrs">9:00a – 9:00p<br>+ Evening Hours 9–11p</td>
+            <td class="hrs">9:00a &ndash; 9:00p<br>+ Evening Hours 9&ndash;11p</td>
+            <td class="hrs">Drive &middot; 10 min</td>
             <td>Biergarten <span class="hrs">(Candlelight)</span></td>
-            <td>Mondays are EPCOT's Extended Evening night. You qualify.</td>
           </tr>
           <tr>
             <td class="day">Tue 22</td>
             <td><span class="park">Hollywood Studios</span></td>
-            <td class="hrs">9:00a – 9:00p<br>EE 8:30a</td>
+            <td class="hrs">9:00a &ndash; 9:00p<br>EE 8:30a</td>
+            <td class="hrs">Drive &middot; 10 min</td>
             <td>Roundup Rodeo BBQ <span class="hrs">(lunch)</span></td>
-            <td>DHS runs late only on party nights. This is one.</td>
           </tr>
           <tr>
             <td class="day">Wed 23</td>
             <td><span class="park">Magic Kingdom</span></td>
-            <td class="hrs">9:00a – 10:00p<br>EE 8:30a</td>
+            <td class="hrs">9:00a &ndash; 10:00p<br>EE 8:30a</td>
+            <td class="hrs"><b>Take the bus</b></td>
             <td>Liberty Tree Tavern <span class="hrs">(dinner)</span></td>
-            <td>First non-party MK night. Holiday parade and fireworks are yours.</td>
           </tr>
           <tr>
             <td class="day">Thu 24</td>
             <td><span class="park">Departure</span><br><span class="hrs">no park</span></td>
-            <td class="hrs">—</td>
-            <td>— <span class="hrs">(quick service)</span></td>
-            <td>Credits still valid through today. Breakfast before bags.</td>
+            <td class="hrs">&mdash;</td>
+            <td class="hrs">Drive to MCO</td>
+            <td>&mdash; <span class="hrs">(quick service)</span></td>
           </tr>
         </tbody>
       </table>
@@ -254,165 +335,171 @@ footer{margin-top:3rem;padding-top:1.1rem;border-top:1px solid var(--line);font-
   </section>
 
   <section>
-    <div class="sechead"><h2>Why this order</h2></div>
+    <div class="sechead">
+      <h2>Why This Order</h2>
+      <div class="orn"><span>&#10052;</span></div>
+    </div>
     <div class="why">
       <h3>Three scheduling facts did most of the work</h3>
       <ul>
-        <li><b>Mickey's Very Merry Christmas Party runs Dec 20 and Dec 22.</b> On both nights Magic Kingdom shuts to day guests at 6:00&nbsp;PM. Both are also sold out, so buying in isn't an option. That rules MK out on two of your four days and puts it on Dec 21 or Dec 23.</li>
-        <li><b>Hollywood Studios stays open to 9:00&nbsp;PM only on Dec 20, 22 and 24</b> — Disney deliberately runs it late on party nights. On Dec 21 and 23 it closes at 7:00. So DHS has to be Dec 20 or Dec 22.</li>
-        <li><b>Saratoga Springs is a Deluxe Villa resort</b>, which makes you eligible for Extended Evening Hours. EPCOT's December pattern is Mondays, 9–11&nbsp;PM — including Dec 21. Two extra hours at a fraction of the crowd is the single best value in the week. Confirm it in the app once December dates post.</li>
+        <li><b>Mickey's Very Merry Christmas Party runs Dec 20 and Dec 22.</b> On both nights Magic Kingdom shuts to day guests at 6:00&nbsp;PM. Both are also sold out, so buying in isn't an option. That rules MK out on two of our four days and puts it on Dec 21 or Dec 23.</li>
+        <li><b>Hollywood Studios stays open to 9:00&nbsp;PM only on Dec 20, 22 and 24</b> &mdash; Disney deliberately runs it late on party nights. On Dec 21 and 23 it closes at 7:00. So DHS has to be Dec 20 or Dec 22.</li>
+        <li><b>Saratoga Springs is a Deluxe Villa resort</b>, which makes us eligible for Extended Evening Hours. EPCOT's December pattern is Mondays, 9&ndash;11&nbsp;PM &mdash; including Dec 21. Two extra hours at a fraction of the crowd is the single best value in the week. Confirm it in the app once December dates post.</li>
       </ul>
-      <p style="font-size:.87rem;color:var(--muted)">That leaves Animal Kingdom for Dec 20 by elimination — which happens to be the right answer anyway, since its 6:00&nbsp;PM close gives you a gentle landing on your first full day after travel.</p>
+      <p style="font-size:.87rem;color:var(--muted)">That leaves Animal Kingdom for Dec 20 by elimination &mdash; which happens to be the right answer anyway, since its 6:00&nbsp;PM close gives us a gentle landing on the first full day after travel.</p>
     </div>
   </section>
 
   <section>
     <div class="sechead">
-      <h2>Day by day</h2>
-      <span class="note">Rope-drop sequences assume you're through the gate at Early Entry.</span>
+      <h2>Day by Day</h2>
+      <div class="orn"><span>&#10052;</span></div>
+      <span class="note">Departure times assume driving ourselves and being through the gate at Early Entry.</span>
     </div>
 
-    <!-- DEC 19 -->
     <article class="day-card">
       <div class="day-top">
+        <span class="orb rest">&#9733;</span>
         <span class="dnum">Sat Dec 19</span>
         <h3>Arrival</h3>
         <span class="open">No park</span>
       </div>
       <div class="day-body">
         <div class="spine">
-          <div class="slot"><div class="t">On arrival</div><div class="what"><b>Check in, both suites.</b> <span>Saratoga Springs is spread across five sections — ask to be placed near each other, and note Congress Park is the shortest walk to Disney Springs.</span></div></div>
-          <div class="slot key"><div class="t">First stop</div><div class="what"><b>Collect all nine refillable mugs</b> at The Artist's Palette. <span>Unlimited refills at any resort quick service for the whole stay — worth doing before anything else.</span></div></div>
-          <div class="slot meal"><div class="t">Evening</div><div class="what"><b>Dinner at The Turf Club.</b> <span>On property, walkable, no bus. The easy choice on a travel day — and far easier to get nine seats than anything in Disney Springs.</span></div></div>
-          <div class="slot"><div class="t">After</div><div class="what"><b>Walk or boat to Disney Springs.</b> <span>Christmas Tree Trail and the lights, no ticket needed. Keep it short — tomorrow starts at 6:30 AM.</span></div></div>
+          <div class="slot drive"><div class="t">On landing</div><div class="what"><b>Collect the rental, drive to Saratoga Springs.</b> <span>About 25&ndash;30 minutes from MCO. With two cars for nine people, agree who rides with whom before you leave the airport &mdash; it saves a scene in the garage.</span></div></div>
+          <div class="slot"><div class="t">Check-in</div><div class="what"><b>Both suites.</b> <span>Saratoga Springs is spread across five sections &mdash; ask to be placed near each other, and note Congress Park is the shortest walk to Disney Springs. Overnight self-parking is free.</span></div></div>
+          <div class="slot key"><div class="t">First stop</div><div class="what"><b>Collect all nine refillable mugs</b> at The Artist's Palette. <span>Unlimited refills at any resort quick service for the whole stay &mdash; worth doing before anything else.</span></div></div>
+          <div class="slot meal"><div class="t">Evening</div><div class="what"><b>Dinner at The Turf Club.</b> <span>On property, walkable, no driving after a travel day. Far easier to get nine seats than anything in Disney Springs.</span></div></div>
+          <div class="slot"><div class="t">After</div><div class="what"><b>Walk or boat to Disney Springs.</b> <span>Christmas Tree Trail and the lights, no ticket needed. Keep it short &mdash; tomorrow is the earliest start of the week.</span></div></div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>Table service</h4><p>The Turf Club Bar and Grill<span class="credit">9 credits · 1 each</span></p></div>
-          <div class="mini"><h4>If Turf Club is full</h4><p>Raglan Road or Morimoto Asia at Disney Springs — both take one credit and seat large parties.</p></div>
+          <div class="mini"><h4>Table service</h4><p>The Turf Club Bar and Grill<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>If Turf Club is full</h4><p>Raglan Road or Morimoto Asia at Disney Springs &mdash; both take one credit and seat large parties.</p></div>
         </div>
       </div>
     </article>
 
-    <!-- DEC 20 -->
     <article class="day-card">
       <div class="day-top">
-        <span class="dnum">Sun Dec 20 · Day 1</span>
+        <span class="orb">1</span>
+        <span class="dnum">Sun Dec 20</span>
         <h3>Animal Kingdom</h3>
-        <span class="open">8:00a – 6:00p · EE 7:30a</span>
+        <span class="open">8:00a &ndash; 6:00p &middot; EE 7:30a</span>
       </div>
       <div class="day-body">
         <div class="spine">
-          <div class="slot key"><div class="t">6:30 AM</div><div class="what"><b>Bus from the resort.</b> <span>Earliest start of the week. Target the gate by 7:00 for a 7:30 Early Entry — in peak week the pre-opening queue is long.</span></div></div>
+          <div class="slot drive"><div class="t">6:35 AM</div><div class="what"><b>Leave the resort.</b> <span>About 15 minutes to the lot, then tram, security and the walk in &mdash; budget 40 minutes car to gate in holiday week. Earliest start of the trip; the 7:30 Early Entry is what makes the next item possible.</span></div></div>
           <div class="slot key"><div class="t">7:30 AM</div><div class="what"><b>Straight to Pandora. Avatar Flight of Passage first</b>, then Na'vi River Journey. <span>Flight of Passage hits 180+ minutes by mid-morning. This single move is worth the alarm clock.</span></div></div>
-          <div class="slot"><div class="t">9:15 AM</div><div class="what"><b>Kilimanjaro Safaris.</b> <span>Animals are most active in the cool morning — this genuinely is a different ride at 9 AM than at 3 PM.</span></div></div>
+          <div class="slot"><div class="t">9:15 AM</div><div class="what"><b>Kilimanjaro Safaris.</b> <span>Animals are most active in the cool morning &mdash; this genuinely is a different ride at 9 AM than at 3 PM.</span></div></div>
           <div class="slot"><div class="t">10:30 AM</div><div class="what"><b>Expedition Everest</b>, then Maharajah Jungle Trek. <span>Everest is the one coaster here.</span></div></div>
-          <div class="slot meal"><div class="t">1:00 PM</div><div class="what"><b>Lunch — Tusker House.</b> <span>Buffet, one credit, and the single easiest format for a party of nine.</span></div></div>
-          <div class="slot"><div class="t">2:30 PM</div><div class="what"><b>Festival of the Lion King</b>, then Feathered Friends and the Tree of Life trails. <span>Air-conditioned sit-downs — good pacing for Mike and Inge after a 7 AM start.</span></div></div>
-          <div class="slot"><div class="t">6:00 PM</div><div class="what"><b>Park closes. Hop to EPCOT</b> (open to 9:00) <span>or head back for an early night. There's no 2 PM hopping restriction anymore, so this is a free choice made on the day — and after a travel day plus a 6:30 AM start, nobody should feel bad about the early night.</span></div></div>
+          <div class="slot meal"><div class="t">1:00 PM</div><div class="what"><b>Lunch &mdash; Tusker House.</b> <span>Buffet, one credit, and the single easiest format for a party of nine.</span></div></div>
+          <div class="slot"><div class="t">2:30 PM</div><div class="what"><b>Festival of the Lion King</b>, then Feathered Friends and the Tree of Life trails. <span>Air-conditioned sit-downs &mdash; good pacing for Mike and Inge after a 6:35 start.</span></div></div>
+          <div class="slot"><div class="t">6:00 PM</div><div class="what"><b>Park closes. Drive to EPCOT</b> (open to 9:00) <span>or head back for an early night. Having the cars means this is a genuine game-time decision &mdash; no bus queue to commit to.</span></div></div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>Table service</h4><p>Tusker House, lunch<span class="credit">9 credits · 1 each</span></p></div>
-          <div class="mini"><h4>Quick service</h4><p>Dinner wherever you land. Satu'li Canteen is the best counter food at any park if you eat before close.<span class="credit">9 credits · 1 each</span></p></div>
-          <div class="mini"><h4>Skip</h4><p>Kali River Rapids — you get soaked, and December evenings drop into the 50s. Often down for refurbishment in winter anyway.</p></div>
+          <div class="mini"><h4>Table service</h4><p>Tusker House, lunch<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Quick service</h4><p>Dinner wherever we land. Satu'li Canteen is the best counter food at any park if we eat before close.<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Skip</h4><p>Kali River Rapids &mdash; you get soaked, and December evenings drop into the 50s. Often down for refurbishment in winter anyway.</p></div>
         </div>
-        <p class="optout"><b>Sitting out:</b> Expedition Everest is the only real thrill. Everything else on this day works for all nine of you.</p>
+        <p class="optout"><b>Sitting out:</b> Expedition Everest is the only real thrill. Everything else today works for all nine of us.</p>
       </div>
     </article>
 
-    <!-- DEC 21 -->
     <article class="day-card">
       <div class="day-top">
-        <span class="dnum">Mon Dec 21 · Day 2</span>
+        <span class="orb">2</span>
+        <span class="dnum">Mon Dec 21</span>
         <h3>EPCOT</h3>
-        <span class="open">9:00a – 9:00p · + Evening Hours to 11:00p</span>
+        <span class="open">9:00a &ndash; 9:00p &middot; + Evening Hours to 11:00p</span>
       </div>
       <div class="day-body">
         <div class="spine">
-          <div class="slot key"><div class="t">7:30 AM</div><div class="what"><b>Bus for 8:30 Early Entry.</b></div></div>
-          <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Guardians of the Galaxy: Cosmic Rewind</b> or <b>Test Track</b>. <span>Guardians is often a Single Pass or virtual queue attraction — check the app the morning of and adjust.</span></div></div>
+          <div class="slot drive"><div class="t">7:40 AM</div><div class="what"><b>Leave the resort</b> for 8:30 Early Entry. <span>EPCOT is the closest park to Saratoga Springs &mdash; roughly 10 minutes, and you park and walk straight in.</span></div></div>
+          <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Guardians of the Galaxy: Cosmic Rewind</b> or <b>Test Track</b>. <span>Guardians is often a Single Pass or virtual queue attraction &mdash; check the app that morning and adjust.</span></div></div>
           <div class="slot"><div class="t">9:30 AM</div><div class="what"><b>Frozen Ever After</b>, then <b>Remy's Ratatouille Adventure</b>. <span>Both build fast; both are gentle enough for the whole party.</span></div></div>
           <div class="slot"><div class="t">11:00 AM</div><div class="what"><b>Soarin' Around the World</b> and Living with the Land.</div></div>
-          <div class="slot"><div class="t">Midday</div><div class="what"><b>Quick-service lunch, then World Showcase on foot.</b> <span>Festival of the Holidays is running — the Holiday Kitchens booths are the best snack-credit value on property, mostly $7–9 items. Use several here.</span></div></div>
-          <div class="slot meal"><div class="t">4:45 PM</div><div class="what"><b>Dinner — Biergarten.</b> <span>Candlelight Processional package. Shared tables, family-style, oompah band.</span></div></div>
-          <div class="slot key"><div class="t">6:45 PM</div><div class="what"><b>Candlelight Processional</b> at America Gardens Theatre. <span>Massed choir, full orchestra, celebrity narrator reading the Christmas story. Roughly 40 minutes. Your package guarantees seats — without one you'd queue for an hour.</span></div></div>
-          <div class="slot"><div class="t">8:00 PM</div><div class="what"><b>Luminous</b> — the nighttime show over World Showcase Lagoon.</div></div>
-          <div class="slot key"><div class="t">9–11 PM</div><div class="what"><b>Extended Evening Hours.</b> <span>Park is open only to Deluxe and Deluxe Villa guests. Re-ride Guardians, Test Track and Frozen at a fraction of the daytime wait. This is the best two hours of the week — don't leave early.</span></div></div>
+          <div class="slot"><div class="t">Midday</div><div class="what"><b>Quick-service lunch, then World Showcase on foot.</b> <span>Festival of the Holidays is running &mdash; the Holiday Kitchens booths are the best snack-credit value on property, mostly $7&ndash;9 items. Use several here.</span></div></div>
+          <div class="slot meal"><div class="t">4:45 PM</div><div class="what"><b>Dinner &mdash; Biergarten.</b> <span>Candlelight Processional package. Shared tables, family-style, oompah band.</span></div></div>
+          <div class="slot key"><div class="t">6:45 PM</div><div class="what"><b>Candlelight Processional</b> at America Gardens Theatre. <span>Massed choir, full orchestra, celebrity narrator reading the Christmas story. Roughly 40 minutes. The package guarantees seats &mdash; without one you'd queue for an hour.</span></div></div>
+          <div class="slot"><div class="t">8:00 PM</div><div class="what"><b>Luminous</b> &mdash; the nighttime show over World Showcase Lagoon.</div></div>
+          <div class="slot key"><div class="t">9&ndash;11 PM</div><div class="what"><b>Extended Evening Hours.</b> <span>Park open only to Deluxe and Deluxe Villa guests. Re-ride Guardians, Test Track and Frozen at a fraction of the daytime wait. Best two hours of the week &mdash; don't leave early. Driving means no last-bus anxiety.</span></div></div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>Table service</h4><p>Biergarten, Candlelight package<span class="credit">9 credits · 1 each</span></p></div>
-          <div class="mini"><h4>Quick service</h4><p>Connections Eatery or Regal Eagle Smokehouse<span class="credit">9 credits · 1 each</span></p></div>
-          <div class="mini"><h4>Worth knowing</h4><p>Le Cellier and Akershus also offer Candlelight packages, but both cost <b>two</b> credits per person — which breaks the ledger below.</p></div>
+          <div class="mini"><h4>Table service</h4><p>Biergarten, Candlelight package<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Quick service</h4><p>Connections Eatery or Regal Eagle Smokehouse<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Worth knowing</h4><p>Le Cellier and Akershus also offer Candlelight packages, but both cost <b>two</b> credits per person &mdash; which breaks the ledger below.</p></div>
         </div>
         <p class="optout"><b>Sitting out:</b> Guardians (launch coaster, backwards start) and Test Track are the only two with real intensity. Mike and Inge can wait in the gift shop at Guardians or do Spaceship Earth next door.</p>
       </div>
     </article>
 
-    <!-- DEC 22 -->
     <article class="day-card">
       <div class="day-top">
-        <span class="dnum">Tue Dec 22 · Day 3</span>
+        <span class="orb">3</span>
+        <span class="dnum">Tue Dec 22</span>
         <h3>Hollywood Studios</h3>
-        <span class="open">9:00a – 9:00p · EE 8:30a</span>
+        <span class="open">9:00a &ndash; 9:00p &middot; EE 8:30a</span>
       </div>
       <div class="day-body">
         <div class="spine">
-          <div class="slot key"><div class="t">7:30 AM</div><div class="what"><b>Bus for 8:30 Early Entry.</b> <span>The most rope-drop-dependent park of the four. If one morning has to go right, it's this one.</span></div></div>
-          <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Star Wars: Rise of the Resistance, immediately.</b> <span>Longest, best and most breakdown-prone ride at Disney World. Go straight there — it routinely passes 2 hours by 10 AM.</span></div></div>
+          <div class="slot drive"><div class="t">7:35 AM</div><div class="what"><b>Leave the resort</b> for 8:30 Early Entry. <span>The most rope-drop-dependent park of the four. If one morning has to go right, it's this one &mdash; leave on time.</span></div></div>
+          <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Star Wars: Rise of the Resistance, immediately.</b> <span>Longest, best and most breakdown-prone ride at Disney World. Go straight there &mdash; it routinely passes 2 hours by 10 AM.</span></div></div>
           <div class="slot"><div class="t">9:30 AM</div><div class="what"><b>Millennium Falcon: Smugglers Run</b>, then walk to Toy Story Land for <b>Slinky Dog Dash</b>.</div></div>
           <div class="slot"><div class="t">11:00 AM</div><div class="what"><b>Toy Story Mania</b> and <b>Mickey &amp; Minnie's Runaway Railway</b>. <span>Both work for the entire party.</span></div></div>
-          <div class="slot meal"><div class="t">12:30 PM</div><div class="what"><b>Lunch — Roundup Rodeo BBQ.</b> <span>Family-style skillets, one credit, in Toy Story Land. Built for groups your size.</span></div></div>
-          <div class="slot"><div class="t">2:30 PM</div><div class="what"><b>Tower of Terror</b> and <b>Rock 'n' Roller Coaster</b>. <span>The two biggest thrills of the week — plan for people to sit these out.</span></div></div>
-          <div class="slot"><div class="t">4:30 PM</div><div class="what"><b>Resort break.</b> <span>Third consecutive early morning. A two-hour reset here is what keeps the last day pleasant.</span></div></div>
-          <div class="slot"><div class="t">7:00 PM</div><div class="what"><b>Back for the evening.</b> <span>Indiana Jones Epic Stunt Spectacular, Muppet*Vision, and check the app for Fantasmic! — it's worth staying for if it's running.</span></div></div>
+          <div class="slot meal"><div class="t">12:30 PM</div><div class="what"><b>Lunch &mdash; Roundup Rodeo BBQ.</b> <span>Family-style skillets, one credit, in Toy Story Land. Built for groups our size.</span></div></div>
+          <div class="slot"><div class="t">2:30 PM</div><div class="what"><b>Tower of Terror</b> and <b>Rock 'n' Roller Coaster</b>. <span>The two biggest thrills of the week &mdash; plan for people to sit these out.</span></div></div>
+          <div class="slot drive"><div class="t">4:30 PM</div><div class="what"><b>Resort break.</b> <span>Third consecutive early morning. A two-hour reset here is what keeps the last day pleasant &mdash; and with the cars it's a 10-minute hop each way instead of an hour round trip on buses.</span></div></div>
+          <div class="slot"><div class="t">7:00 PM</div><div class="what"><b>Back for the evening.</b> <span>Indiana Jones Epic Stunt Spectacular, Muppet*Vision, and check the app for Fantasmic! &mdash; worth staying for if it's running.</span></div></div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>Table service</h4><p>Roundup Rodeo BBQ, lunch<span class="credit">9 credits · 1 each</span></p></div>
-          <div class="mini"><h4>Quick service</h4><p>Docking Bay 7 or Woody's Lunch Box, dinner<span class="credit">9 credits · 1 each</span></p></div>
-          <div class="mini"><h4>Alternative</h4><p>50's Prime Time Café — same one credit, and the servers scold you for elbows on the table. The funniest meal on property with a group this size.</p></div>
+          <div class="mini"><h4>Table service</h4><p>Roundup Rodeo BBQ, lunch<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Quick service</h4><p>Docking Bay 7 or Woody's Lunch Box, dinner<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Alternative</h4><p>50's Prime Time Caf&eacute; &mdash; same one credit, and the servers scold you for elbows on the table. The funniest meal on property with a group this size.</p></div>
         </div>
-        <p class="optout"><b>Sitting out:</b> the heaviest day for it. Tower of Terror (freefall drops), Rock 'n' Roller Coaster (0–57 mph launch, inversions) and Slinky Dog Dash. Rise of the Resistance looks intense but has no big drops — it's mostly a ride-through, and worth encouraging everyone onto.</p>
+        <p class="optout"><b>Sitting out:</b> the heaviest day for it. Tower of Terror (freefall drops), Rock 'n' Roller Coaster (0&ndash;57 mph launch, inversions) and Slinky Dog Dash. Rise of the Resistance looks intense but has no big drops &mdash; it's mostly a ride-through, and worth encouraging everyone onto.</p>
       </div>
     </article>
 
-    <!-- DEC 23 -->
     <article class="day-card">
       <div class="day-top">
-        <span class="dnum">Wed Dec 23 · Day 4</span>
+        <span class="orb">4</span>
+        <span class="dnum">Wed Dec 23</span>
         <h3>Magic Kingdom</h3>
-        <span class="open">9:00a – 10:00p · EE 8:30a</span>
+        <span class="open">9:00a &ndash; 10:00p &middot; EE 8:30a</span>
       </div>
       <div class="day-body">
         <div class="spine">
-          <div class="slot key"><div class="t">7:30 AM</div><div class="what"><b>Bus for 8:30 Early Entry.</b> <span>Last park day, and the longest. Pace it.</span></div></div>
+          <div class="slot drive"><div class="t">7:05 AM</div><div class="what"><b>Leave the cars at the resort &mdash; take the bus today.</b> <span>This is the one day driving loses. You can't park at Magic Kingdom; you park at the Transportation and Ticket Center, clear security there, then cross the lagoon by monorail or ferry. That's 30&ndash;45 minutes car to gate. The resort bus drops you at the turnstiles.</span></div></div>
           <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Seven Dwarfs Mine Train first</b>, then <b>Peter Pan's Flight</b>. <span>The two worst standby lines in the park, both in Fantasyland. Get them before 9:30 and the day is won.</span></div></div>
           <div class="slot"><div class="t">9:45 AM</div><div class="what"><b>Haunted Mansion</b>, then <b>Big Thunder Mountain</b> and <b>Tiana's Bayou Adventure</b>.</div></div>
-          <div class="slot"><div class="t">11:30 AM</div><div class="what"><b>Pirates of the Caribbean</b> and <b>Jungle Cruise</b> — the holiday Jingle Cruise overlay should be running.</div></div>
+          <div class="slot"><div class="t">11:30 AM</div><div class="what"><b>Pirates of the Caribbean</b> and <b>Jungle Cruise</b> &mdash; the holiday Jingle Cruise overlay should be running.</div></div>
           <div class="slot meal"><div class="t">12:45 PM</div><div class="what"><b>Quick-service lunch at Columbia Harbour House.</b> <span>Upstairs seating is the quietest room in the park.</span></div></div>
-          <div class="slot"><div class="t">2:00 PM</div><div class="what"><b>Space Mountain</b>, <b>TRON Lightcycle / Run</b> and the PeopleMover. <span>TRON is usually Single Pass — budget for it separately or skip.</span></div></div>
-          <div class="slot"><div class="t">3:30 PM</div><div class="what"><b>Resort break</b>, or Carousel of Progress and the Hall of Presidents if you'd rather stay put in air conditioning.</div></div>
-          <div class="slot meal"><div class="t">5:00 PM</div><div class="what"><b>Dinner — Liberty Tree Tavern.</b> <span>Family-style holiday feast, one credit, Colonial dining room. The right last supper for a trip like this.</span></div></div>
-          <div class="slot key"><div class="t">Evening</div><div class="what"><b>Main Street at night, the holiday parade, and fireworks.</b> <span>The parties end Dec 22, so Dec 23 is the first night the Christmas parade typically runs for regular day guests — check the app that morning. Castle lighting and Main Street in full decoration is the picture everyone goes home with.</span></div></div>
+          <div class="slot"><div class="t">2:00 PM</div><div class="what"><b>Space Mountain</b>, <b>TRON Lightcycle / Run</b> and the PeopleMover. <span>TRON is usually Single Pass &mdash; budget for it separately or skip.</span></div></div>
+          <div class="slot"><div class="t">3:30 PM</div><div class="what"><b>Carousel of Progress and the Hall of Presidents</b> <span>if anyone needs air conditioning and a sit-down. Skipping the resort break today &mdash; the bus round trip costs more than it returns.</span></div></div>
+          <div class="slot meal"><div class="t">5:00 PM</div><div class="what"><b>Dinner &mdash; Liberty Tree Tavern.</b> <span>Family-style holiday feast, one credit, Colonial dining room. The right last supper for a trip like this.</span></div></div>
+          <div class="slot key"><div class="t">Evening</div><div class="what"><b>Main Street at night, the holiday parade, and fireworks.</b> <span>The parties end Dec 22, so Dec 23 is the first night the Christmas parade typically runs for regular day guests &mdash; check the app that morning. Castle lighting and Main Street in full decoration is the picture everyone goes home with.</span></div></div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>Table service</h4><p>Liberty Tree Tavern, dinner<span class="credit">9 credits · 1 each</span></p></div>
-          <div class="mini"><h4>Quick service</h4><p>Columbia Harbour House, lunch<span class="credit">9 credits · 1 each</span></p></div>
-          <div class="mini"><h4>Alternative</h4><p>Skipper Canteen — one credit, genuinely good food, and far easier to book than anything else in the park.</p></div>
+          <div class="mini"><h4>Table service</h4><p>Liberty Tree Tavern, dinner<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Quick service</h4><p>Columbia Harbour House, lunch<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Alternative</h4><p>Skipper Canteen &mdash; one credit, genuinely good food, and far easier to book than anything else in the park.</p></div>
         </div>
-        <p class="optout"><b>Sitting out:</b> Seven Dwarfs (mild), Big Thunder, Space Mountain and TRON. Haunted Mansion, Pirates and Jungle Cruise are the ones to make sure all nine of you do together.</p>
+        <p class="optout"><b>Sitting out:</b> Seven Dwarfs (mild), Big Thunder, Space Mountain and TRON. Haunted Mansion, Pirates and Jungle Cruise are the ones to make sure all nine of us do together.</p>
       </div>
     </article>
 
-    <!-- DEC 24 -->
     <article class="day-card">
       <div class="day-top">
+        <span class="orb rest">&#9733;</span>
         <span class="dnum">Thu Dec 24</span>
         <h3>Departure</h3>
         <span class="open">Check-out</span>
       </div>
       <div class="day-body">
         <div class="spine">
-          <div class="slot meal"><div class="t">Morning</div><div class="what"><b>Quick-service breakfast at The Artist's Palette.</b> <span>Your credits stay valid through the end of today — spend the last nine rather than forfeiting them.</span></div></div>
+          <div class="slot meal"><div class="t">Morning</div><div class="what"><b>Quick-service breakfast at The Artist's Palette.</b> <span>Credits stay valid through the end of today &mdash; spend the last nine rather than forfeiting them.</span></div></div>
           <div class="slot"><div class="t">Before bags</div><div class="what"><b>Last mug refills</b>, and burn any leftover snack credits on packaged goods at the resort shop. <span>Coffee beans, candy and boxed sweets are snack-eligible and travel home.</span></div></div>
+          <div class="slot drive"><div class="t">Departure</div><div class="what"><b>Drive to MCO.</b> <span>Allow 30 minutes plus rental return. Christmas Eve is one of the busiest airport days of the year &mdash; leave earlier than feels necessary.</span></div></div>
         </div>
       </div>
     </article>
@@ -421,12 +508,13 @@ footer{margin-top:3rem;padding-top:1.1rem;border-top:1px solid var(--line);font-
 
   <section>
     <div class="sechead">
-      <h2>The dining credit ledger</h2>
-      <span class="note">Five nights × nine guests. Everyone counts as an adult — Lydia is 16.</span>
+      <h2>The Dining Credit Ledger</h2>
+      <div class="orn"><span>&#10052;</span></div>
+      <span class="note">Five nights &times; nine guests. Everyone counts as an adult &mdash; Lydia is 16.</span>
     </div>
     <div class="ledger">
-      <div class="lcard"><div class="n">45</div><div class="lab">Table-service credits</div><div class="eq">5 meals × 9 people</div></div>
-      <div class="lcard"><div class="n">45</div><div class="lab">Quick-service credits</div><div class="eq">5 meals × 9 people</div></div>
+      <div class="lcard"><div class="n">45</div><div class="lab">Table-service credits</div><div class="eq">5 meals &times; 9 people</div></div>
+      <div class="lcard"><div class="n">45</div><div class="lab">Quick-service credits</div><div class="eq">5 meals &times; 9 people</div></div>
       <div class="lcard"><div class="n">45</div><div class="lab">Snack credits</div><div class="eq">breakfasts + Holiday Kitchens</div></div>
       <div class="lcard"><div class="n">9</div><div class="lab">Refillable mugs</div><div class="eq">resort locations only</div></div>
     </div>
@@ -434,36 +522,44 @@ footer{margin-top:3rem;padding-top:1.1rem;border-top:1px solid var(--line);font-
       <table>
         <thead><tr><th>Day</th><th>Table service</th><th>Quick service</th><th>Snacks</th></tr></thead>
         <tbody>
-          <tr><td class="day">Sat 19</td><td>The Turf Club <span class="hrs">9</span></td><td class="hrs">—</td><td class="hrs">—</td></tr>
+          <tr><td class="day">Sat 19</td><td>The Turf Club <span class="hrs">9</span></td><td class="hrs">&mdash;</td><td class="hrs">&mdash;</td></tr>
           <tr><td class="day">Sun 20</td><td>Tusker House <span class="hrs">9</span></td><td>Dinner <span class="hrs">9</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
           <tr><td class="day">Mon 21</td><td>Biergarten <span class="hrs">9</span></td><td>Lunch <span class="hrs">9</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
           <tr><td class="day">Tue 22</td><td>Roundup Rodeo <span class="hrs">9</span></td><td>Dinner <span class="hrs">9</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
           <tr><td class="day">Wed 23</td><td>Liberty Tree <span class="hrs">9</span></td><td>Lunch <span class="hrs">9</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
-          <tr><td class="day">Thu 24</td><td class="hrs">—</td><td>Breakfast <span class="hrs">9</span></td><td>Spare <span class="hrs">9</span></td></tr>
+          <tr><td class="day">Thu 24</td><td class="hrs">&mdash;</td><td>Breakfast <span class="hrs">9</span></td><td>Spare <span class="hrs">9</span></td></tr>
           <tr><td class="day"><b>Total</b></td><td><b class="mono">45 / 45</b></td><td><b class="mono">45 / 45</b></td><td><b class="mono">45 / 45</b></td></tr>
         </tbody>
       </table>
     </div>
-    <p style="font-size:.87rem;color:var(--muted);margin-top:.8rem">Every restaurant above costs <b>one</b> credit per person. That's deliberate — the ledger balances to zero only if you avoid signature restaurants, which charge two. Swap in Tiffins, Le Cellier, Be Our Guest or Cinderella's Royal Table and you lose a whole meal elsewhere.</p>
+    <p style="font-size:.87rem;color:var(--muted);margin-top:.85rem;text-align:center">Every restaurant above costs <b>one</b> credit per person. That's deliberate &mdash; the ledger balances to zero only if we avoid signature restaurants, which charge two. Swap in Tiffins, Le Cellier, Be Our Guest or Cinderella's Royal Table and we lose a whole meal elsewhere.</p>
   </section>
 
   <section>
-    <div class="sechead"><h2>Things that will catch you out</h2></div>
+    <div class="sechead">
+      <h2>Things That Will Catch Us Out</h2>
+      <div class="orn"><span>&#10052;</span></div>
+    </div>
     <div class="notes">
-      <div class="note-item"><span class="k">Party of 9</span><p>Online booking caps at 8 guests. You must call <b class="mono">(407) 939-3463</b> and ask for Group Dining. If they can't seat nine together, book two overlapping reservations and tell the host at check-in that you'd like to sit together — they usually manage it.</p></div>
-      <div class="note-item"><span class="k">Gratuity</span><p>An 18% gratuity is added automatically for parties of six or more, and the dining plan does <b>not</b> cover it. Budget roughly $50–80 in tip per table-service meal — call it $300 across the week.</p></div>
-      <div class="note-item"><span class="k">Transport</span><p>Saratoga Springs buses stop at five internal sections before leaving, so they fill up and take time. Budget <b>60–75 minutes door to gate</b> in peak season, which is why the bus times above look so early.</p></div>
-      <div class="note-item"><span class="k">Weather</span><p>Highs in the low 70s, lows in the low 50s. Evenings genuinely get cold once the sun drops — bring layers you can carry, and skip the water rides.</p></div>
-      <div class="note-item"><span class="k">Park hopping</span><p>The old 2:00 PM restriction is gone. You can hop any time after tapping into your first park, subject only to capacity — which in Christmas week is a real possibility, so don't build a plan that depends on it.</p></div>
-      <div class="note-item"><span class="k">Christmas Party</span><p>Dec 20 and Dec 22 are both sold out, so there's no option to buy in. It's not a loss — Dec 23 gives you the holiday parade, fireworks and decorations at no extra cost.</p></div>
-      <div class="note-item"><span class="k">Verify in December</span><p>Park hours, Early Entry times and Extended Evening Hours all shift. The Dec 21 EPCOT evening session follows the published Monday pattern but hasn't been formally confirmed for December. Re-check My Disney Experience the week before you fly.</p></div>
+      <div class="note-item"><span class="k">Parking</span><p>Standard theme park parking is <b>free</b> for Disney Resort guests &mdash; normally about $30 a day, so roughly $240 saved across two cars and four days. Have a MagicBand or Key to the World card ready at the booth, and make sure both cars' drivers have one.</p></div>
+      <div class="note-item"><span class="k">Magic Kingdom</span><p>The one park you cannot drive to. Parking is at the Transportation and Ticket Center, with security there and then a monorail or ferry across the lagoon &mdash; 30 to 45 minutes from car to gate. The resort bus goes direct. Take the bus on Dec 23.</p></div>
+      <div class="note-item"><span class="k">Two cars, nine people</span><p>Decide riders before each departure, not in the parking lot. Park in the same row where you can, and photograph the row marker &mdash; the lots are enormous and every aisle looks identical at 10 PM.</p></div>
+      <div class="note-item"><span class="k">Party of 9</span><p>Online booking caps at 8 guests. We must call <b class="mono">(407) 939-3463</b> and ask for Group Dining. If they can't seat nine together, book two overlapping reservations and tell the host at check-in that we'd like to sit together &mdash; they usually manage it.</p></div>
+      <div class="note-item"><span class="k">Gratuity</span><p>An 18% gratuity is added automatically for parties of six or more, and the dining plan does <b>not</b> cover it. Budget roughly $50&ndash;80 in tip per table-service meal &mdash; call it $300 across the week.</p></div>
+      <div class="note-item"><span class="k">Weather</span><p>Highs in the low 70s, lows in the low 50s. Evenings genuinely get cold once the sun drops &mdash; bring layers you can carry, and skip the water rides.</p></div>
+      <div class="note-item"><span class="k">Park hopping</span><p>The old 2:00 PM restriction is gone. We can hop any time after tapping into the first park, subject only to capacity &mdash; which in Christmas week is a real possibility, so don't build a plan that depends on it.</p></div>
+      <div class="note-item"><span class="k">Christmas Party</span><p>Dec 20 and Dec 22 are both sold out, so there's no option to buy in. It's not a loss &mdash; Dec 23 gives us the holiday parade, fireworks and decorations at no extra cost.</p></div>
+      <div class="note-item"><span class="k">Verify in December</span><p>Park hours, Early Entry times and Extended Evening Hours all shift. The Dec 21 EPCOT evening session follows the published Monday pattern but hasn't been formally confirmed for December. Re-check My Disney Experience the week before we fly.</p></div>
     </div>
   </section>
 
   <footer>
-    Built 16 October 2026. Hours and event dates from published schedules and subject to change — confirm in My Disney Experience before each park day.
+    <div class="candy" aria-hidden="true"></div>
+    Built 16 October 2026 &middot; see you on Main Street<br>
+    Hours and event dates from published schedules and subject to change &mdash; confirm in My Disney Experience before each park day.
   </footer>
 
 </div>
+<!--ARTIFACT-BODY-END-->
 </body>
 </html>
