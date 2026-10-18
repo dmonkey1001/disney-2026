@@ -149,6 +149,16 @@ td .park{font-weight:800}
 .mini .upg{margin-top:.55rem;padding-top:.55rem;border-top:1px dashed var(--line)}
 .mini .upg .credit{color:var(--green)}
 .mini .opt{margin-top:.45rem;padding-top:.45rem;border-top:1px dashed var(--line)}
+.tracks{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+@media(max-width:36rem){.tracks{grid-template-columns:1fr}}
+.track{border:1px solid var(--line);border-radius:8px;padding:.75rem .85rem;min-width:0}
+.track.show{background:var(--gold-soft);border-left:3px solid var(--gold)}
+.track.ride{background:var(--green-soft);border-left:3px solid var(--green)}
+.track h5{margin:0 0 .35rem;font-family:var(--mono);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.track.show h5{color:var(--gold)}
+.track.ride h5{color:var(--green)}
+.track p{font-size:.85rem}
+.track p+p{margin-top:.35rem}
 
 .optout{font-size:.84rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.7rem}
 .optout b{color:var(--fg);font-weight:700}
@@ -296,35 +306,35 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
             <td><span class="park">Arrival</span><br><span class="hrs">no park</span></td>
             <td class="hrs">&mdash;</td>
             <td class="hrs">Drive from MCO</td>
-            <td>The Turf Club <span class="hrs">(resort)</span></td>
+            <td>The Turf Club <span class="hrs">or Disney Springs</span></td>
           </tr>
           <tr>
             <td class="day">Sun 20</td>
             <td><span class="park">Animal Kingdom</span></td>
             <td class="hrs">8:00a &ndash; 6:00p<br>EE 7:30a</td>
             <td class="hrs">Drive &middot; 15 min</td>
-            <td>Tusker House <span class="hrs">(lunch)</span></td>
+            <td>&mdash; <span class="hrs">quick service only</span></td>
           </tr>
           <tr>
             <td class="day">Mon 21</td>
             <td><span class="park">EPCOT</span></td>
             <td class="hrs">9:00a &ndash; 9:00p<br>+ Evening Hours 9&ndash;11p</td>
             <td class="hrs">Drive &middot; 10 min</td>
-            <td>Biergarten <span class="hrs">or Le Cellier</span></td>
+            <td>Biergarten <span class="hrs">(dinner)</span></td>
           </tr>
           <tr>
             <td class="day">Tue 22</td>
             <td><span class="park">Hollywood Studios</span></td>
             <td class="hrs">9:00a &ndash; 9:00p<br>EE 8:30a</td>
             <td class="hrs">Drive &middot; 10 min</td>
-            <td>Roundup Rodeo BBQ <span class="hrs">(lunch)</span></td>
+            <td>50's Prime Time <span class="hrs">(dinner)</span></td>
           </tr>
           <tr>
             <td class="day">Wed 23</td>
             <td><span class="park">Magic Kingdom</span></td>
             <td class="hrs">9:00a &ndash; 10:00p<br>EE 8:30a</td>
             <td class="hrs"><b>Take the bus</b></td>
-            <td>Liberty Tree Tavern <span class="hrs">(dinner)</span></td>
+            <td><b>Signature</b> <span class="hrs">monorail resort</span></td>
           </tr>
           <tr>
             <td class="day">Thu 24</td>
@@ -394,7 +404,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
           <div class="slot"><div class="t">After</div><div class="what"><b>Walk or boat to Disney Springs.</b> <span>Christmas Tree Trail and the lights, no ticket needed. Keep it short &mdash; tomorrow is the earliest start of the week.</span></div></div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>Table service</h4><p><b>Standard:</b> The Turf Club Bar and Grill<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>Fancier:</b> The BOATHOUSE at Disney Springs &mdash; waterfront, steak and seafood, used to large parties<span class="credit">18 credits &middot; 2 each</span></p></div>
+          <div class="mini"><h4>Table service &middot; dinner</h4><p><b>The Turf Club</b> &mdash; on property, walkable, no driving after a travel day.<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>Or Disney Springs</b>, which Traci rates and which is a short walk or boat from Saratoga Springs: Raglan Road, Morimoto Asia or Chef Art Smith's Homecoming all take one credit and seat large parties.<span class="credit">9 credits &middot; 1 each</span></p></div>
           <div class="mini"><h4>If Turf Club is full</h4><p>Raglan Road or Morimoto Asia at Disney Springs &mdash; both take one credit and seat large parties.</p></div>
         </div>
       </div>
@@ -413,12 +423,16 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
           <div class="slot key"><div class="t">7:30 AM</div><div class="what"><b>Straight to Pandora. Ride Flight of Passage standby</b>, then Na'vi River Journey. <span>Standby is genuinely short in the first twenty minutes, before it climbs past 180 minutes for the rest of the day. Set your Single Pass return for late afternoon and you ride the best attraction on property <em>twice</em> &mdash; which is the whole argument for the 6:35 alarm.</span></div></div>
           <div class="slot"><div class="t">9:15 AM</div><div class="what"><b>Kilimanjaro Safaris.</b> <span>Animals are most active in the cool morning &mdash; this genuinely is a different ride at 9 AM than at 3 PM.</span></div></div>
           <div class="slot"><div class="t">10:30 AM</div><div class="what"><b>Expedition Everest</b>, then Maharajah Jungle Trek. <span>Everest is the one coaster here.</span></div></div>
-          <div class="slot meal"><div class="t">1:00 PM</div><div class="what"><b>Lunch &mdash; Tusker House.</b> <span>Buffet, one credit, and the single easiest format for a party of nine.</span></div></div>
-          <div class="slot"><div class="t">2:30 PM</div><div class="what"><b>Festival of the Lion King</b>, then the Gorilla Falls and Tree of Life trails. <span>The Lion King show is one of the best things Disney has ever staged &mdash; acrobats, fire-twirlers and a live vocalist in the round. Worth queuing for on its own merits, not as somewhere to sit down.</span></div></div>
+          <div class="slot meal"><div class="t">1:00 PM</div><div class="what"><b>Quick-service lunch &mdash; Satu'li Canteen.</b> <span>The best counter food at any park, and no table-service credit spent. Traci's steer, and a good one: Tusker House isn't worth a credit, and Animal Kingdom is the day to save them.</span></div></div>
+          <div class="slot"><div class="t">2:30 PM</div><div class="what"><b>Gorilla Falls and the Tree of Life trails</b>, <span>then the afternoon splits &mdash; see below.</span></div></div>
           <div class="slot"><div class="t">6:00 PM</div><div class="what"><b>Park closes. Drive to EPCOT</b> (open to 9:00) <span>or head back for an early night. Having the cars means this is a genuine game-time decision &mdash; no bus queue to commit to.</span></div></div>
         </div>
+        <div class="tracks">
+          <div class="track show"><h5>If you want the show</h5><p><b>Festival of the Lion King</b>, around 3:00. Acrobats, fire-twirlers and a live vocalist in the round &mdash; one of the best things Disney has ever staged.</p></div>
+          <div class="track ride"><h5>If you'd rather ride</h5><p>Everest again, or a second Flight of Passage on the Single Pass return. Ride waits drop while the theatres fill.</p></div>
+        </div>
         <div class="rowgrid">
-          <div class="mini"><h4>Table service</h4><p><b>Standard:</b> Tusker House, lunch &mdash; buffet, easiest format for nine<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>Fancier:</b> Tiffins &mdash; far the best food at Animal Kingdom, and still inside the park<span class="credit">18 credits &middot; 2 each</span></p></div>
+          <div class="mini"><h4>No table service today</h4><p>Quick service only &mdash; <b>Satu'li Canteen</b>, the best counter food on property.<span class="credit">0 table-service credits</span></p><p class="upg"><b>If anyone wants one anyway:</b> Tiffins is the best food at Animal Kingdom by a distance, but it's a signature at 18 credits and would cost us the Dec 23 dinner.</p></div>
           <div class="mini"><h4>Quick service</h4><p>Dinner wherever we land. Satu'li Canteen is the best counter food at any park if we eat before close.<span class="credit">9 credits &middot; 1 each</span></p></div>
           <div class="mini"><h4>Skip</h4><p>Kali River Rapids &mdash; you get soaked, and December evenings drop into the 50s. Often down for refurbishment in winter anyway.</p></div>
           <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass:</b> Flight of Passage.<br><b>Multi Pass</b> (no tiers here &mdash; take any three): Kilimanjaro Safaris, Expedition Everest, Na'vi River Journey.<span class="credit">easiest LL day of the four</span></p></div>
@@ -441,14 +455,16 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
           <div class="slot"><div class="t">9:30 AM</div><div class="what"><b>Frozen Ever After</b>, then <b>Remy's Ratatouille Adventure</b>. <span>Both build fast; both are gentle enough for the whole party.</span></div></div>
           <div class="slot"><div class="t">11:00 AM</div><div class="what"><b>Soarin' Around the World</b> and Living with the Land.</div></div>
           <div class="slot"><div class="t">Midday</div><div class="what"><b>Quick-service lunch, then World Showcase on foot.</b> <span>Festival of the Holidays is running &mdash; the Holiday Kitchens booths are the best snack-credit value on property, mostly $7&ndash;9 items. Use several here.</span></div></div>
-          <div class="slot meal"><div class="t">5:30 PM</div><div class="what"><b>Dinner &mdash; Biergarten, or Le Cellier if we're upgrading.</b> <span>With no package to anchor the timing, this slot is free to be whatever we book. Eat early enough to make the queue.</span></div></div>
-          <div class="slot key"><div class="t">6:50 PM</div><div class="what"><b>Join the Candlelight standby queue</b> for the last show. <span>America Gardens Theatre. About an hour's wait for the final performance &mdash; far better odds than the early shows, which can run three hours deep for a well-known narrator.</span></div></div>
-          <div class="slot key"><div class="t">8:00 PM</div><div class="what"><b>Candlelight Processional.</b> <span>Massed choir, full orchestra and a celebrity narrator reading the Christmas story. Roughly 40 minutes, and the most genuinely moving thing on the whole trip.</span></div></div>
-          <div class="slot"><div class="t">After</div><div class="what"><b>Luminous</b> over World Showcase Lagoon <span>if the timing lines up &mdash; check the app that morning, since the show slots shift on Extended Evening nights.</span></div></div>
-          <div class="slot key"><div class="t">9&ndash;11 PM</div><div class="what"><b>Extended Evening Hours.</b> <span>Park open only to Deluxe and Deluxe Villa guests. Re-ride Guardians, Test Track and Frozen at a fraction of the daytime wait. Best two hours of the week &mdash; don't leave early. Driving means no last-bus anxiety.</span></div></div>
+          <div class="slot meal"><div class="t">5:30 PM</div><div class="what"><b>Dinner &mdash; Biergarten.</b> <span>Traci asked for this one and she's right to: family-style, shared long tables, oompah band, and it seats nine without a fight. Eat early enough that the show crowd makes the queue.</span></div></div>
+          <div class="slot"><div class="t">6:50 PM</div><div class="what"><b>The evening splits here</b> <span>&mdash; see the two tracks below. Everyone converges again at 9:00.</span></div></div>
+          <div class="slot key"><div class="t">9&ndash;11 PM</div><div class="what"><b>Extended Evening Hours &mdash; all nine of us.</b> <span>Park open only to Deluxe and Deluxe Villa guests. Pure rides and no shows, so it works for everybody. Re-ride Guardians, Test Track and Frozen at a fraction of the daytime wait. Best two hours of the week, and driving means no last-bus anxiety.</span></div></div>
+        </div>
+        <div class="tracks">
+          <div class="track show"><h5>Show track &middot; from 6:50</h5><p>Join the <b>Candlelight standby queue</b> for the 8:00 performance. Roughly an hour's wait, with standing room behind the benches if the seats fill.</p><p>Massed choir, full orchestra and a celebrity narrator. About 40 minutes, and the most genuinely moving thing on the trip.</p></div>
+          <div class="track ride"><h5>Ride track &middot; from 6:50</h5><p>While a third of the park queues for the theatre, <b>everything else empties out</b>. Soarin', Spaceship Earth, Living with the Land and the Mexico boat ride all drop to near walk-on.</p><p>Travis, Traci and Lydia &mdash; this is your window. Meet everyone at 9:00.</p></div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>Table service</h4><p><b>Standard:</b> Biergarten &mdash; family-style, shared tables, handles nine easily<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>Fancier:</b> Le Cellier Steakhouse &mdash; in Canada, a few minutes' walk from the theatre<span class="credit">18 credits &middot; 2 each</span></p></div>
+          <div class="mini"><h4>Table service &middot; dinner</h4><p><b>Biergarten</b> &mdash; Traci asked for it: family-style, shared long tables, handles nine easily.<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>Her other EPCOT picks, both one credit:</b> Garden Grill, which rotates and serves family-style, is the better of the two for a group. La Hacienda de San Angel is the other &mdash; though its draw is the lagoon fireworks view, which is the one thing Travis has said he can skip.<span class="credit">9 credits &middot; 1 each</span></p></div>
           <div class="mini"><h4>Quick service</h4><p>Connections Eatery or Regal Eagle Smokehouse<span class="credit">9 credits &middot; 1 each</span></p></div>
           <div class="mini"><h4>Candlelight standby</h4><p>Take the <b>last show</b> &mdash; roughly an hour's queue against up to three for the early ones. Send two people to hold places while the rest finish dessert. If the benches fill there's standing room behind them with a clear view, and package cancellations do turn up, so keep checking.</p></div>
           <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass:</b> Guardians of the Galaxy.<br><b>Multi Pass</b> &mdash; Tier 1: Frozen Ever After. Tier 2: Soarin' and Mission: SPACE.<span class="credit">re-stack after each tap</span></p></div>
@@ -470,15 +486,19 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
           <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Rope drop Millennium Falcon: Smugglers Run</b>, then <b>Mickey &amp; Minnie's Runaway Railway</b>. <span>Set your Rise of the Resistance Single Pass for the <em>earliest</em> return you can get &mdash; it is the most breakdown-prone ride on property, and an outage at 4 PM can cost you the ride entirely.</span></div></div>
           <div class="slot key"><div class="t">9:30 AM</div><div class="what"><b>Rise of the Resistance</b> on the Single Pass return. <span>The longest and best attraction at Disney World. Eighteen minutes, four ride systems, and worth every dollar of the $25.</span></div></div>
           <div class="slot"><div class="t">11:00 AM</div><div class="what"><b>Slinky Dog Dash</b> on Lightning Lane, then <b>Toy Story Mania</b>. <span>Slinky's standby is the worst in the park after Rise &mdash; never queue for it.</span></div></div>
-          <div class="slot meal"><div class="t">12:30 PM</div><div class="what"><b>Lunch &mdash; Roundup Rodeo BBQ.</b> <span>Family-style skillets, one credit, in Toy Story Land. Built for groups our size.</span></div></div>
+          <div class="slot meal"><div class="t">12:30 PM</div><div class="what"><b>Quick-service lunch &mdash; Woody's Lunch Box or Docking Bay 7.</b> <span>Table service moves to dinner today, which keeps the busy middle of the day free for Lightning Lane returns.</span></div></div>
           <div class="slot"><div class="t">2:30 PM</div><div class="what"><b>Tower of Terror</b> and <b>Rock 'n' Roller Coaster</b>. <span>The two biggest thrills of the week &mdash; plan for people to sit these out.</span></div></div>
           <div class="slot drive"><div class="t">4:30 PM</div><div class="what"><b>Optional resort run.</b> <span>With the cars this is a 10-minute hop each way if anyone wants to drop bags or change for the evening. But Hollywood Studios runs to 9:00 tonight and the last two hours are the quietest ride time of the whole day &mdash; if everyone's game, stay put and keep re-stacking.</span></div></div>
-          <div class="slot"><div class="t">7:00 PM</div><div class="what"><b>Back for the evening.</b> <span>Indiana Jones Epic Stunt Spectacular, Muppet*Vision, and check the app for Fantasmic! &mdash; worth staying for if it's running.</span></div></div>
+          <div class="slot meal"><div class="t">6:00 PM</div><div class="what"><b>Dinner &mdash; 50's Prime Time Caf&eacute;.</b> <span>Traci's pick. The servers play your mother and will tell you off for elbows on the table &mdash; comfortably the funniest meal on property. One catch: it seats in small booths, so nine of us will be split across tables that may not adjoin.</span></div></div>
+          <div class="slot"><div class="t">7:30 PM</div><div class="what"><b>Last two hours.</b> <span>The quietest ride time of the day. See the tracks below &mdash; Fantasmic! is worth staying for if it's running, but it isn't for everyone.</span></div></div>
+        </div>
+        <div class="tracks">
+          <div class="track show"><h5>Show track</h5><p><b>Fantasmic!</b> if it's running &mdash; check the app that morning. Also the Indiana Jones Epic Stunt Spectacular and Muppet*Vision earlier in the day.</p></div>
+          <div class="track ride"><h5>Ride track</h5><p>Fantasmic! seats several thousand people at once, and the park goes quiet while it runs. <b>Tower of Terror and Rock 'n' Roller Coaster drop hard</b> in that window &mdash; the single best re-ride opportunity of the trip.</p></div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>Table service</h4><p><b>Standard:</b> Roundup Rodeo BBQ, lunch &mdash; family-style skillets<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>Fancier:</b> The Hollywood Brown Derby &mdash; white tablecloths, the original Cobb salad<span class="credit">18 credits &middot; 2 each</span></p></div>
-          <div class="mini"><h4>Quick service</h4><p>Docking Bay 7 or Woody's Lunch Box, dinner<span class="credit">9 credits &middot; 1 each</span></p></div>
-          <div class="mini"><h4>Alternative</h4><p>50's Prime Time Caf&eacute; &mdash; same one credit, and the servers scold you for elbows on the table. The funniest meal on property with a group this size.</p></div>
+          <div class="mini"><h4>Table service &middot; dinner</h4><p><b>50's Prime Time Caf&eacute;</b> &mdash; Traci's pick, and the most fun we'll have at a table all week.<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>If nine-at-one-table matters more:</b> Roundup Rodeo BBQ, family-style skillets, built for groups our size.<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Quick service</h4><p>Woody's Lunch Box or Docking Bay 7 at lunch.<span class="credit">9 credits &middot; 1 each</span></p></div>
           <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass:</b> Rise of the Resistance &mdash; book the earliest return.<br><b>Multi Pass</b> &mdash; Tier 1: Slinky Dog Dash. Tier 2: Tower of Terror and Rock 'n' Roller Coaster.<span class="credit">busiest LL day &mdash; re-stack hard</span></p></div>
         </div>
         <p class="optout"><b>The headliners:</b> the big day. Rise of the Resistance, Tower of Terror (repeated freefall drops), Rock 'n' Roller Coaster (0&ndash;57 mph launch with inversions) and Slinky Dog Dash. Rise sounds the most intimidating and is actually the gentlest of the four &mdash; no drops, no inversions, mostly a walk-through and a slow dark ride. Get everyone on that one.</p>
@@ -501,11 +521,15 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
           <div class="slot meal"><div class="t">12:45 PM</div><div class="what"><b>Quick-service lunch at Columbia Harbour House.</b> <span>Upstairs seating is the quietest room in the park.</span></div></div>
           <div class="slot"><div class="t">2:00 PM</div><div class="what"><b>TRON Lightcycle / Run</b> on the Single Pass, then <b>Space Mountain</b> and the PeopleMover. <span>TRON is the fastest coaster at Magic Kingdom and you ride it leaning forward on a motorbike-style vehicle. At $25 it's the priciest Single Pass on property &mdash; and the one this group will most want.</span></div></div>
           <div class="slot"><div class="t">3:30 PM</div><div class="what"><b>Second lap.</b> <span>Keep re-stacking passes and go again on whatever was best &mdash; Big Thunder and Tiana's both reward a repeat. No resort break today; the bus round trip costs more than it returns. Carousel of Progress and the Hall of Presidents are here if anyone wants them, and they're genuinely good rather than merely somewhere to sit.</span></div></div>
-          <div class="slot meal"><div class="t">5:00 PM</div><div class="what"><b>Dinner &mdash; Liberty Tree Tavern.</b> <span>Family-style holiday feast, one credit, Colonial dining room. The right last supper for a trip like this.</span></div></div>
-          <div class="slot key"><div class="t">Evening</div><div class="what"><b>Main Street at night, the holiday parade, and fireworks.</b> <span>The parties end Dec 22, so Dec 23 is the first night the Christmas parade typically runs for regular day guests &mdash; check the app that morning. Castle lighting and Main Street in full decoration is the picture everyone goes home with.</span></div></div>
+          <div class="slot meal"><div class="t">6:00 PM</div><div class="what"><b>Monorail out for the signature dinner.</b> <span>One stop to the Contemporary for California Grill, or two to the Grand Floridian for Citricos. This is where the 18 credits freed up by skipping table service at Animal Kingdom and Magic Kingdom go. Same ticket gets us back into the park afterwards.</span></div></div>
+          <div class="slot key"><div class="t">8:30 PM</div><div class="what"><b>The last evening splits</b> <span>&mdash; see the tracks below. The park is open until 10:00, so there's time for both.</span></div></div>
+        </div>
+        <div class="tracks">
+          <div class="track show"><h5>Show track</h5><p>The parties end Dec 22, so tonight is the first the <b>Christmas parade</b> typically runs for regular day guests &mdash; check the app that morning.</p><p>Then <b>fireworks</b>, from California Grill's terrace if we're dining there, or from Main Street. Castle lighting and Main Street in full decoration is the picture everyone goes home with.</p></div>
+          <div class="track ride"><h5>Ride track</h5><p>Parade and fireworks are <b>the best ride window of the entire week</b>. Half the park stands still on Main Street while Fantasyland, Frontierland and Tomorrowland empty out.</p><p>Seven Dwarfs, Big Thunder and Space Mountain all become near walk-on. Re-stack passes and go.</p></div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>Table service &mdash; the finale</h4><p><b>Standard:</b> Liberty Tree Tavern &mdash; family-style holiday feast, and nobody leaves the park<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>For the view:</b> California Grill &mdash; rooftop at the Contemporary, one monorail stop, Magic Kingdom fireworks from the terrace<span class="credit">18 credits &middot; 2 each</span></p><p class="opt"><b>For the food:</b> Citricos &mdash; Grand Floridian, Michelin-recognized, the best plain fine dining on property<span class="credit">18 credits &middot; 2 each</span></p></div>
+          <div class="mini"><h4>The signature &mdash; pick one</h4><p><b>For the view:</b> California Grill, rooftop at the Contemporary. Fireworks from the terrace with the music piped in.<span class="credit">18 credits &middot; 2 each</span></p><p class="opt"><b>For the food:</b> Citricos at the Grand Floridian. Michelin-recognized, and the better meal of the two by most accounts.<span class="credit">18 credits &middot; 2 each</span></p><p class="upg"><b>If we'd rather not leave the park:</b> Liberty Tree Tavern, family-style holiday feast &mdash; but then the signature is off and 9 credits go spare.<span class="credit">9 credits &middot; 1 each</span></p></div>
           <div class="mini"><h4>Quick service</h4><p>Columbia Harbour House, lunch<span class="credit">9 credits &middot; 1 each</span></p></div>
           <div class="mini"><h4>Alternative</h4><p>Skipper Canteen &mdash; one credit, genuinely good food, and far easier to book than anything else in the park.</p></div>
           <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass &times;2:</b> Seven Dwarfs Mine Train and TRON &mdash; the only park with two.<br><b>Multi Pass</b> &mdash; Tier 1: Peter Pan's Flight. Tier 2: Haunted Mansion and Pirates.<span class="credit">book this day first on Dec 12</span></p></div>
@@ -534,9 +558,9 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
 
   <section>
     <div class="sechead">
-      <h2>Picking Our Level</h2>
+      <h2>Where the Credits Go</h2>
       <div class="orn"><span>&#10052;</span></div>
-      <span class="note">Every day has a standard pick and a fancier one. Here's what each costs.</span>
+      <span class="note">Four dinners instead of five meals, and one of them is a proper one. Here's the arithmetic.</span>
     </div>
 
     <div class="why" style="background:var(--surface-2);border-left-color:var(--gold);margin-bottom:1.2rem">
@@ -549,38 +573,27 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <p style="font-size:.87rem;color:var(--muted)">Two things worth knowing at the table: buffets and prix-fixe menus charge a credit per person with no sharing, but at ordinary table-service restaurants two people may split an entr&eacute;e. And the 18% large-party gratuity is never covered by credits, whichever level we pick.</p>
     </div>
 
-    <div class="scroll" style="margin-bottom:1.2rem">
-      <table>
-        <thead><tr><th>Day</th><th>Standard &middot; 1 credit each</th><th>Fancier &middot; 2 credits each</th></tr></thead>
-        <tbody>
-          <tr><td class="day">Sat 19</td><td>The Turf Club <span class="hrs">on property, walkable</span></td><td>The BOATHOUSE <span class="hrs">Disney Springs, waterfront</span></td></tr>
-          <tr><td class="day">Sun 20</td><td>Tusker House <span class="hrs">buffet, easy for nine</span></td><td>Tiffins <span class="hrs">best food at AK</span></td></tr>
-          <tr><td class="day">Mon 21</td><td>Biergarten <span class="hrs">family-style, communal</span></td><td>Le Cellier <span class="hrs">steakhouse, by the theatre</span></td></tr>
-          <tr><td class="day">Tue 22</td><td>Roundup Rodeo BBQ <span class="hrs">family-style skillets</span></td><td>The Hollywood Brown Derby <span class="hrs">white tablecloth</span></td></tr>
-          <tr><td class="day">Wed 23</td><td>Liberty Tree Tavern <span class="hrs">holiday feast, in park</span></td><td>California Grill <span class="hrs">fireworks view</span><br>Citricos <span class="hrs">Michelin-recognized</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-
     <div class="scroll">
       <table>
-        <thead><tr><th>If we choose&hellip;</th><th>Meals on credits</th><th>Credits</th><th>Out of pocket</th></tr></thead>
+        <thead><tr><th>Day</th><th>Dinner</th><th>Why</th><th>Credits</th></tr></thead>
         <tbody>
-          <tr><td class="day">All standard</td><td>5 regular</td><td class="mono">45 / 45</td><td class="hrs">&mdash;</td></tr>
-          <tr><td class="day">One upgrade</td><td>1 signature + 3 regular</td><td class="mono">45 / 45</td><td class="hrs">&mdash;</td></tr>
-          <tr><td class="day">Two upgrades</td><td>2 signature + 1 regular</td><td class="mono">45 / 45</td><td class="hrs">&mdash;</td></tr>
-          <tr><td class="day">Four upgrades</td><td>2 signature on credits, 2 paid, 1 regular</td><td class="mono">45 / 45</td><td><b>~$1,600&ndash;2,300</b> <span class="hrs">incl. gratuity</span></td></tr>
+          <tr><td class="day">Sat 19</td><td>The Turf Club <span class="hrs">or Disney Springs</span></td><td>Walkable on a travel day. Travis's family lands at 2:40, so an unhurried evening.</td><td class="mono">9</td></tr>
+          <tr><td class="day">Sun 20</td><td>&mdash; <span class="hrs">quick service</span></td><td>Traci's steer: no table-service meal at Animal Kingdom is worth a credit.</td><td class="mono">0</td></tr>
+          <tr><td class="day">Mon 21</td><td>Biergarten</td><td>Specifically requested, and it seats nine at shared tables without a fight.</td><td class="mono">9</td></tr>
+          <tr><td class="day">Tue 22</td><td>50's Prime Time Caf&eacute;</td><td>Traci's pick. Splits us across booths, but it's the most fun table of the week.</td><td class="mono">9</td></tr>
+          <tr><td class="day">Wed 23</td><td><b>California Grill</b> or <b>Citricos</b></td><td>The signature, paid for by the two meals we dropped. Monorail from Magic Kingdom.</td><td class="mono">18</td></tr>
+          <tr><td class="day"><b>Total</b></td><td>4 dinners</td><td class="hrs">all table service at dinner, none at lunch</td><td class="mono"><b>45 / 45</b></td></tr>
         </tbody>
       </table>
     </div>
-    <p style="font-size:.87rem;color:var(--muted);margin-top:.85rem;text-align:center">Book the upgrades first on Monday. A signature room that seats nine is scarcer than a family-style one, so if Tiffins or Citricos can't take the party, we fall back to that day's standard pick having lost nothing.</p>
+    <p style="font-size:.87rem;color:var(--muted);margin-top:.85rem;text-align:center"><b>Book the signature first on Monday.</b> A fine-dining room that can seat nine is the scarcest thing on the list; everything else here is family-style and far easier to place. If neither California Grill nor Citricos can take us, Liberty Tree Tavern inside Magic Kingdom is the fallback &mdash; and the 9 spare credits buy a table-service lunch somewhere.</p>
   </section>
 
   <section>
     <div class="sechead">
       <h2>The Dining Credit Ledger</h2>
       <div class="orn"><span>&#10052;</span></div>
-      <span class="note">Shown at the all-standard level &mdash; five nights &times; nine guests, everyone an adult since Lydia is 16.</span>
+      <span class="note">Five nights &times; nine guests, everyone an adult since Lydia is 16. Every column balances to zero.</span>
     </div>
     <div class="ledger">
       <div class="lcard"><div class="n">45</div><div class="lab">Table-service credits</div><div class="eq">5 meals &times; 9 people</div></div>
@@ -593,16 +606,16 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
         <thead><tr><th>Day</th><th>Table service</th><th>Quick service</th><th>Snacks</th></tr></thead>
         <tbody>
           <tr><td class="day">Sat 19</td><td>The Turf Club <span class="hrs">9</span></td><td class="hrs">&mdash;</td><td class="hrs">&mdash;</td></tr>
-          <tr><td class="day">Sun 20</td><td>Tusker House <span class="hrs">9</span></td><td>Dinner <span class="hrs">9</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
+          <tr><td class="day">Sun 20</td><td class="hrs">&mdash;</td><td>Lunch + dinner <span class="hrs">18</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
           <tr><td class="day">Mon 21</td><td>Biergarten <span class="hrs">9</span></td><td>Lunch <span class="hrs">9</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
-          <tr><td class="day">Tue 22</td><td>Roundup Rodeo <span class="hrs">9</span></td><td>Dinner <span class="hrs">9</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
-          <tr><td class="day">Wed 23</td><td>Liberty Tree <span class="hrs">9</span></td><td>Lunch <span class="hrs">9</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
-          <tr><td class="day">Thu 24</td><td class="hrs">&mdash;</td><td>Breakfast <span class="hrs">9</span></td><td>Spare <span class="hrs">9</span></td></tr>
+          <tr><td class="day">Tue 22</td><td>50's Prime Time <span class="hrs">9</span></td><td>Lunch <span class="hrs">9</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
+          <tr><td class="day">Wed 23</td><td><b>Signature</b> <span class="hrs">18</span></td><td>Lunch <span class="hrs">9</span></td><td>Breakfast <span class="hrs">9</span></td></tr>
+          <tr><td class="day">Thu 24</td><td class="hrs">&mdash;</td><td class="hrs">&mdash;</td><td>Breakfast <span class="hrs">9</span></td></tr>
           <tr><td class="day"><b>Total</b></td><td><b class="mono">45 / 45</b></td><td><b class="mono">45 / 45</b></td><td><b class="mono">45 / 45</b></td></tr>
         </tbody>
       </table>
     </div>
-    <p style="font-size:.87rem;color:var(--muted);margin-top:.85rem;text-align:center">This is the version that balances to exactly zero. Every upgrade swaps one of these rows for a meal costing double, so each one we take removes a sit-down meal from somewhere else &mdash; or moves it onto the credit card.</p>
+    <p style="font-size:.87rem;color:var(--muted);margin-top:.85rem;text-align:center">Animal Kingdom gets two quick-service meals since the park closes at 6:00 and we're not spending a credit there. The only meal not covered anywhere is lunch on arrival day, when most of us are still in the air.</p>
   </section>
 
   <section>
