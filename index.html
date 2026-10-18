@@ -207,6 +207,13 @@ td .park{font-weight:800}
 @media(max-width:34rem){.note-item{grid-template-columns:1fr;gap:.3rem}.note-item .k{justify-self:start}}
 
 footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);text-align:center}
+
+/* ---------- page tabs (shared with tuesday.html) ---------- */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;flex-wrap:wrap;gap:.45rem;padding-block:.6rem;margin:-.6rem 0 1rem;background:var(--bg);border-bottom:1px solid var(--line)}
+.tab{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:.4rem .85rem;border:1px solid var(--line);border-radius:999px;white-space:nowrap}
+.tab:hover{border-color:var(--gold);color:var(--fg)}
+.tab.on{color:var(--bg);background:var(--gold);border-color:var(--gold)}
+.tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .candy{height:5px;border-radius:999px;margin-bottom:1.2rem;background:repeating-linear-gradient(45deg,var(--red) 0 10px,#fff 10px 20px);opacity:.65}
 </style>
 <!--ARTIFACT-HEAD-END-->
@@ -215,6 +222,11 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
 <!--ARTIFACT-BODY-START-->
 
 <div class="wrap">
+
+  <nav class="tabs" aria-label="Trip pages">
+    <a class="tab on" href="https://dmonkey1001.github.io/disney-2026/" aria-current="page">Itinerary</a>
+    <a class="tab" href="https://dmonkey1001.github.io/disney-2026/tuesday.html">Tuesday booking sheet</a>
+  </nav>
 
   <header class="hero">
     <div class="stars" aria-hidden="true">
@@ -300,16 +312,16 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       </div>
 
       <div class="dl soon">
-        <div class="when">TUE OCT 20<small>5:00 AM CT &middot; 6:00 AM ET</small></div>
+        <div class="when">TUE OCT 20<small>6:00 AM ET sharp</small></div>
         <div>
           <span class="pill gold">Online first, phone second</span>
           <h3>All four dinners &mdash; the 60-day window opens</h3>
-          <p>Because this is a resort package, we book the <b>entire stay</b> in one sitting. The catch: <b>online opens at 6:00 AM ET but the phone line not until 7:00</b>, so calling Group Dining first would put us an hour behind everyone else &mdash; fatal for Citricos on a peak Christmas-week night. <b>Get online at 5:00 AM Central</b> and try for nine. Sources disagree on whether the app really stops at eight, so test it beforehand &mdash; if nine works, this is simple. If it does cap at eight, book eight immediately to hold the table and call <b class="mono">(407) 939-3463</b> at 6:00 AM Central to add the ninth; for Citricos specifically, a second person booking 4 from their own account in parallel is the safer play, since one account can't hold two overlapping reservations. <b>Citricos first, always.</b></p>
+          <p>Because this is a resort package, we book the <b>entire stay</b> in one sitting. The catch: <b>online opens at 6:00 AM but the phone line not until 7:00</b>, so calling Group Dining first would put us an hour behind everyone else &mdash; fatal for Citricos on a peak Christmas-week night. <b>Get online at 6:00 AM</b> and try for nine. Sources disagree on whether the app really stops at eight, so test it beforehand &mdash; if nine works, this is simple. If it does cap at eight, book eight immediately to hold the table and call <b class="mono">(407) 939-3463</b> at 7:00 AM to add the ninth; for Citricos specifically, a second person booking 4 from their own account in parallel is the safer play, since one account can't hold two overlapping reservations. <b>Citricos first, always.</b> Times, windows and backups for every night are on the <a href="https://dmonkey1001.github.io/disney-2026/tuesday.html"><b>Tuesday booking sheet</b></a>.</p>
         </div>
       </div>
 
       <div class="dl later">
-        <div class="when">SAT DEC 12<small>6:00 AM CT &middot; 7:00 AM ET</small></div>
+        <div class="when">SAT DEC 12<small>7:00 AM ET</small></div>
         <div>
           <span class="pill green">Set an alarm</span>
           <h3>Lightning Lane &mdash; buy and book the whole stay</h3>
@@ -336,10 +348,10 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     </div>
 
     <div class="cg urgent">
-      <div class="cg-head"><h3>Dining &mdash; all four at once</h3><span class="cg-when">Tue Oct 20 &middot; 5:00 AM CT</span></div>
-      <div class="todo"><input type="checkbox" id="t-online"><label for="t-online"><b>5:00 AM Central &mdash; go online, not to the phone.</b><span class="sub">Online opens at 6:00 ET; the phone line not until 7:00. Calling first would cost us an hour against everyone else. Be logged in and refreshing from about 4:45.</span></label></div>
+      <div class="cg-head"><h3>Dining &mdash; all four at once</h3><span class="cg-when">Tue Oct 20 &middot; 6:00 AM ET</span></div>
+      <div class="todo"><input type="checkbox" id="t-online"><label for="t-online"><b>6:00 AM &mdash; go online, not to the phone.</b><span class="sub">The phone line doesn't open until 7:00. Calling first would cost us an hour against everyone else. Be logged in and refreshing from about 5:45.</span></label></div>
       <div class="todo"><input type="checkbox" id="t-second"><label for="t-second"><b>Only if the app caps at 8: line up a second booker for Citricos.</b><span class="sub">The dummy-booking test above settles whether this is needed at all &mdash; if the app takes nine, skip it. If it stops at eight, one account can't hold two overlapping reservations, so Travis or Tai books from their own at the same moment and we cover 5 and 4. Worth it only for Citricos; the other three are family-style rooms that take nine without fuss.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-call"><label for="t-call"><b>6:00 AM Central &mdash; call (407) 939-3463, ask for Group Dining.</b><span class="sub">To merge the split bookings, add a ninth to a table of eight, or fill whatever the app couldn't.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-call"><label for="t-call"><b>7:00 AM &mdash; call (407) 939-3463, ask for Group Dining.</b><span class="sub">To merge the split bookings, add a ninth to a table of eight, or fill whatever the app couldn't.</span></label></div>
       <div class="todo"><input type="checkbox" id="t-citricos"><label for="t-citricos"><b>1. Citricos</b> &mdash; Wed Dec 23, around 5:30 PM, party of 9<span class="sub">First, always. A fine-dining room that seats nine is by far the hardest thing on the list.</span></label></div>
       <div class="todo"><input type="checkbox" id="t-prime"><label for="t-prime"><b>2. 50's Prime Time Caf&eacute;</b> &mdash; Tue Dec 22, around 6:00 PM, party of 9<span class="sub">Second, because it seats in small booths and a table for nine is scarce.</span></label></div>
       <div class="todo"><input type="checkbox" id="t-bier"><label for="t-bier"><b>3. Biergarten</b> &mdash; Mon Dec 21, around 5:30 PM, party of 9<span class="sub">Long shared tables, so nine is easier here. Early enough to make the Candlelight queue by 6:50.</span></label></div>
@@ -360,7 +372,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     </div>
 
     <div class="cg later">
-      <div class="cg-head"><h3>Lightning Lane &mdash; the whole stay at once</h3><span class="cg-when">Sat Dec 12 &middot; 6:00 AM CT</span></div>
+      <div class="cg-head"><h3>Lightning Lane &mdash; the whole stay at once</h3><span class="cg-when">Sat Dec 12 &middot; 7:00 AM ET</span></div>
       <div class="todo"><input type="checkbox" id="t-mp"><label for="t-mp"><b>Buy Multi Pass</b> for all nine, all four park days, with the first three picks in each day's <b>morning</b> park &mdash; <b>in the phone app</b>.<span class="sub">Disney only sells Lightning Lane through the My Disney Experience app, not the website.Book <b>Dec 22 first</b> (Magic Kingdom morning, the scarcest), then Dec 21 Hollywood Studios, Dec 23 EPCOT, Dec 20 Animal Kingdom. Roughly $1,400 for the party.</span></label></div>
       <div class="todo"><input type="checkbox" id="t-sp1"><label for="t-sp1"><b>Single Pass: Avatar Flight of Passage</b> &mdash; Sun Dec 20<span class="sub">Return for late morning, around 11:00&ndash;12:00, so the second ride lands before the 1:00 break. We ride it standby at rope drop as well.</span></label></div>
       <div class="todo"><input type="checkbox" id="t-sp3"><label for="t-sp3"><b>Single Pass: Rise of the Resistance</b> &mdash; Mon Dec 21<span class="sub">Take the <b>earliest</b> return window offered. It breaks down more than anything else on property.</span></label></div>
@@ -792,8 +804,8 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <div class="note-item"><span class="k">The van and the rental</span><p>The van seats eight against a party of nine, so the rental is the ninth seat as well as a convenience. Two vehicles is the better arrangement regardless: people can leave a park early or stay late independently, which is exactly what this group is going to want. Park in the same row where you can, and photograph the row marker; the lots are enormous and every aisle looks identical at 10 PM.</p></div>
       <div class="note-item"><span class="k">Hopping and LL</span><p>Our <b>first three Multi Pass selections must all be in the same park</b>, so they go to each day's morning park. Evening-park Lightning Lanes can only be booked after the first morning tap &mdash; do it from the queue around 9:00, before availability thins out. Expect fewer of them than in the morning; the evening tracks are built to work on standby if we come up short.</p></div>
       <div class="note-item"><span class="k">Pack a collar</span><p><b>Everyone needs a collared shirt and proper shoes in their suitcase.</b> This is a before-you-leave-home item, not a day-of one &mdash; there is nowhere to buy your way out of it on Wednesday evening. Citricos enforces the signature dress code: no tank tops, flip-flops, cut-offs or torn clothing, and people do get turned away at the door. The Wednesday break is when we change, so nobody has to wear it around EPCOT all morning &mdash; but it only works if it was packed.</p></div>
-      <div class="note-item"><span class="k">Party of 9</span><p>Sources disagree on whether the app takes nine, so test it beforehand. Go online first at 5:00 AM Central; if it stops at eight, book eight to hold the table and call <b class="mono">(407) 939-3463</b> at 6:00 Central for Group Dining. If we end up on two reservations, tell the host at the podium rather than checking in on the app &mdash; they usually seat us together.</p></div>
-      <div class="note-item"><span class="k">LL for nine</span><p>Everyone must be linked in My Disney Experience <b>before</b> Dec 12, or you can't book them into a pass. One person books for the whole party. Nine people also need nine slots in the same return window, which is the first thing to run short on a busy day &mdash; so book the moment the clock turns 6:00 AM Central, and take a slightly worse time over splitting the group.</p></div>
+      <div class="note-item"><span class="k">Party of 9</span><p>Sources disagree on whether the app takes nine, so test it beforehand. Go online first at 6:00 AM; if it stops at eight, book eight to hold the table and call <b class="mono">(407) 939-3463</b> at 7:00 for Group Dining. If we end up on two reservations, tell the host at the podium rather than checking in on the app &mdash; they usually seat us together.</p></div>
+      <div class="note-item"><span class="k">LL for nine</span><p>Everyone must be linked in My Disney Experience <b>before</b> Dec 12, or you can't book them into a pass. One person books for the whole party. Nine people also need nine slots in the same return window, which is the first thing to run short on a busy day &mdash; so book the moment the clock turns 7:00 AM, and take a slightly worse time over splitting the group.</p></div>
       <div class="note-item"><span class="k">Re-stacking</span><p>The single habit that decides how much we get done: the instant you tap into a Lightning Lane, open the app and book the next one. Hold three at all times. Done properly that's six to ten passes a day instead of three.</p></div>
       <div class="note-item"><span class="k">No-show fee</span><p>Every table-service booking carries a <b>$10 per person</b> charge if we don't show or cancel too late &mdash; <b>$90 a meal</b> for nine. The deadline is generous: cancel up to <b>two hours before</b> the reservation through the app. Disney usually waives the fee for a genuine emergency, like someone falling ill. Travis caught this one.</p></div>
       <div class="note-item"><span class="k">Gratuity</span><p>An 18% gratuity is added automatically for parties of six or more, and the dining plan does <b>not</b> cover it. Budget roughly $50&ndash;80 in tip per table-service meal &mdash; call it $300 across the week.</p></div>

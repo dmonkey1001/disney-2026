@@ -55,6 +55,8 @@ a{color:var(--gold)}
 .clock div{background:rgba(255,255,255,.08);border:1px solid rgba(255,233,168,.25);border-radius:8px;padding:.5rem .55rem}
 .clock b{display:block;font-family:var(--mono);font-size:1.05rem;color:#FFF3D4;font-variant-numeric:tabular-nums}
 .clock span{font-size:.74rem;color:#D9E2F2}
+.clock em{display:block;font-style:normal;font-family:var(--mono);font-size:.74rem;color:#FFE9A8;margin-bottom:.1rem;font-variant-numeric:tabular-nums}
+.fl{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 
 .box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1rem 1.05rem;display:grid;gap:.6rem}
 .box h2{font-family:var(--body);font-size:1rem;font-weight:800}
@@ -82,24 +84,36 @@ a{color:var(--gold)}
 .alt.first .rank{color:var(--gold);font-weight:600}
 .note{font-size:.84rem;color:var(--muted)}
 .foot{font-size:.8rem;color:var(--muted);text-align:center}
+
+/* page tabs (shared with index.html) */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;flex-wrap:wrap;gap:.45rem;padding-block:.6rem;margin:-.6rem 0 0;background:var(--bg);border-bottom:1px solid var(--line)}
+.tab{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:.4rem .85rem;border:1px solid var(--line);border-radius:999px;white-space:nowrap}
+.tab:hover{border-color:var(--gold);color:var(--fg)}
+.tab.on{color:var(--bg);background:var(--gold);border-color:var(--gold)}
+.tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 </style>
 </head>
 <body>
 <div class="wrap">
 
+  <nav class="tabs" aria-label="Trip pages">
+    <a class="tab" href="https://dmonkey1001.github.io/disney-2026/">Itinerary</a>
+    <a class="tab on" href="https://dmonkey1001.github.io/disney-2026/tuesday.html" aria-current="page">Tuesday booking sheet</a>
+  </nav>
+
   <header class="top">
-    <div class="kick">Tuesday 20 October &middot; Central time</div>
+    <div class="kick">Tuesday 20 October &middot; Central and Eastern</div>
     <h1>Tuesday Dining Cheat Sheet</h1>
-    <p>Four dinners, booked online in one sitting, hardest first.</p>
+    <p>Four dinners, booked online in one sitting, hardest first. Booking times are shown in both zones; dinner times are Florida time.</p>
     <div class="clock">
-      <div><b>4:45</b><span>sign in, open tabs</span></div>
-      <div><b>5:00</b><span>online opens</span></div>
-      <div><b>6:00</b><span>phone opens</span></div>
+      <div><b>4:45 CT</b><em>5:45 ET</em><span>sign in, open tabs</span></div>
+      <div><b>5:00 CT</b><em>6:00 ET</em><span>online opens</span></div>
+      <div><b>6:00 CT</b><em>7:00 ET</em><span>phone opens</span></div>
     </div>
   </header>
 
   <section class="box">
-    <h2>Before 5:00</h2>
+    <h2>Before 5:00 CT / 6:00 ET</h2>
     <ol>
       <li>Sign in at <b>disneyworld.disney.go.com</b> on the laptop. Dining works in the browser.</li>
       <li>Open <b>four tabs</b>, one per restaurant below, each with its date, <b>party of 9</b> and the <b>Dinner</b> meal period already set. Then each search is a single click at 5:00.</li>
@@ -117,7 +131,7 @@ a{color:var(--gold)}
     <div class="card-h"><span class="num">1</span><div class="when"><div class="d">Wed Dec 23 &middot; the signature</div><h3>Citricos</h3></div></div>
     <div class="card-b">
       <dl class="win">
-        <dt>Aim for</dt><dd><span class="t">5:30 PM</span></dd>
+        <dt>Aim for</dt><dd><span class="t">5:30 PM</span> <span class="fl">Florida time</span></dd>
         <dt>Accept</dt><dd><span class="t">4:30 &ndash; 6:45 PM</span></dd>
         <dt>Why</dt><dd>Later than 6:45 eats the Magic Kingdom parade and fireworks.</dd>
       </dl>
@@ -183,7 +197,7 @@ a{color:var(--gold)}
     <ol>
       <li>Book every restaurant for <b>8</b> instead, in the same order. That holds the tables.</li>
       <li><b>Citricos only:</b> have Travis or Tai book 4 from <em>their</em> account at the same moment while you book 5. One account can't hold two overlapping reservations.</li>
-      <li>At <b>6:00 Central</b>, call <b class="mono">(407) 939-3463</b>, ask for <b>Group Dining</b>, and add the ninth to each booking.</li>
+      <li>At <b>6:00 CT / 7:00 ET</b>, call <b class="mono">(407) 939-3463</b>, ask for <b>Group Dining</b>, and add the ninth to each booking.</li>
     </ol>
   </section>
 
