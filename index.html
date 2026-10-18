@@ -26,6 +26,7 @@
   --green:#1A5C3A; --green-soft:#E4F1E9;
   --red:#A3202C; --red-soft:#FBE7E6;
   --sky-1:#0B1526; --sky-2:#1C3157; --sky-3:#38406E;
+  --dusk:#3D4C99;
   --star:#FFE9A8; --snow:#FFFFFF;
   --display:"Cinzel Decorative",Georgia,serif;
   --body:"Nunito","Segoe UI",system-ui,sans-serif;
@@ -38,6 +39,7 @@
   --green:#4FB587; --green-soft:#11291F;
   --red:#F0757F; --red-soft:#2C1517;
   --sky-1:#060D1A; --sky-2:#132544; --sky-3:#27315A;
+  --dusk:#9AA8F0;
   color-scheme:dark;
 }}
 :root[data-theme="dark"]{
@@ -47,6 +49,7 @@
   --green:#4FB587; --green-soft:#11291F;
   --red:#F0757F; --red-soft:#2C1517;
   --sky-1:#060D1A; --sky-2:#132544; --sky-3:#27315A;
+  --dusk:#9AA8F0;
   color-scheme:dark;
 }
 
@@ -160,6 +163,17 @@ td .park{font-weight:800}
 .track p{font-size:.85rem}
 .track p+p{margin-top:.35rem}
 
+/* ---------- split days: morning / break / evening legs ---------- */
+.day-top .arrow{font-family:var(--body);font-weight:700;color:var(--gold);padding:0 .15rem}
+.leg{display:grid;gap:.4rem}
+.phase{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .6rem}
+.phase .ph{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:.12rem .5rem;border:1px solid currentColor;border-radius:999px}
+.phase.am .ph{color:var(--gold)}
+.phase.brk .ph{color:var(--muted)}
+.phase.pm .ph{color:var(--dusk)}
+.phase .pk{font-family:var(--display);font-weight:700;font-size:1rem}
+.phase .ph-hrs{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+
 /* ---------- booking checklist ---------- */
 .cg{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--muted);border-radius:4px 10px 10px 4px;padding:.95rem 1.1rem;margin-bottom:.8rem}
 .cg.urgent{border-left-color:var(--red)}
@@ -235,12 +249,13 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <div class="garland" aria-hidden="true">
         <i class="bauble b1"></i><i class="bauble b2"></i><i class="bauble b3"></i><i class="bauble b4"></i><i class="bauble b5"></i>
       </div>
-      <p class="tag">Nine of us, four park days, and one stubborn fact: Magic Kingdom closes at 6:00&nbsp;PM on two of them. Everything else follows from that.</p>
+      <p class="tag">Nine of us, four park days, two parks a day with a break in the middle &mdash; all built around one stubborn fact: Magic Kingdom closes at 6:00&nbsp;PM on two of them.</p>
       <div class="facts">
         <span class="fact">9 guests</span>
         <span class="fact">Saratoga Springs &middot; 2 &times; 2-BR suite</span>
         <span class="fact">5 nights</span>
         <span class="fact">4-day Park Hopper</span>
+        <span class="fact">Two parks a day</span>
         <span class="fact">Disney Dining Plan</span>
         <span class="fact">Driving ourselves</span>
         <span class="fact">Lightning Lane &times; 9</span>
@@ -271,12 +286,12 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     <div class="sechead">
       <h2>Book These First</h2>
       <div class="orn"><span>&#10052;</span></div>
-      <span class="note">Three dates decide how good this trip is. Two of them are this week.</span>
+      <span class="note">Three things decide how good this trip is. The dining window opens this Tuesday.</span>
     </div>
     <div class="deadlines">
 
       <div class="dl now">
-        <div class="when">TODAY<small>Oct 16 &middot; already open</small></div>
+        <div class="when">ONGOING<small>check for cancellations</small></div>
         <div>
           <span class="pill red">Packages gone</span>
           <h3>Candlelight Processional &mdash; we're going standby</h3>
@@ -298,7 +313,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
         <div>
           <span class="pill green">Set an alarm</span>
           <h3>Lightning Lane &mdash; buy and book the whole stay</h3>
-          <p>Seven days before check-in, at 7:00&nbsp;AM ET, you buy Multi Pass and make the first three selections for <b>every park day at once</b>. Book <b>Dec 23 Magic Kingdom first</b> &mdash; it's the most oversubscribed day of the four &mdash; then Dec 22, Dec 21, Dec 20. Buy the five Single Pass headliners in the same sitting; they sell out for holiday dates. Full cost for nine people is roughly <b>$1,400 Multi Pass + $1,000 Single Pass</b>. See the playbook below for exactly what to pick.</p>
+          <p>Seven days before check-in we buy Multi Pass and make the first three selections for <b>every park day at once</b> &mdash; all in that day's <b>morning</b> park, since the first three must share a park. Book <b>Dec 22 first</b>: the Magic Kingdom morning is the scarcest of the four. Then Dec 21, Dec 23, Dec 20. Buy the five Single Pass headliners in the same sitting; they sell out for holiday dates. Full cost for nine people is roughly <b>$1,400 Multi Pass + $1,000 Single Pass</b>. See the playbook below for exactly what to pick.</p>
         </div>
       </div>
 
@@ -345,11 +360,11 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
 
     <div class="cg later">
       <div class="cg-head"><h3>Lightning Lane &mdash; the whole stay at once</h3><span class="cg-when">Sat Dec 12 &middot; 6:00 AM CT</span></div>
-      <div class="todo"><input type="checkbox" id="t-mp"><label for="t-mp"><b>Buy Multi Pass</b> for all nine, all four park days.<span class="sub">Book <b>Dec 23 Magic Kingdom first</b>, then Dec 22, Dec 21, Dec 20. Roughly $1,400 for the party.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-sp1"><label for="t-sp1"><b>Single Pass: Avatar Flight of Passage</b> &mdash; Sun Dec 20<span class="sub">Set the return for late afternoon so we can also ride it standby at rope drop.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-sp2"><label for="t-sp2"><b>Single Pass: Guardians of the Galaxy</b> &mdash; Mon Dec 21</label></div>
-      <div class="todo"><input type="checkbox" id="t-sp3"><label for="t-sp3"><b>Single Pass: Rise of the Resistance</b> &mdash; Tue Dec 22<span class="sub">Take the <b>earliest</b> return window offered. It breaks down more than anything else on property.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-sp4"><label for="t-sp4"><b>Single Pass: Seven Dwarfs and TRON</b> &mdash; Wed Dec 23<span class="sub">The only park with two. Roughly $1,000 across all five Single Passes for nine people.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-mp"><label for="t-mp"><b>Buy Multi Pass</b> for all nine, all four park days, with the first three picks in each day's <b>morning</b> park.<span class="sub">Book <b>Dec 22 first</b> (Magic Kingdom morning, the scarcest), then Dec 21 Hollywood Studios, Dec 23 EPCOT, Dec 20 Animal Kingdom. Roughly $1,400 for the party.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-sp1"><label for="t-sp1"><b>Single Pass: Avatar Flight of Passage</b> &mdash; Sun Dec 20<span class="sub">Return for late morning, around 11:00&ndash;12:00, so the second ride lands before the 1:00 break. We ride it standby at rope drop as well.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-sp3"><label for="t-sp3"><b>Single Pass: Rise of the Resistance</b> &mdash; Mon Dec 21<span class="sub">Take the <b>earliest</b> return window offered. It breaks down more than anything else on property.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-sp4"><label for="t-sp4"><b>Single Pass: Seven Dwarfs and TRON</b> &mdash; Tue Dec 22<span class="sub">Both before 1:00, ahead of the break. Two is Disney's daily maximum, and this is the only park that needs both.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-sp2"><label for="t-sp2"><b>Single Pass: Guardians of the Galaxy</b> &mdash; Wed Dec 23<span class="sub">A mid-morning return, before we head back to change for Citricos. Roughly $1,000 across all five Single Passes for nine people.</span></label></div>
     </div>
 
     <div class="cg later">
@@ -357,7 +372,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <div class="todo"><input type="checkbox" id="t-groceries"><label for="t-groceries"><b>Order groceries for delivery on Dec 19.</b><span class="sub">To Bell Services, who refrigerate. Breakfast for nine across the week runs about $60&ndash;80 and keeps all 45 snack credits for the parks.</span></label></div>
       <div class="todo"><input type="checkbox" id="t-checkin"><label for="t-checkin"><b>Online check-in, with a room request</b> to put the two villas near each other.</label></div>
       <div class="todo"><input type="checkbox" id="t-hours"><label for="t-hours"><b>Re-check park hours and Early Entry</b> in the app, and confirm the Dec 21 EPCOT Extended Evening session.<span class="sub">It follows the published Monday pattern but hasn't been formally confirmed for December.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-collar"><label for="t-collar"><b>Remind everyone: collared shirt and closed shoes</b> packed for Wednesday.<span class="sub">Citricos turns people away. There's no fixing it that evening.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-collar"><label for="t-collar"><b>Remind everyone: collared shirt and closed shoes</b> packed for Wednesday.<span class="sub">We change into them during the break, but they still have to be in the suitcase. Citricos turns people away, and there's no fixing it that evening.</span></label></div>
     </div>
 
     <div class="cg later">
@@ -371,55 +386,55 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     <div class="sechead">
       <h2>The Week at a Glance</h2>
       <div class="orn"><span>&#10052;</span></div>
-      <span class="note">Published hours &mdash; Disney adjusts these, so re-check in the app in December.</span>
+      <span class="note">Two parks a day with a break in the middle. Published hours &mdash; Disney adjusts these, so re-check in the app in December.</span>
     </div>
     <div class="scroll">
       <table>
         <thead>
-          <tr><th>Day</th><th>Park</th><th>Hours</th><th>Getting there</th><th>Table service</th></tr>
+          <tr><th>Day</th><th>Morning</th><th>Break</th><th>Evening</th><th>Dinner</th></tr>
         </thead>
         <tbody>
           <tr>
             <td class="day">Sat 19</td>
-            <td><span class="park">Arrival</span><br><span class="hrs">no park</span></td>
+            <td><span class="park">Arrival</span><br><span class="hrs">drive from MCO</span></td>
             <td class="hrs">&mdash;</td>
-            <td class="hrs">Drive from MCO</td>
+            <td><span class="park">Disney Springs</span><br><span class="hrs">walk or boat</span></td>
             <td>The Turf Club <span class="hrs">or Disney Springs</span></td>
           </tr>
           <tr>
             <td class="day">Sun 20</td>
-            <td><span class="park">Animal Kingdom</span></td>
-            <td class="hrs">8:00a &ndash; 6:00p<br>EE 7:30a</td>
-            <td class="hrs">Drive &middot; 15 min</td>
-            <td>&mdash; <span class="hrs">quick service only</span></td>
+            <td><span class="park">Animal Kingdom</span><br><span class="hrs">EE 7:30 &middot; drive</span></td>
+            <td class="hrs">from 1:00</td>
+            <td><span class="park">Free</span><br><span class="hrs">Disney Springs or EPCOT</span></td>
+            <td>&mdash; <span class="hrs">quick service</span></td>
           </tr>
           <tr>
             <td class="day">Mon 21</td>
-            <td><span class="park">EPCOT</span></td>
-            <td class="hrs">9:00a &ndash; 9:00p<br>+ Evening Hours 9&ndash;11p</td>
-            <td class="hrs">Drive &middot; 10 min</td>
-            <td>Biergarten <span class="hrs">(dinner)</span></td>
+            <td><span class="park">Hollywood Studios</span><br><span class="hrs">EE 8:30 &middot; drive</span></td>
+            <td class="hrs">1:15&ndash;4:15</td>
+            <td><span class="park">EPCOT</span><br><span class="hrs">+ Evening Hours to 11 &middot; drive</span></td>
+            <td>Biergarten</td>
           </tr>
           <tr>
             <td class="day">Tue 22</td>
-            <td><span class="park">Hollywood Studios</span></td>
-            <td class="hrs">9:00a &ndash; 9:00p<br>EE 8:30a</td>
-            <td class="hrs">Drive &middot; 10 min</td>
-            <td>50's Prime Time <span class="hrs">(dinner)</span></td>
+            <td><span class="park">Magic Kingdom</span><br><span class="hrs">EE 8:30 &middot; <b>bus</b></span></td>
+            <td class="hrs">1:30&ndash;4:30</td>
+            <td><span class="park">Hollywood Studios</span><br><span class="hrs">to 9:00 &middot; drive</span></td>
+            <td>50's Prime Time</td>
           </tr>
           <tr>
             <td class="day">Wed 23</td>
-            <td><span class="park">Magic Kingdom</span></td>
-            <td class="hrs">9:00a &ndash; 10:00p<br>EE 8:30a</td>
-            <td class="hrs"><b>Take the bus</b></td>
-            <td><b>Citricos</b> <span class="hrs">Grand Floridian</span></td>
+            <td><span class="park">EPCOT</span><br><span class="hrs">EE 8:30 &middot; drive</span></td>
+            <td class="hrs">1:15&ndash;4:45</td>
+            <td><span class="park">Magic Kingdom</span><br><span class="hrs">to 10:00 &middot; via Grand Floridian</span></td>
+            <td><b>Citricos</b></td>
           </tr>
           <tr>
             <td class="day">Thu 24</td>
-            <td><span class="park">Departure</span><br><span class="hrs">no park</span></td>
+            <td><span class="park">Departure</span><br><span class="hrs">drive to MCO</span></td>
             <td class="hrs">&mdash;</td>
-            <td class="hrs">Drive to MCO</td>
-            <td>&mdash; <span class="hrs">(quick service)</span></td>
+            <td class="hrs">&mdash;</td>
+            <td class="hrs">&mdash;</td>
           </tr>
         </tbody>
       </table>
@@ -428,17 +443,18 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
 
   <section>
     <div class="sechead">
-      <h2>Why This Order</h2>
+      <h2>Why Each Park Lands Where It Does</h2>
       <div class="orn"><span>&#10052;</span></div>
     </div>
     <div class="why">
-      <h3>Three scheduling facts did most of the work</h3>
+      <h3>Four facts about opening hours did most of the work</h3>
       <ul>
-        <li><b>Mickey's Very Merry Christmas Party runs Dec 20 and Dec 22.</b> On both nights Magic Kingdom shuts to day guests at 6:00&nbsp;PM. Both are also sold out, so buying in isn't an option. That rules MK out on two of our four days and puts it on Dec 21 or Dec 23.</li>
-        <li><b>Hollywood Studios stays open to 9:00&nbsp;PM only on Dec 20, 22 and 24</b> &mdash; Disney deliberately runs it late on party nights. On Dec 21 and 23 it closes at 7:00. So DHS has to be Dec 20 or Dec 22.</li>
-        <li><b>Saratoga Springs is a Deluxe Villa resort</b>, which makes us eligible for Extended Evening Hours. EPCOT's December pattern is Mondays, 9&ndash;11&nbsp;PM &mdash; including Dec 21. Two extra hours at a fraction of the crowd is the single best value in the week. Confirm it in the app once December dates post.</li>
+        <li><b>Animal Kingdom closes at 6:00&nbsp;PM every day</b>, so it can only ever be a morning. It takes the first day, when the 7:30 Early Entry is easiest to face and a free evening afterwards is most welcome.</li>
+        <li><b>Mickey's Very Merry Christmas Party shuts Magic Kingdom to day guests at 6:00&nbsp;PM on Dec 20 and Dec 22.</b> That costs nothing on a morning, so Dec 22 becomes the Magic Kingdom ride morning. Its evening goes to Dec 23, the first night after the parties end, when the Christmas parade typically returns for regular guests.</li>
+        <li><b>Hollywood Studios stays open to 9:00&nbsp;PM only on Dec 20 and Dec 22</b>, and closes at 7:00 on Dec 21 and 23. So its evening is Dec 22, with 50's Prime Time and Fantasmic, and its morning is Dec 21, where the early close doesn't matter.</li>
+        <li><b>Saratoga Springs qualifies for Extended Evening Hours</b>, and EPCOT's December session is Mondays, 9&ndash;11&nbsp;PM &mdash; Dec 21. That fixes EPCOT's evening and leaves its morning for Dec 23. Confirm the session in the app once December dates post.</li>
       </ul>
-      <p style="font-size:.87rem;color:var(--muted)">That leaves Animal Kingdom for Dec 20 by elimination &mdash; which happens to be the right answer anyway, since its 6:00&nbsp;PM close means the first full day after a travel day still ends at a civilised hour &mdash; and leaves the evening free to hop to EPCOT if anyone's still going.</p>
+      <p style="font-size:.87rem;color:var(--muted)">The useful accident is that all four dinner reservations were already in the right park for the evening. Nothing booked on Tuesday has to change.</p>
     </div>
   </section>
 
@@ -455,7 +471,8 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
         <li><b>Single Pass</b> is bought per ride, and covers the five headliners Disney deliberately holds back: <b>Seven Dwarfs Mine Train</b> and <b>TRON</b> at Magic Kingdom, <b>Guardians of the Galaxy</b> at EPCOT, <b>Rise of the Resistance</b> at Hollywood Studios, and <b>Avatar Flight of Passage</b> at Animal Kingdom. No amount of Multi Pass gets you onto these.</li>
         <li><b>Multi Pass is tiered</b> at Magic Kingdom, EPCOT and Hollywood Studios: one Tier&nbsp;1 plus two Tier&nbsp;2 per booking. Animal Kingdom has no tiers &mdash; take any three. Tier assignments move around, so confirm in the app when you book.</li>
       </ul>
-      <p style="font-size:.87rem;color:var(--muted)"><b>What this means for the mornings:</b> Lightning Lane does not replace rope drop, it redirects it. Pre-book the rides with the worst standby, then spend the first free hour on whatever you <em>didn't</em> get a pass for. Early Entry waits are low across the board, so that hour banks three or four extra rides while your first return window is still ahead of you.</p>
+      <p style="font-size:.87rem;color:var(--muted)"><b>What this means on split days:</b> each day's three pre-booked Multi Pass picks go to the <b>morning</b> park, because the first three must all be in one park. The moment we tap into the first, the app lets us book in any park &mdash; so do it from the queue around 9:00 and pick up the evening park's rides before they go. Every Single Pass headliner sits in its morning park too, which keeps us inside Disney's limit of two Single Pass rides a day.</p>
+      <p style="font-size:.87rem;color:var(--muted)">And Lightning Lane doesn't replace rope drop, it redirects it. Spend the Early Entry hour on whatever we <em>didn't</em> get a pass for &mdash; waits are low across the board, so that hour banks three or four extra rides while the first return window is still ahead of us.</p>
     </div>
   </section>
 
@@ -463,7 +480,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     <div class="sechead">
       <h2>Day by Day</h2>
       <div class="orn"><span>&#10052;</span></div>
-      <span class="note">Departure times assume driving ourselves and being through the gate at Early Entry.</span>
+      <span class="note">Every park day is a morning park, a break back at Saratoga Springs from about 1:00, and an evening park. Times assume Early Entry and driving, except where the bus wins.</span>
     </div>
 
     <article class="day-card">
@@ -477,7 +494,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
         <div class="spine">
           <div class="slot drive"><div class="t">On landing</div><div class="what"><b>Collect the rental, drive to Saratoga Springs.</b> <span>About 25&ndash;30 minutes from MCO. Mike and Inge arrive in the van; Travis, Traci and Lydia land at 2:40 and are taking a car service straight to the resort. That leaves four of us on the rental, so a standard car covers it. Between the van's eight seats and the rental, we have room to spare.</span></div></div>
           <div class="slot"><div class="t">Check-in</div><div class="what"><b>Both suites.</b> <span>Saratoga Springs is spread across five sections &mdash; ask to be placed near each other, and note Congress Park is the shortest walk to Disney Springs. Overnight self-parking is free.</span></div></div>
-          <div class="slot key"><div class="t">First stop</div><div class="what"><b>Collect all nine refillable mugs</b> at The Artist's Palette. <span>Unlimited refills at any resort quick service for the whole stay &mdash; worth doing before anything else.</span></div></div>
+          <div class="slot key"><div class="t">First stop</div><div class="what"><b>Collect all nine refillable mugs</b> at The Artist's Palette, <span>and the groceries from Bell Services. Unlimited mug refills at any resort quick service for the whole stay.</span></div></div>
           <div class="slot meal"><div class="t">Evening</div><div class="what"><b>Dinner at The Turf Club.</b> <span>On property, walkable, no driving after a travel day. Far easier to get nine seats than anything in Disney Springs.</span></div></div>
           <div class="slot"><div class="t">After</div><div class="what"><b>Walk or boat to Disney Springs.</b> <span>Christmas Tree Trail and the lights, no ticket needed. Keep it short &mdash; tomorrow is the earliest start of the week.</span></div></div>
         </div>
@@ -492,30 +509,43 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <div class="day-top">
         <span class="orb">1</span>
         <span class="dnum">Sun Dec 20</span>
-        <h3>Animal Kingdom</h3>
-        <span class="open">8:00a &ndash; 6:00p &middot; EE 7:30a</span>
+        <h3>Animal Kingdom <span class="arrow">&rarr;</span> free evening</h3>
+        <span class="open">AK closes 6:00p</span>
       </div>
       <div class="day-body">
-        <div class="spine">
-          <div class="slot drive"><div class="t">6:35 AM</div><div class="what"><b>Leave the resort.</b> <span>About 15 minutes to the lot, then tram, security and the walk in &mdash; budget 40 minutes car to gate in holiday week. Earliest start of the trip; the 7:30 Early Entry is what makes the next item possible.</span></div></div>
-          <div class="slot key"><div class="t">7:30 AM</div><div class="what"><b>Straight to Pandora. Ride Flight of Passage standby</b>, then Na'vi River Journey. <span>Standby is genuinely short in the first twenty minutes, before it climbs past 180 minutes for the rest of the day. Set your Single Pass return for late afternoon and you ride the best attraction on property <em>twice</em> &mdash; which is the whole argument for the 6:35 alarm.</span></div></div>
-          <div class="slot"><div class="t">9:15 AM</div><div class="what"><b>Kilimanjaro Safaris.</b> <span>Animals are most active in the cool morning &mdash; this genuinely is a different ride at 9 AM than at 3 PM.</span></div></div>
-          <div class="slot"><div class="t">10:30 AM</div><div class="what"><b>Expedition Everest</b>, then Maharajah Jungle Trek. <span>Everest is the one coaster here.</span></div></div>
-          <div class="slot meal"><div class="t">1:00 PM</div><div class="what"><b>Quick-service lunch &mdash; Satu'li Canteen.</b> <span>The best counter food at any park, and no table-service credit spent. Traci's steer, and a good one: Tusker House isn't worth a credit, and Animal Kingdom is the day to save them.</span></div></div>
-          <div class="slot"><div class="t">2:30 PM</div><div class="what"><b>Gorilla Falls and the Tree of Life trails</b>, <span>then the afternoon splits &mdash; see below.</span></div></div>
-          <div class="slot"><div class="t">6:00 PM</div><div class="what"><b>Park closes. Drive to EPCOT</b> (open to 9:00) <span>or head back for an early night. Having the cars means this is a genuine game-time decision &mdash; no bus queue to commit to.</span></div></div>
+        <div class="leg">
+          <div class="phase am"><span class="ph">Morning</span><span class="pk">Animal Kingdom</span><span class="ph-hrs">EE 7:30 &middot; closes 6:00</span></div>
+          <div class="spine">
+            <div class="slot drive"><div class="t">6:35 AM</div><div class="what"><b>Drive to Animal Kingdom.</b> <span>About 15 minutes to the lot, then tram, security and the walk in &mdash; budget 40 minutes car to gate in holiday week. The earliest start of the trip, and the reason this evening is left free.</span></div></div>
+            <div class="slot key"><div class="t">7:30 AM</div><div class="what"><b>Straight to Pandora. Ride Flight of Passage standby</b>, then Na'vi River Journey. <span>Standby is genuinely short in the first twenty minutes before climbing past three hours. Set the Single Pass return for late morning and we ride the best attraction on property twice before the break.</span></div></div>
+            <div class="slot"><div class="t">9:00 AM</div><div class="what"><b>Kilimanjaro Safaris</b> on Lightning Lane. <span>Animals are most active in the cool morning &mdash; a genuinely different ride at 9 than at 3.</span></div></div>
+            <div class="slot"><div class="t">10:00 AM</div><div class="what"><b>Expedition Everest</b>, then Maharajah Jungle Trek. <span>Everest is the one coaster here.</span></div></div>
+            <div class="slot"><div class="t">11:00 AM</div><div class="what"><b>The morning splits</b> <span>&mdash; see the tracks below &mdash; then everyone back to Pandora for the second Flight of Passage on its Single Pass return.</span></div></div>
+            <div class="slot meal"><div class="t">12:15 PM</div><div class="what"><b>Quick-service lunch &mdash; Satu'li Canteen.</b> <span>The best counter food at any park, and no table-service credit spent. Traci's steer: nothing sit-down at Animal Kingdom is worth a credit.</span></div></div>
+          </div>
         </div>
         <div class="tracks">
-          <div class="track show"><h5>If you want the show</h5><p><b>Festival of the Lion King</b>, around 3:00. Acrobats, fire-twirlers and a live vocalist in the round &mdash; one of the best things Disney has ever staged.</p></div>
-          <div class="track ride"><h5>If you'd rather ride</h5><p>Everest again, or a second Flight of Passage on the Single Pass return. Ride waits drop while the theatres fill.</p></div>
+          <div class="track show"><h5>Show track &middot; around 11:00</h5><p><b>Festival of the Lion King.</b> Acrobats, fire-twirlers and a live vocalist in the round &mdash; one of the best things Disney has ever staged.</p></div>
+          <div class="track ride"><h5>Ride track &middot; around 11:00</h5><p><b>Everest again</b> while the theatre fills, or the Gorilla Falls and Tree of Life trails.</p></div>
+        </div>
+        <div class="leg">
+          <div class="phase brk"><span class="ph">Break</span><span class="pk">Saratoga Springs</span><span class="ph-hrs">from about 1:00</span></div>
+          <div class="spine">
+            <div class="slot"><div class="t">1:00 PM</div><div class="what"><b>Back to the villas.</b> <span>Nap, pool, laundry, mug refills. After a 6:35 start this is the most deserved break of the week.</span></div></div>
+          </div>
+        </div>
+        <div class="leg">
+          <div class="phase pm"><span class="ph">Evening</span><span class="pk">Our call</span><span class="ph-hrs">nothing booked</span></div>
+          <div class="spine">
+            <div class="slot"><div class="t">Evening</div><div class="what"><b>Left free on purpose.</b> <span>Walk or boat to Disney Springs for the lights and a counter-service dinner, or drive ten minutes to EPCOT, open to 9:00, for World Showcase and the Holiday Kitchens. Or simply an early night &mdash; the next three days are long.</span></div></div>
+          </div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>No table service today</h4><p>Quick service only &mdash; <b>Satu'li Canteen</b>, the best counter food on property.<span class="credit">0 table-service credits</span></p><p class="upg"><b>If anyone wants one anyway:</b> Tiffins is the best food at Animal Kingdom by a distance, but it's a signature at 18 credits and would cost us the Dec 23 dinner.</p></div>
-          <div class="mini"><h4>Quick service</h4><p>Dinner wherever we land. Satu'li Canteen is the best counter food at any park if we eat before close.<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>No table service today</h4><p>Quick service at lunch and dinner &mdash; <b>Satu'li Canteen</b> in the park, then Disney Springs counter service or The Artist's Palette at the resort.<span class="credit">18 quick-service credits</span></p><p class="upg"><b>If anyone wants a sit-down anyway:</b> Tiffins is the best food at Animal Kingdom by a distance, but it's a signature at 18 credits and would cost us Citricos.</p></div>
+          <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass:</b> Flight of Passage, return late morning.<br><b>Multi Pass</b> (no tiers here &mdash; take any three): Kilimanjaro Safaris, Expedition Everest, Festival of the Lion King.<span class="credit">easiest LL day of the four</span></p></div>
           <div class="mini"><h4>Skip</h4><p>Kali River Rapids &mdash; you get soaked, and December evenings drop into the 50s. Often down for refurbishment in winter anyway.</p></div>
-          <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass:</b> Flight of Passage.<br><b>Multi Pass</b> (no tiers here &mdash; take any three): Kilimanjaro Safaris, Expedition Everest, Na'vi River Journey.<span class="credit">easiest LL day of the four</span></p></div>
         </div>
-        <p class="optout"><b>The headliners:</b> Flight of Passage and Expedition Everest. Everest is a genuine coaster with a backwards section; Flight of Passage is a motion simulator that makes some people queasy but has no drops. With Lightning Lane on the rest, there's time to do both twice if the queue gods are kind.</p>
+        <p class="optout"><b>The headliners:</b> Flight of Passage and Expedition Everest. Everest is a genuine coaster with a backwards section; Flight of Passage is a motion simulator that makes some people queasy but has no drops. Both can be done twice by lunchtime if the morning goes to plan.</p>
       </div>
     </article>
 
@@ -523,19 +553,35 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <div class="day-top">
         <span class="orb">2</span>
         <span class="dnum">Mon Dec 21</span>
-        <h3>EPCOT</h3>
-        <span class="open">9:00a &ndash; 9:00p &middot; + Evening Hours to 11:00p</span>
+        <h3>Hollywood Studios <span class="arrow">&rarr;</span> EPCOT</h3>
+        <span class="open">EPCOT to 11:00p for us</span>
       </div>
       <div class="day-body">
-        <div class="spine">
-          <div class="slot drive"><div class="t">7:40 AM</div><div class="what"><b>Leave the resort</b> for 8:30 Early Entry. <span>EPCOT is the closest park to Saratoga Springs &mdash; roughly 10 minutes, and you park and walk straight in.</span></div></div>
-          <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Rope drop Test Track</b>, then <b>Remy's Ratatouille Adventure</b>. <span>Guardians is Single Pass, so it's already booked &mdash; don't spend the Early Entry hour on it. These two are the pair that climbs fastest once the park fills.</span></div></div>
-          <div class="slot"><div class="t">9:30 AM</div><div class="what"><b>Frozen Ever After</b>, then <b>Remy's Ratatouille Adventure</b>. <span>Both build fast; both are gentle enough for the whole party.</span></div></div>
-          <div class="slot"><div class="t">11:00 AM</div><div class="what"><b>Soarin' Around the World</b> and Living with the Land.</div></div>
-          <div class="slot"><div class="t">Midday</div><div class="what"><b>Quick-service lunch, then World Showcase on foot.</b> <span>Festival of the Holidays is running &mdash; the Holiday Kitchens booths are the best snack-credit value on property, mostly $7&ndash;9 items. Use several here.</span></div></div>
-          <div class="slot meal"><div class="t">5:30 PM</div><div class="what"><b>Dinner &mdash; Biergarten.</b> <span>Traci asked for this one and she's right to: family-style, shared long tables, oompah band, and it seats nine without a fight. Eat early enough that the show crowd makes the queue.</span></div></div>
-          <div class="slot"><div class="t">6:50 PM</div><div class="what"><b>The evening splits here</b> <span>&mdash; see the two tracks below. Everyone converges again at 9:00.</span></div></div>
-          <div class="slot key"><div class="t">9&ndash;11 PM</div><div class="what"><b>Extended Evening Hours &mdash; all nine of us.</b> <span>Park open only to Deluxe and Deluxe Villa guests. Pure rides and no shows, so it works for everybody. Re-ride Guardians, Test Track and Frozen at a fraction of the daytime wait. Best two hours of the week, and driving means no last-bus anxiety.</span></div></div>
+        <div class="leg">
+          <div class="phase am"><span class="ph">Morning</span><span class="pk">Hollywood Studios</span><span class="ph-hrs">EE 8:30 &middot; closes 7:00</span></div>
+          <div class="spine">
+            <div class="slot drive"><div class="t">7:35 AM</div><div class="what"><b>Drive to Hollywood Studios</b> for 8:30 Early Entry. <span>The most rope-drop-dependent park of the four. If one morning has to go right, it's this one.</span></div></div>
+            <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Rope drop Millennium Falcon: Smugglers Run</b>, then <b>Mickey &amp; Minnie's Runaway Railway</b>. <span>Rise of the Resistance is on a Single Pass &mdash; take the <em>earliest</em> return offered, because it breaks down more than anything else on property and an outage later can cost the ride outright.</span></div></div>
+            <div class="slot key"><div class="t">9:30 AM</div><div class="what"><b>Rise of the Resistance.</b> <span>The longest and best attraction at Disney World: eighteen minutes, four ride systems.</span></div></div>
+            <div class="slot"><div class="t">10:30 AM</div><div class="what"><b>Slinky Dog Dash</b> on Lightning Lane, then <b>Toy Story Mania</b>. <span>Slinky's standby is the worst in the park after Rise &mdash; never queue for it.</span></div></div>
+            <div class="slot"><div class="t">11:30 AM</div><div class="what"><b>Tower of Terror</b> and <b>Rock 'n' Roller Coaster</b>. <span>The two biggest thrills of the week. We're back here tomorrow evening for re-rides.</span></div></div>
+            <div class="slot meal"><div class="t">12:30 PM</div><div class="what"><b>Quick-service lunch &mdash; Woody's Lunch Box or Docking Bay 7.</b></div></div>
+          </div>
+        </div>
+        <div class="leg">
+          <div class="phase brk"><span class="ph">Break</span><span class="pk">Saratoga Springs</span><span class="ph-hrs">about 1:15 &ndash; 4:15</span></div>
+          <div class="spine">
+            <div class="slot"><div class="t">1:15 PM</div><div class="what"><b>Back to the villas.</b> <span>Tonight runs to 11:00 PM, so this break is what makes the day possible. Sleep if you can.</span></div></div>
+          </div>
+        </div>
+        <div class="leg">
+          <div class="phase pm"><span class="ph">Evening</span><span class="pk">EPCOT</span><span class="ph-hrs">to 9:00 &middot; Extended Evening Hours 9&ndash;11</span></div>
+          <div class="spine">
+            <div class="slot drive"><div class="t">4:15 PM</div><div class="what"><b>Drive to EPCOT</b>, about ten minutes. <span>Soarin', Spaceship Earth or Living with the Land before dinner, on whatever Lightning Lanes we picked up after this morning's first tap.</span></div></div>
+            <div class="slot meal"><div class="t">5:30 PM</div><div class="what"><b>Dinner &mdash; Biergarten.</b> <span>Traci asked for this one: family-style, shared long tables, oompah band, and it seats nine without a fight.</span></div></div>
+            <div class="slot"><div class="t">6:50 PM</div><div class="what"><b>The evening splits</b> <span>&mdash; see the tracks below. Everyone converges again at 9:00.</span></div></div>
+            <div class="slot key"><div class="t">9&ndash;11 PM</div><div class="what"><b>Extended Evening Hours &mdash; all nine of us.</b> <span>Park open only to Deluxe and Deluxe Villa guests. Pure rides and no shows, so it works for everybody. Test Track, Frozen and Remy at a fraction of the daytime wait. We're back on Wednesday morning for Guardians.</span></div></div>
+          </div>
         </div>
         <div class="tracks">
           <div class="track show"><h5>Show track &middot; from 6:50</h5><p>Join the <b>Candlelight standby queue</b> for the 8:00 performance. Roughly an hour's wait, with standing room behind the benches if the seats fill.</p><p>Massed choir, full orchestra and a celebrity narrator. About 40 minutes, and the most genuinely moving thing on the trip.</p></div>
@@ -543,11 +589,11 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
         </div>
         <div class="rowgrid">
           <div class="mini"><h4>Table service &middot; dinner</h4><p><b>Biergarten</b> &mdash; Traci asked for it: family-style, shared long tables, handles nine easily.<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>Her other EPCOT picks, both one credit:</b> Garden Grill, which rotates and serves family-style, is the better of the two for a group. La Hacienda de San Angel is the other &mdash; though its draw is the lagoon fireworks view, which is the one thing Travis has said he can skip.<span class="credit">9 credits &middot; 1 each</span></p></div>
-          <div class="mini"><h4>Quick service</h4><p>Connections Eatery or Regal Eagle Smokehouse<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Quick service</h4><p>Woody's Lunch Box or Docking Bay 7 at Hollywood Studios, before the break.<span class="credit">9 credits &middot; 1 each</span></p></div>
           <div class="mini"><h4>Candlelight standby</h4><p>Take the <b>last show</b> &mdash; roughly an hour's queue against up to three for the early ones. Send two people to hold places while the rest finish dessert. If the benches fill there's standing room behind them with a clear view, and package cancellations do turn up, so keep checking.</p></div>
-          <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass:</b> Guardians of the Galaxy.<br><b>Multi Pass</b> &mdash; Tier 1: Frozen Ever After. Tier 2: Soarin' and Mission: SPACE.<span class="credit">re-stack after each tap</span></p></div>
+          <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass:</b> Rise of the Resistance &mdash; earliest return.<br><b>Multi Pass</b>, Hollywood Studios &mdash; Tier 1: Slinky Dog Dash. Tier 2: Tower of Terror and Rock 'n' Roller Coaster.<br><b>After the first tap:</b> add EPCOT picks for the evening.<span class="credit">re-stack hard</span></p></div>
         </div>
-        <p class="optout"><b>The headliners:</b> Guardians, Test Track and Remy. Guardians launches backwards and spins its ride vehicles to face the action &mdash; it's the most intense thing at EPCOT, though the track itself is smooth with no inversions. Extended Evening Hours at 9&nbsp;PM is the window to re-ride anything that was worth doing twice.</p>
+        <p class="optout"><b>The headliners:</b> Rise of the Resistance, Tower of Terror (repeated freefall drops), Rock 'n' Roller Coaster (0&ndash;57 mph launch with inversions) and Slinky Dog Dash. Rise sounds the most intimidating and is actually the gentlest of the four &mdash; no drops, no inversions. Get everyone on that one.</p>
       </div>
     </article>
 
@@ -555,31 +601,45 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <div class="day-top">
         <span class="orb">3</span>
         <span class="dnum">Tue Dec 22</span>
-        <h3>Hollywood Studios</h3>
-        <span class="open">9:00a &ndash; 9:00p &middot; EE 8:30a</span>
+        <h3>Magic Kingdom <span class="arrow">&rarr;</span> Hollywood Studios</h3>
+        <span class="open">DHS to 9:00p</span>
       </div>
       <div class="day-body">
-        <div class="spine">
-          <div class="slot drive"><div class="t">7:35 AM</div><div class="what"><b>Leave the resort</b> for 8:30 Early Entry. <span>The most rope-drop-dependent park of the four. If one morning has to go right, it's this one &mdash; leave on time.</span></div></div>
-          <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Rope drop Millennium Falcon: Smugglers Run</b>, then <b>Mickey &amp; Minnie's Runaway Railway</b>. <span>Set your Rise of the Resistance Single Pass for the <em>earliest</em> return you can get &mdash; it is the most breakdown-prone ride on property, and an outage at 4 PM can cost you the ride entirely.</span></div></div>
-          <div class="slot key"><div class="t">9:30 AM</div><div class="what"><b>Rise of the Resistance</b> on the Single Pass return. <span>The longest and best attraction at Disney World. Eighteen minutes, four ride systems, and worth every dollar of the $25.</span></div></div>
-          <div class="slot"><div class="t">11:00 AM</div><div class="what"><b>Slinky Dog Dash</b> on Lightning Lane, then <b>Toy Story Mania</b>. <span>Slinky's standby is the worst in the park after Rise &mdash; never queue for it.</span></div></div>
-          <div class="slot meal"><div class="t">12:30 PM</div><div class="what"><b>Quick-service lunch &mdash; Woody's Lunch Box or Docking Bay 7.</b> <span>Table service moves to dinner today, which keeps the busy middle of the day free for Lightning Lane returns.</span></div></div>
-          <div class="slot"><div class="t">2:30 PM</div><div class="what"><b>Tower of Terror</b> and <b>Rock 'n' Roller Coaster</b>. <span>The two biggest thrills of the week &mdash; plan for people to sit these out.</span></div></div>
-          <div class="slot drive"><div class="t">4:30 PM</div><div class="what"><b>Optional resort run.</b> <span>With the cars this is a 10-minute hop each way if anyone wants to drop bags or change for the evening. But Hollywood Studios runs to 9:00 tonight and the last two hours are the quietest ride time of the whole day &mdash; if everyone's game, stay put and keep re-stacking.</span></div></div>
-          <div class="slot meal"><div class="t">6:00 PM</div><div class="what"><b>Dinner &mdash; 50's Prime Time Caf&eacute;.</b> <span>Traci's pick. The servers play your mother and will tell you off for elbows on the table &mdash; comfortably the funniest meal on property. One catch: it seats in small booths, so nine of us will be split across tables that may not adjoin.</span></div></div>
-          <div class="slot"><div class="t">7:30 PM</div><div class="what"><b>Last two hours.</b> <span>The quietest ride time of the day. See the tracks below &mdash; Fantasmic! is worth staying for if it's running, but it isn't for everyone.</span></div></div>
+        <div class="leg">
+          <div class="phase am"><span class="ph">Morning</span><span class="pk">Magic Kingdom</span><span class="ph-hrs">EE 8:30 &middot; closes 6:00 for the party</span></div>
+          <div class="spine">
+            <div class="slot drive"><div class="t">7:05 AM</div><div class="what"><b>Take the bus, not the car.</b> <span>You can't park at Magic Kingdom: the lot is at the Transportation and Ticket Center, with security there and then a monorail or ferry across the lagoon &mdash; 30 to 45 minutes car to gate. The resort bus drops you at the turnstiles.</span></div></div>
+            <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Turn left at the hub. Rope drop Tiana's Bayou Adventure</b>, then <b>Big Thunder Mountain</b>. <span>Both in Frontierland, next door to each other. Seven Dwarfs and Peter Pan's are the park's two worst lines and we hold passes for both, so this hour goes where we don't.</span></div></div>
+            <div class="slot key"><div class="t">9:30 AM</div><div class="what"><b>Seven Dwarfs Mine Train</b> and <b>Peter Pan's Flight</b> on their passes, then <b>Haunted Mansion</b>.</div></div>
+            <div class="slot"><div class="t">10:45 AM</div><div class="what"><b>Pirates of the Caribbean</b> and <b>Jungle Cruise</b> &mdash; the holiday Jingle Cruise overlay should be running.</div></div>
+            <div class="slot key"><div class="t">11:45 AM</div><div class="what"><b>TRON Lightcycle / Run</b> on its Single Pass, then <b>Space Mountain</b>. <span>TRON is the fastest coaster in the park, ridden leaning forward on a motorbike-style seat &mdash; the one this group will most want.</span></div></div>
+            <div class="slot meal"><div class="t">12:45 PM</div><div class="what"><b>Quick-service lunch &mdash; Cosmic Ray's</b> <span>in Tomorrowland, right by TRON, or Columbia Harbour House if anyone wants the quiet upstairs room.</span></div></div>
+          </div>
+        </div>
+        <div class="leg">
+          <div class="phase brk"><span class="ph">Break</span><span class="pk">Saratoga Springs</span><span class="ph-hrs">about 1:30 &ndash; 4:30</span></div>
+          <div class="spine">
+            <div class="slot drive"><div class="t">1:30 PM</div><div class="what"><b>Bus back to the villas.</b> <span>Magic Kingdom shuts to day guests at 6:00 tonight for the Christmas Party, so leaving costs us nothing.</span></div></div>
+          </div>
+        </div>
+        <div class="leg">
+          <div class="phase pm"><span class="ph">Evening</span><span class="pk">Hollywood Studios</span><span class="ph-hrs">open to 9:00</span></div>
+          <div class="spine">
+            <div class="slot drive"><div class="t">4:30 PM</div><div class="what"><b>Drive to Hollywood Studios.</b> <span>Second laps on whatever was best yesterday morning, on the Lightning Lanes picked up after this morning's first tap.</span></div></div>
+            <div class="slot meal"><div class="t">6:00 PM</div><div class="what"><b>Dinner &mdash; 50's Prime Time Caf&eacute;.</b> <span>Traci's pick. The servers play your mother and will tell you off for elbows on the table. It seats in small booths, so nine of us will be split across tables that may not adjoin.</span></div></div>
+            <div class="slot"><div class="t">7:30 PM</div><div class="what"><b>The last ninety minutes split</b> <span>&mdash; see the tracks below. The quietest ride time of the whole day.</span></div></div>
+          </div>
         </div>
         <div class="tracks">
-          <div class="track show"><h5>Show track</h5><p><b>Fantasmic!</b> if it's running &mdash; check the app that morning. Also the Indiana Jones Epic Stunt Spectacular and Muppet*Vision earlier in the day.</p></div>
-          <div class="track ride"><h5>Ride track</h5><p>Fantasmic! seats several thousand people at once, and the park goes quiet while it runs. <b>Tower of Terror and Rock 'n' Roller Coaster drop hard</b> in that window &mdash; the single best re-ride opportunity of the trip.</p></div>
+          <div class="track show"><h5>Show track</h5><p><b>Fantasmic!</b> if it's running &mdash; check the app that morning.</p></div>
+          <div class="track ride"><h5>Ride track</h5><p>Fantasmic! seats several thousand people at once and the park goes quiet while it runs. <b>Tower of Terror and Rock 'n' Roller Coaster drop hard</b> in that window &mdash; the best re-ride opportunity of the trip.</p></div>
         </div>
         <div class="rowgrid">
           <div class="mini"><h4>Table service &middot; dinner</h4><p><b>50's Prime Time Caf&eacute;</b> &mdash; Traci's pick, and the most fun we'll have at a table all week.<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>If nine-at-one-table matters more:</b> Roundup Rodeo BBQ, family-style skillets, built for groups our size.<span class="credit">9 credits &middot; 1 each</span></p></div>
-          <div class="mini"><h4>Quick service</h4><p>Woody's Lunch Box or Docking Bay 7 at lunch.<span class="credit">9 credits &middot; 1 each</span></p></div>
-          <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass:</b> Rise of the Resistance &mdash; book the earliest return.<br><b>Multi Pass</b> &mdash; Tier 1: Slinky Dog Dash. Tier 2: Tower of Terror and Rock 'n' Roller Coaster.<span class="credit">busiest LL day &mdash; re-stack hard</span></p></div>
+          <div class="mini"><h4>Quick service</h4><p>Cosmic Ray's or Columbia Harbour House at Magic Kingdom, before the bus back.<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass &times;2:</b> Seven Dwarfs Mine Train and TRON &mdash; the daily maximum.<br><b>Multi Pass</b>, Magic Kingdom &mdash; Tier 1: Peter Pan's Flight. Tier 2: Haunted Mansion and Pirates.<br><b>After the first tap:</b> add Hollywood Studios picks for the evening.<span class="credit">book this day first on Dec 12</span></p></div>
         </div>
-        <p class="optout"><b>The headliners:</b> the big day. Rise of the Resistance, Tower of Terror (repeated freefall drops), Rock 'n' Roller Coaster (0&ndash;57 mph launch with inversions) and Slinky Dog Dash. Rise sounds the most intimidating and is actually the gentlest of the four &mdash; no drops, no inversions, mostly a walk-through and a slow dark ride. Get everyone on that one.</p>
+        <p class="optout"><b>The headliners:</b> TRON is the big one &mdash; fastest coaster in the park, no inversions, over in about a minute. Space Mountain is rougher than it looks because it's pitch dark and you can't see the turns coming. Seven Dwarfs and Big Thunder are mild by comparison. Haunted Mansion, Pirates and Jungle Cruise are the ones worth doing as all nine, together.</p>
       </div>
     </article>
 
@@ -587,32 +647,45 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <div class="day-top">
         <span class="orb">4</span>
         <span class="dnum">Wed Dec 23</span>
-        <h3>Magic Kingdom</h3>
-        <span class="open">9:00a &ndash; 10:00p &middot; EE 8:30a</span>
+        <h3>EPCOT <span class="arrow">&rarr;</span> Magic Kingdom</h3>
+        <span class="open">MK to 10:00p</span>
       </div>
       <div class="day-body">
-        <div class="spine">
-          <div class="slot drive"><div class="t">7:05 AM</div><div class="what"><b>Leave the cars at the resort &mdash; take the bus today.</b> <span>This is the one day driving loses. You can't park at Magic Kingdom; you park at the Transportation and Ticket Center, clear security there, then cross the lagoon by monorail or ferry. That's 30&ndash;45 minutes car to gate. The resort bus drops you at the turnstiles.</span></div></div>
-          <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Turn left at the hub. Rope drop Tiana's Bayou Adventure</b>, then <b>Big Thunder Mountain</b>. <span>Both in Frontierland, next door to each other. Seven Dwarfs and Peter Pan's are the park's two worst lines and you already hold passes for both &mdash; so spend this hour where you don't.</span></div></div>
-          <div class="slot key"><div class="t">9:45 AM</div><div class="what"><b>Seven Dwarfs Mine Train</b> and <b>Peter Pan's Flight</b> on their passes, then <b>Haunted Mansion</b>. <span>Three of the park's headline queues cleared before 11 AM without standing in any of them.</span></div></div>
-          <div class="slot"><div class="t">11:30 AM</div><div class="what"><b>Pirates of the Caribbean</b> and <b>Jungle Cruise</b> &mdash; the holiday Jingle Cruise overlay should be running.</div></div>
-          <div class="slot meal"><div class="t">12:45 PM</div><div class="what"><b>Quick-service lunch at Columbia Harbour House.</b> <span>Upstairs seating is the quietest room in the park.</span></div></div>
-          <div class="slot"><div class="t">2:00 PM</div><div class="what"><b>TRON Lightcycle / Run</b> on the Single Pass, then <b>Space Mountain</b> and the PeopleMover. <span>TRON is the fastest coaster at Magic Kingdom and you ride it leaning forward on a motorbike-style vehicle. At $25 it's the priciest Single Pass on property &mdash; and the one this group will most want.</span></div></div>
-          <div class="slot"><div class="t">3:30 PM</div><div class="what"><b>Second lap.</b> <span>Keep re-stacking passes and go again on whatever was best &mdash; Big Thunder and Tiana's both reward a repeat. No resort break today; the bus round trip costs more than it returns. Carousel of Progress and the Hall of Presidents are here if anyone wants them, and they're genuinely good rather than merely somewhere to sit.</span></div></div>
-          <div class="slot meal"><div class="t">5:30 PM</div><div class="what"><b>Dinner &mdash; Citricos, at the Grand Floridian.</b> <span>Take the <b>boat</b>, about six minutes, or walk the lakeside path in twelve to eighteen. Not the monorail: from Magic Kingdom it runs the long way round through the Contemporary and the TTC, so it's the slowest of the three. This is where the 18 credits freed by skipping table service at Animal Kingdom and Magic Kingdom go, and the same ticket gets us back in afterwards.</span></div></div>
-          <div class="slot key"><div class="t">8:00 PM</div><div class="what"><b>Boat back, and the last evening splits</b> <span>&mdash; see the tracks below. The park is open until 10:00, so there's time for both.</span></div></div>
+        <div class="leg">
+          <div class="phase am"><span class="ph">Morning</span><span class="pk">EPCOT</span><span class="ph-hrs">EE 8:30 &middot; open to 9:00</span></div>
+          <div class="spine">
+            <div class="slot drive"><div class="t">7:40 AM</div><div class="what"><b>Drive to EPCOT</b> for 8:30 Early Entry. <span>The closest park to Saratoga Springs &mdash; roughly 10 minutes, and you park and walk straight in.</span></div></div>
+            <div class="slot key"><div class="t">8:30 AM</div><div class="what"><b>Rope drop Test Track</b>, then <b>Remy's Ratatouille Adventure</b>. <span>The pair that climbs fastest once the park fills. Guardians is already booked, so the Early Entry hour goes elsewhere.</span></div></div>
+            <div class="slot key"><div class="t">9:45 AM</div><div class="what"><b>Guardians of the Galaxy: Cosmic Rewind</b> on its Single Pass, then <b>Frozen Ever After</b>.</div></div>
+            <div class="slot"><div class="t">10:45 AM</div><div class="what"><b>Soarin' Around the World</b> and <b>Mission: SPACE</b>.</div></div>
+            <div class="slot"><div class="t">11:30 AM</div><div class="what"><b>World Showcase on foot.</b> <span>Festival of the Holidays is running &mdash; the Holiday Kitchens booths are the best snack-credit value on property, mostly $7&ndash;9 items.</span></div></div>
+            <div class="slot meal"><div class="t">12:30 PM</div><div class="what"><b>Quick-service lunch &mdash; Regal Eagle Smokehouse</b> <span>or keep it light, given what's coming at 5:30.</span></div></div>
+          </div>
+        </div>
+        <div class="leg">
+          <div class="phase brk"><span class="ph">Break</span><span class="pk">Saratoga Springs</span><span class="ph-hrs">about 1:15 &ndash; 4:45</span></div>
+          <div class="spine">
+            <div class="slot"><div class="t">1:15 PM</div><div class="what"><b>Back to the villas, and change for dinner.</b> <span>Collared shirts and closed shoes go on here, not at 7 this morning &mdash; the break is what makes the Citricos dress code painless.</span></div></div>
+          </div>
+        </div>
+        <div class="leg">
+          <div class="phase pm"><span class="ph">Evening</span><span class="pk">Magic Kingdom</span><span class="ph-hrs">open to 10:00</span></div>
+          <div class="spine">
+            <div class="slot drive"><div class="t">4:45 PM</div><div class="what"><b>Drive to the Grand Floridian.</b> <span>Resort gates normally admit cars for a dining reservation, and from there Magic Kingdom is a 12&ndash;18 minute lakeside walk &mdash; far quicker than going through the TTC.</span></div></div>
+            <div class="slot meal"><div class="t">5:30 PM</div><div class="what"><b>Dinner &mdash; Citricos.</b> <span>The signature: Michelin-recognized and widely called the best plain fine dining on property. This is where the 18 credits from skipping table service at Animal Kingdom and Magic Kingdom go.</span></div></div>
+            <div class="slot key"><div class="t">7:45 PM</div><div class="what"><b>Walk into Magic Kingdom, and the last evening splits</b> <span>&mdash; see the tracks below. At 10:00 it's the same walk back to the car.</span></div></div>
+          </div>
         </div>
         <div class="tracks">
-          <div class="track show"><h5>Show track</h5><p>The parties end Dec 22, so tonight is the first the <b>Christmas parade</b> typically runs for regular day guests &mdash; check the app that morning.</p><p>Then <b>fireworks</b> from Main Street, back in the park after dinner. Castle lighting and Main Street in full decoration is the picture everyone goes home with.</p></div>
+          <div class="track show"><h5>Show track</h5><p>The parties end Dec 22, so tonight is the first the <b>Christmas parade</b> typically runs for regular day guests &mdash; check the app that morning.</p><p>Then <b>fireworks</b> from Main Street. Castle lighting and Main Street in full decoration is the picture everyone goes home with.</p></div>
           <div class="track ride"><h5>Ride track</h5><p>Parade and fireworks are <b>the best ride window of the entire week</b>. Half the park stands still on Main Street while Fantasyland, Frontierland and Tomorrowland empty out.</p><p>Seven Dwarfs, Big Thunder and Space Mountain all become near walk-on. Re-stack passes and go.</p></div>
         </div>
         <div class="rowgrid">
-          <div class="mini"><h4>The signature</h4><p><b>Citricos</b>, Grand Floridian. Michelin-recognized and widely called the best plain fine dining on property. Boat or walk from the park.<span class="credit">18 credits &middot; 2 each</span></p><p class="opt"><b>Fallback if they can't seat nine:</b> California Grill at the Contemporary, which trades some of the cooking for a fireworks terrace.<span class="credit">18 credits &middot; 2 each</span></p><p class="upg"><b>Last resort:</b> Liberty Tree Tavern inside the park &mdash; but then the signature is off and 9 credits go spare.<span class="credit">9 credits &middot; 1 each</span></p></div>
-          <div class="mini"><h4>Quick service</h4><p>Columbia Harbour House, lunch<span class="credit">9 credits &middot; 1 each</span></p></div>
-          <div class="mini"><h4>Alternative</h4><p>Skipper Canteen &mdash; one credit, genuinely good food, and far easier to book than anything else in the park.</p></div>
-          <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass &times;2:</b> Seven Dwarfs Mine Train and TRON &mdash; the only park with two.<br><b>Multi Pass</b> &mdash; Tier 1: Peter Pan's Flight. Tier 2: Haunted Mansion and Pirates.<span class="credit">book this day first on Dec 12</span></p></div>
+          <div class="mini"><h4>The signature</h4><p><b>Citricos</b>, Grand Floridian. Michelin-recognized and widely called the best plain fine dining on property. Drive over after the break.<span class="credit">18 credits &middot; 2 each</span></p><p class="opt"><b>Fallback if they can't seat nine:</b> California Grill at the Contemporary, which trades some of the cooking for a fireworks terrace.<span class="credit">18 credits &middot; 2 each</span></p><p class="upg"><b>Last resort:</b> Liberty Tree Tavern inside the park &mdash; but then the signature is off and 9 credits go spare.<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Quick service</h4><p>Regal Eagle Smokehouse or Connections Eatery at EPCOT, before the break.<span class="credit">9 credits &middot; 1 each</span></p></div>
+          <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass:</b> Guardians of the Galaxy.<br><b>Multi Pass</b>, EPCOT &mdash; Tier 1: Frozen Ever After. Tier 2: Soarin' and Mission: SPACE.<br><b>After the first tap:</b> add Magic Kingdom picks for the evening ride track.<span class="credit">re-stack after each tap</span></p></div>
         </div>
-        <p class="optout"><b>The headliners:</b> TRON is the big one &mdash; fastest coaster in the park, no inversions, over in about a minute. Space Mountain is rougher than it looks because it's pitch dark and you can't see the turns coming. Seven Dwarfs and Big Thunder are both mild by comparison. Haunted Mansion, Pirates and Jungle Cruise are the ones worth doing as all nine, together.</p>
+        <p class="optout"><b>The headliners:</b> Guardians, Test Track and Remy, all this morning. Guardians launches backwards and spins its ride vehicles to face the action &mdash; the most intense thing at EPCOT, though the track is smooth with no inversions. Tonight is about dinner, the parade and the castle; the big Magic Kingdom rides were yesterday morning.</p>
       </div>
     </article>
 
@@ -625,8 +698,8 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       </div>
       <div class="day-body">
         <div class="spine">
-          <div class="slot meal"><div class="t">Morning</div><div class="what"><b>Quick-service breakfast at The Artist's Palette.</b> <span>Credits stay valid through the end of today &mdash; spend the last nine rather than forfeiting them.</span></div></div>
-          <div class="slot"><div class="t">Before bags</div><div class="what"><b>Last mug refills</b>, and burn any leftover snack credits on packaged goods at the resort shop. <span>Coffee beans, candy and boxed sweets are snack-eligible and travel home.</span></div></div>
+          <div class="slot meal"><div class="t">Morning</div><div class="what"><b>Breakfast in the villa, or on the last snack credits.</b> <span>Credits stay valid through today. Travis, Traci and Lydia leave early, so say goodbyes the night before.</span></div></div>
+          <div class="slot"><div class="t">Before bags</div><div class="what"><b>Last mug refills</b>, and spend any leftover snack credits on packaged goods at the resort shop. <span>Coffee beans, candy and boxed sweets are snack-eligible and travel home.</span></div></div>
           <div class="slot drive"><div class="t">Departure</div><div class="what"><b>Drive to MCO; the van heads home separately.</b> <span>Allow 30 minutes plus rental return. Christmas Eve is one of the busiest airport days of the year &mdash; leave earlier than feels necessary, and make sure nobody's luggage is in the wrong vehicle.</span></div></div>
         </div>
       </div>
@@ -659,7 +732,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
           <tr><td class="day">Sun 20</td><td>&mdash; <span class="hrs">quick service</span></td><td>Traci's steer: no table-service meal at Animal Kingdom is worth a credit.</td><td class="mono">0</td></tr>
           <tr><td class="day">Mon 21</td><td>Biergarten</td><td>Specifically requested, and it seats nine at shared tables without a fight.</td><td class="mono">9</td></tr>
           <tr><td class="day">Tue 22</td><td>50's Prime Time Caf&eacute;</td><td>Traci's pick. Splits us across booths, but it's the most fun table of the week.</td><td class="mono">9</td></tr>
-          <tr><td class="day">Wed 23</td><td><b>Citricos</b> <span class="hrs">Grand Floridian</span></td><td>The signature, paid for by the two meals we dropped. Boat or walk from Magic Kingdom. <b>Dress code applies.</b></td><td class="mono">18</td></tr>
+          <tr><td class="day">Wed 23</td><td><b>Citricos</b> <span class="hrs">Grand Floridian</span></td><td>The signature, paid for by the meal we dropped. Drive over after the break, then walk into Magic Kingdom. <b>Dress code applies.</b></td><td class="mono">18</td></tr>
           <tr><td class="day"><b>Total</b></td><td>4 dinners</td><td class="hrs">all table service at dinner, none at lunch</td><td class="mono"><b>45 / 45</b></td></tr>
         </tbody>
       </table>
@@ -698,7 +771,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     <div class="why" style="background:var(--green-soft);border-left-color:var(--green);margin-top:1.3rem">
       <h3>Breakfast is the thin part &mdash; and the villas fix it</h3>
       <ul>
-        <li><b>A snack credit is one item under about $7</b> &mdash; a pastry, or a banana, or a coffee. That is not a breakfast before a 6:35 start and a 1:00 lunch, which is a six-hour gap on the heaviest walking day of the week.</li>
+        <li><b>A snack credit is one item under about $7</b> &mdash; a pastry, or a banana, or a coffee. That is not a breakfast before a 6:35 start and a lunch after noon &mdash; more than five hours on the heaviest walking day of the week.</li>
         <li><b>Both two-bedroom villas have full kitchens</b> &mdash; stove, oven, full-size fridge, dishwasher, coffee maker, plus a washer and dryer. Order groceries to Bell Services before we arrive; Instacart, Amazon Fresh and Walmart+ all deliver and Bell Services keeps cold items refrigerated. Eggs, bagels, fruit and yogurt for nine is roughly $60&ndash;80 for the week.</li>
         <li><b>That frees all 45 snack credits for the parks</b>, where they're worth far more: Dole Whips, Mickey pretzels, and the EPCOT Holiday Kitchens booths, which are the best snack-credit value on property. The refillable mugs cover unlimited coffee at the resort besides.</li>
       </ul>
@@ -713,16 +786,16 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     </div>
     <div class="notes">
       <div class="note-item"><span class="k">Parking</span><p>Standard theme park parking is <b>free</b> for Disney Resort guests &mdash; normally about $30 a day per vehicle, so roughly $240 saved across the van, the rental and four park days. Whoever is driving each vehicle needs their own MagicBand or Key to the World card at the booth, so don't let both of them end up in one person's pocket.</p></div>
-      <div class="note-item"><span class="k">Magic Kingdom</span><p>The one park you cannot drive to. Parking is at the Transportation and Ticket Center, with security there and then a monorail or ferry across the lagoon &mdash; 30 to 45 minutes from car to gate. The resort bus goes direct. Take the bus on Dec 23.</p></div>
+      <div class="note-item"><span class="k">Magic Kingdom</span><p>The one park you cannot sensibly drive to. Parking is at the Transportation and Ticket Center, with security there and then a monorail or ferry across the lagoon &mdash; 30 to 45 minutes from car to gate. So: <b>bus for the Dec 22 morning</b>, and on Dec 23 <b>drive to the Grand Floridian</b> for Citricos and walk into the park from there.</p></div>
       <div class="note-item"><span class="k">The van and the rental</span><p>The van seats eight against a party of nine, so the rental is the ninth seat as well as a convenience. Two vehicles is the better arrangement regardless: people can leave a park early or stay late independently, which is exactly what this group is going to want. Park in the same row where you can, and photograph the row marker; the lots are enormous and every aisle looks identical at 10 PM.</p></div>
-      <div class="note-item"><span class="k">Hopping and LL</span><p>A catch worth knowing before Dec 12: our <b>first three Multi Pass selections must all be in the same park</b>. Only once we tap into the first can we book one in a different park. So a morning hop costs us the pre-booked passes &mdash; hop after the first redemption, not before.</p></div>
-      <div class="note-item"><span class="k">Pack a collar</span><p><b>Everyone needs a collared shirt and proper shoes in their suitcase.</b> This is a before-you-leave-home item, not a day-of one &mdash; there is nowhere to buy your way out of it on Wednesday evening. Citricos enforces the signature dress code: no tank tops, flip-flops, cut-offs or torn clothing, and people do get turned away at the door. We go straight there from a full day at Magic Kingdom with no chance to change, so wear it from Wednesday morning. December makes that painless &mdash; a collar and closed shoes are comfortable at 70&deg;F, and we want a layer for the evening regardless.</p></div>
-      <div class="note-item"><span class="k">Party of 9</span><p>Online booking caps at 8 guests. We must call <b class="mono">(407) 939-3463</b> and ask for Group Dining. If they can't seat nine together, book two overlapping reservations and tell the host at check-in that we'd like to sit together &mdash; they usually manage it.</p></div>
-      <div class="note-item"><span class="k">LL for nine</span><p>Everyone must be linked in My Disney Experience <b>before</b> Dec 12, or you can't book them into a pass. One person books for the whole party. Nine people also need nine slots in the same return window, which is the first thing to run short on a busy day &mdash; so book the moment the clock turns 7:00, and take a slightly worse time over splitting the group.</p></div>
+      <div class="note-item"><span class="k">Hopping and LL</span><p>Our <b>first three Multi Pass selections must all be in the same park</b>, so they go to each day's morning park. Evening-park Lightning Lanes can only be booked after the first morning tap &mdash; do it from the queue around 9:00, before availability thins out. Expect fewer of them than in the morning; the evening tracks are built to work on standby if we come up short.</p></div>
+      <div class="note-item"><span class="k">Pack a collar</span><p><b>Everyone needs a collared shirt and proper shoes in their suitcase.</b> This is a before-you-leave-home item, not a day-of one &mdash; there is nowhere to buy your way out of it on Wednesday evening. Citricos enforces the signature dress code: no tank tops, flip-flops, cut-offs or torn clothing, and people do get turned away at the door. The Wednesday break is when we change, so nobody has to wear it around EPCOT all morning &mdash; but it only works if it was packed.</p></div>
+      <div class="note-item"><span class="k">Party of 9</span><p>Sources disagree on whether the app takes nine, so test it beforehand. Go online first at 5:00 AM Central; if it stops at eight, book eight to hold the table and call <b class="mono">(407) 939-3463</b> at 6:00 Central for Group Dining. If we end up on two reservations, tell the host at the podium rather than checking in on the app &mdash; they usually seat us together.</p></div>
+      <div class="note-item"><span class="k">LL for nine</span><p>Everyone must be linked in My Disney Experience <b>before</b> Dec 12, or you can't book them into a pass. One person books for the whole party. Nine people also need nine slots in the same return window, which is the first thing to run short on a busy day &mdash; so book the moment the clock turns 6:00 AM Central, and take a slightly worse time over splitting the group.</p></div>
       <div class="note-item"><span class="k">Re-stacking</span><p>The single habit that decides how much we get done: the instant you tap into a Lightning Lane, open the app and book the next one. Hold three at all times. Done properly that's six to ten passes a day instead of three.</p></div>
       <div class="note-item"><span class="k">Gratuity</span><p>An 18% gratuity is added automatically for parties of six or more, and the dining plan does <b>not</b> cover it. Budget roughly $50&ndash;80 in tip per table-service meal &mdash; call it $300 across the week.</p></div>
       <div class="note-item"><span class="k">Weather</span><p>Highs in the low 70s, lows in the low 50s. Evenings genuinely get cold once the sun drops &mdash; bring layers you can carry, and skip the water rides.</p></div>
-      <div class="note-item"><span class="k">Park hopping</span><p>The old 2:00 PM restriction is gone. We can hop any time after tapping into the first park, subject only to capacity &mdash; which in Christmas week is a real possibility, so don't build a plan that depends on it.</p></div>
+      <div class="note-item"><span class="k">Park hopping</span><p>The old 2:00 PM restriction is gone, and the whole plan now leans on hopping. The one limit left is capacity: if a park fills, Disney can stop admitting hoppers. That's typically more of a risk for Dec 26&ndash;31 than our dates. Check the park's status in the app before leaving the villas each evening, and if it's closed to hoppers, swap the evening for Disney Springs.</p></div>
       <div class="note-item"><span class="k">Christmas Party</span><p>Dec 20 and Dec 22 are both sold out, so there's no option to buy in. It's not a loss &mdash; Dec 23 gives us the holiday parade, fireworks and decorations at no extra cost.</p></div>
       <div class="note-item"><span class="k">Verify in December</span><p>Park hours, Early Entry times and Extended Evening Hours all shift. The Dec 21 EPCOT evening session follows the published Monday pattern but hasn't been formally confirmed for December. Re-check My Disney Experience the week before we fly.</p></div>
     </div>
