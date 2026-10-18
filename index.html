@@ -160,6 +160,22 @@ td .park{font-weight:800}
 .track p{font-size:.85rem}
 .track p+p{margin-top:.35rem}
 
+/* ---------- booking checklist ---------- */
+.cg{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--muted);border-radius:4px 10px 10px 4px;padding:.95rem 1.1rem;margin-bottom:.8rem}
+.cg.urgent{border-left-color:var(--red)}
+.cg.soon{border-left-color:var(--gold)}
+.cg.later{border-left-color:var(--green)}
+.cg-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.3rem .7rem;margin-bottom:.55rem}
+.cg-head h3{font-family:var(--body);font-size:.97rem;font-weight:800}
+.cg-when{font-family:var(--mono);font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.todo{display:flex;gap:.6rem;align-items:flex-start;padding:.35rem 0;font-size:.88rem;border-top:1px solid var(--line)}
+.todo:first-of-type{border-top:0}
+.todo input{margin:.3rem 0 0;flex:0 0 auto;width:16px;height:16px;accent-color:var(--green);cursor:pointer}
+.todo label{min-width:0;cursor:pointer}
+.todo input:checked+label{text-decoration:line-through;opacity:.55}
+.todo .sub{display:block;color:var(--muted);font-size:.81rem;margin-top:.1rem}
+.cg-note{font-size:.82rem;color:var(--muted);margin-top:.6rem;padding-top:.5rem;border-top:1px dashed var(--line)}
+
 .optout{font-size:.84rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.7rem}
 .optout b{color:var(--fg);font-weight:700}
 
@@ -286,6 +302,65 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2>The Booking Checklist</h2>
+      <div class="orn"><span>&#10052;</span></div>
+      <span class="note">Everything that has to be reserved, in the order it has to happen. Ticks are saved in this browser.</span>
+    </div>
+
+    <div class="cg urgent">
+      <div class="cg-head"><h3>Before Monday</h3><span class="cg-when">this weekend</span></div>
+      <div class="todo"><input type="checkbox" id="t-link"><label for="t-link"><b>Link all nine of us in My Disney Experience.</b><span class="sub">Blocks both the dining call and Lightning Lane &mdash; you cannot book someone who isn't linked. Do this first.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-backups"><label for="t-backups"><b>Settle backup times for each restaurant.</b><span class="sub">The agent will offer alternatives and you'll have seconds to answer. Decide now how far either side of 5:30 you'll accept.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-conf"><label for="t-conf"><b>Have the resort confirmation number and a card to hand.</b></label></div>
+    </div>
+
+    <div class="cg urgent">
+      <div class="cg-head"><h3>Dining &mdash; all four at once</h3><span class="cg-when">Mon Oct 20 &middot; 6:00 AM ET</span></div>
+      <div class="todo"><input type="checkbox" id="t-call"><label for="t-call"><b>Call (407) 939-3463 and ask for Group Dining.</b><span class="sub">The app caps at eight guests. Start dialling a few minutes early.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-citricos"><label for="t-citricos"><b>Citricos</b> &mdash; Wed Dec 23, around 5:30 PM, party of 9<span class="sub">Ask for this one <b>first</b>. A fine-dining room that seats nine is by far the hardest thing on the list.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-bier"><label for="t-bier"><b>Biergarten</b> &mdash; Mon Dec 21, around 5:30 PM, party of 9<span class="sub">Early enough to make the Candlelight queue by 6:50.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-prime"><label for="t-prime"><b>50's Prime Time Caf&eacute;</b> &mdash; Tue Dec 22, around 6:00 PM, party of 9</label></div>
+      <div class="todo"><input type="checkbox" id="t-turf"><label for="t-turf"><b>The Turf Club or Disney Springs</b> &mdash; Sat Dec 19, evening, party of 9<span class="sub">Travis, Traci and Lydia land at 2:40, so nothing before about 6:30.</span></label></div>
+      <p class="cg-note">If they can't seat nine together, take two overlapping reservations and tell the host at check-in &mdash; they usually manage to seat you near each other.</p>
+    </div>
+
+    <div class="cg soon">
+      <div class="cg-head"><h3>Travel &mdash; no deadline, but prices climb</h3><span class="cg-when">soon</span></div>
+      <div class="todo"><input type="checkbox" id="t-car"><label for="t-car"><b>Rental car at MCO</b> &mdash; pick up Dec 19, return Dec 24<span class="sub">A standard car is enough: only four of us need it, since Mike and Inge drive the van and Travis's family have a car service.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-uber"><label for="t-uber"><b>Confirm Travis's airport car service</b> for a 2:40 PM landing.</label></div>
+    </div>
+
+    <div class="cg soon">
+      <div class="cg-head"><h3>Optional, if we want bands</h3><span class="cg-when">by about Dec 1</span></div>
+      <div class="todo"><input type="checkbox" id="t-bands"><label for="t-bands"><b>Order MagicBands.</b><span class="sub">Order 11 or more days before arrival and they ship to your house; between 6 and 10 days they wait at the resort front desk. Entirely skippable &mdash; MagicMobile on a phone does the same job for free, and either works at the parking booth.</span></label></div>
+    </div>
+
+    <div class="cg later">
+      <div class="cg-head"><h3>Lightning Lane &mdash; the whole stay at once</h3><span class="cg-when">Sat Dec 12 &middot; 7:00 AM ET</span></div>
+      <div class="todo"><input type="checkbox" id="t-mp"><label for="t-mp"><b>Buy Multi Pass</b> for all nine, all four park days.<span class="sub">Book <b>Dec 23 Magic Kingdom first</b>, then Dec 22, Dec 21, Dec 20. Roughly $1,400 for the party.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-sp1"><label for="t-sp1"><b>Single Pass: Avatar Flight of Passage</b> &mdash; Sun Dec 20<span class="sub">Set the return for late afternoon so we can also ride it standby at rope drop.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-sp2"><label for="t-sp2"><b>Single Pass: Guardians of the Galaxy</b> &mdash; Mon Dec 21</label></div>
+      <div class="todo"><input type="checkbox" id="t-sp3"><label for="t-sp3"><b>Single Pass: Rise of the Resistance</b> &mdash; Tue Dec 22<span class="sub">Take the <b>earliest</b> return window offered. It breaks down more than anything else on property.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-sp4"><label for="t-sp4"><b>Single Pass: Seven Dwarfs and TRON</b> &mdash; Wed Dec 23<span class="sub">The only park with two. Roughly $1,000 across all five Single Passes for nine people.</span></label></div>
+    </div>
+
+    <div class="cg later">
+      <div class="cg-head"><h3>The week before</h3><span class="cg-when">from Mon Dec 14</span></div>
+      <div class="todo"><input type="checkbox" id="t-groceries"><label for="t-groceries"><b>Order groceries for delivery on Dec 19.</b><span class="sub">To Bell Services, who refrigerate. Breakfast for nine across the week runs about $60&ndash;80 and keeps all 45 snack credits for the parks.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-checkin"><label for="t-checkin"><b>Online check-in, with a room request</b> to put the two villas near each other.</label></div>
+      <div class="todo"><input type="checkbox" id="t-hours"><label for="t-hours"><b>Re-check park hours and Early Entry</b> in the app, and confirm the Dec 21 EPCOT Extended Evening session.<span class="sub">It follows the published Monday pattern but hasn't been formally confirmed for December.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-collar"><label for="t-collar"><b>Remind everyone: collared shirt and closed shoes</b> packed for Wednesday.<span class="sub">Citricos turns people away. There's no fixing it that evening.</span></label></div>
+    </div>
+
+    <div class="cg later">
+      <div class="cg-head"><h3>On arrival</h3><span class="cg-when">Sat Dec 19</span></div>
+      <div class="todo"><input type="checkbox" id="t-mugs"><label for="t-mugs"><b>Collect all nine refillable mugs</b> at The Artist's Palette.</label></div>
+      <div class="todo"><input type="checkbox" id="t-pickup"><label for="t-pickup"><b>Pick the groceries up from Bell Services.</b></label></div>
     </div>
   </section>
 
@@ -652,9 +727,34 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
 
   <footer>
     <div class="candy" aria-hidden="true"></div>
-    Built 16 October 2026 &middot; see you on Main Street<br>
+    Revised 18 October 2026 &middot; see you on Main Street<br>
     Hours and event dates from published schedules and subject to change &mdash; confirm in My Disney Experience before each park day.
   </footer>
+
+<script>
+// Remember which checklist items are ticked, per browser. Degrades silently
+// if storage is unavailable (private windows, blocked site data).
+(function () {
+  var KEY = 'disney2026-checklist';
+  function load() {
+    try { return JSON.parse(localStorage.getItem(KEY) || '{}') || {}; }
+    catch (e) { return {}; }
+  }
+  function save(state) {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+  var saved = load();
+  var boxes = document.querySelectorAll('.todo input[type="checkbox"]');
+  Array.prototype.forEach.call(boxes, function (box) {
+    if (saved[box.id]) box.checked = true;
+    box.addEventListener('change', function () {
+      var state = load();
+      if (box.checked) state[box.id] = true; else delete state[box.id];
+      save(state);
+    });
+  });
+})();
+</script>
 
 </div>
 <!--ARTIFACT-BODY-END-->
