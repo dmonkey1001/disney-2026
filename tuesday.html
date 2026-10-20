@@ -84,6 +84,12 @@ a{color:var(--gold)}
 .alt.first .rank{color:var(--gold);font-weight:600}
 .note{font-size:.84rem;color:var(--muted)}
 .foot{font-size:.8rem;color:var(--muted);text-align:center}
+.box.done{background:var(--green-soft);border-left:4px solid var(--green)}
+.booked{list-style:none;margin:0;padding:0;display:grid}
+.booked li{display:grid;grid-template-columns:6.4rem 1fr;gap:.05rem .7rem;padding:.45rem 0;border-top:1px solid var(--line);font-size:.92rem}
+.booked li:first-child{border-top:0}
+.booked .bd{grid-row:span 2;font-family:var(--mono);font-size:.74rem;color:var(--muted);padding-top:.15rem}
+.booked .bt{font-family:var(--mono);font-size:.78rem;color:var(--green);font-variant-numeric:tabular-nums}
 .who{display:grid;grid-template-columns:1fr;gap:.6rem}
 .who div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.6rem .7rem;display:grid;gap:.1rem;font-size:.86rem}
 .who .wk{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
@@ -123,6 +129,17 @@ a{color:var(--gold)}
       <div><b>6:00 CT</b><em>7:00 ET</em><span>phone opens</span></div>
     </div>
   </header>
+
+  <section class="box done">
+    <h2>Booked &mdash; Tue Oct 20</h2>
+    <ul class="booked">
+      <li><span class="bd">Sat Dec 19</span><b>Raglan Road</b><span class="bt">6:30 PM &middot; two tables, 5 + 4</span></li>
+      <li><span class="bd">Mon Dec 21</span><b>Biergarten</b><span class="bt">6:10 PM &middot; party of 9</span></li>
+      <li><span class="bd">Tue Dec 22</span><b>50&rsquo;s Prime Time Caf&eacute;</b><span class="bt">7:55 PM &middot; party of 9</span></li>
+      <li><span class="bd">Wed Dec 23</span><b>Citricos</b><span class="bt">5:30 PM for 5 &middot; 5:35 PM for 4</span></li>
+    </ul>
+    <p class="note">Every first choice, 45 of 45 credits. Still to do: call Group Dining to note the Raglan Road and Citricos pairs as one party each. The plan below is kept for reference.</p>
+  </section>
 
   <section class="box warn">
     <h2>Why two of us: the site stops at eight</h2>

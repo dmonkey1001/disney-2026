@@ -194,6 +194,11 @@ td .park{font-weight:800}
 .todo label{min-width:0;cursor:pointer}
 .todo input:checked+label{text-decoration:line-through;opacity:.55}
 .todo .sub{display:block;color:var(--muted);font-size:.81rem;margin-top:.1rem}
+.booked{list-style:none;margin:0 0 .5rem;padding:0;display:grid}
+.booked li{display:grid;grid-template-columns:6.4rem 1fr;gap:.05rem .7rem;padding:.45rem 0;border-top:1px solid var(--line);font-size:.92rem}
+.booked li:first-child{border-top:0}
+.booked .bd{grid-row:span 2;font-family:var(--mono);font-size:.74rem;color:var(--muted);padding-top:.15rem}
+.booked .bt{font-family:var(--mono);font-size:.78rem;color:var(--green);font-variant-numeric:tabular-nums}
 .cg-note{font-size:.82rem;color:var(--muted);margin-top:.6rem;padding-top:.5rem;border-top:1px dashed var(--line)}
 
 .optout{font-size:.84rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.7rem}
@@ -336,34 +341,25 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
 
   <section>
     <div class="sechead">
-      <h2>Book These First</h2>
+      <h2>Key Dates</h2>
       <div class="orn"><span>&#10052;</span></div>
-      <span class="note">Three things decide how good this trip is. The dining window opens this Tuesday.</span>
+      <span class="note">Dinners are booked. Lightning Lane on Dec 12 is the one date left.</span>
     </div>
     <div class="deadlines">
 
-      <div class="dl now">
-        <div class="when">ONGOING<small>check for cancellations</small></div>
+      <div class="dl later">
+        <div class="when">BOOKED<small>Tue Oct 20</small></div>
         <div>
-          <span class="pill red">Packages gone</span>
-          <h3>Candlelight Processional &mdash; we're going standby</h3>
-          <p><b>The show itself cannot sell out</b> &mdash; it's included with EPCOT admission and runs three times a night. What sells out is the <em>dining package</em>, and all that buys is a guaranteed seat. It's gone for Dec 21, which is survivable and quietly useful: it frees the evening meal to be any restaurant we like. Package holders take 50&ndash;75% of the theater, but the <b>last show of the night</b> is far the easiest to walk into &mdash; typically 45&ndash;60 minutes of queueing against up to three hours for the early shows, with standing room behind the benches if the seats fill. An 8:00&nbsp;PM show also ends right as Extended Evening Hours begin. Package cancellations do appear, so keep checking.</p>
+          <span class="pill green">All four dinners</span>
+          <h3>Dining is done &mdash; every first choice</h3>
+          <p>Raglan Road on the 19th at 6:30 (two tables), Biergarten on the 21st at 6:10, 50&rsquo;s Prime Time on the 22nd at 7:55, and Citricos on the 23rd at 5:30 and 5:35 (two tables). Credits come out at exactly 45 of 45. One call left: Group Dining, to note each pair of split tables as one party.</p>
         </div>
       </div>
 
       <div class="dl soon">
-        <div class="when">TUE OCT 20<small>6:00 AM ET sharp</small></div>
-        <div>
-          <span class="pill gold">Online first, phone second</span>
-          <h3>All four dinners &mdash; the 60-day window opens</h3>
-          <p>Because this is a resort package, we book the <b>entire stay</b> in one sitting. The catch: <b>online opens at 6:00 AM but the phone line not until 7:00</b>, so calling Group Dining first would put us an hour behind everyone else &mdash; fatal for Citricos on a peak Christmas-week night. <b>Get online at 6:00 AM.</b> Testing showed Citricos and Raglan Road won't take nine online, so those are booked as a table of 5 and a table of 4 at the same time &mdash; Derek books the 5s and Tai books the 4s from her own account, since one account can't hold two overlapping reservations. At 7:00 AM a call to Group Dining links the halves into one party. <b>Citricos first, always.</b> Times, windows and backups for every night are on the <a href="https://dmonkey1001.github.io/disney-2026/tuesday.html"><b>Tuesday booking sheet</b></a>.</p>
-        </div>
-      </div>
-
-      <div class="dl later">
         <div class="when">SAT DEC 12<small>7:00 AM ET</small></div>
         <div>
-          <span class="pill green">Set an alarm</span>
+          <span class="pill gold">Next up</span>
           <h3>Lightning Lane &mdash; buy and book the whole stay</h3>
           <p>Seven days before check-in we buy Multi Pass &mdash; <b>in the phone app</b>, since Disney doesn't sell Lightning Lane on the website &mdash; and make the first three selections for <b>every park day at once</b> &mdash; all in that day's <b>morning</b> park, since the first three must share a park. Book <b>Dec 22 first</b>: the Magic Kingdom morning is the scarcest of the four. Then Dec 21, Dec 23, Dec 20. Buy the five Single Pass headliners in the same sitting; they sell out for holiday dates. Full cost for nine people is roughly <b>$1,400 Multi Pass + $1,000 Single Pass</b>. See the playbook below for exactly what to pick.</p>
         </div>
@@ -379,25 +375,17 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <span class="note">Everything that has to be reserved, in the order it has to happen. Ticks are saved in this browser.</span>
     </div>
 
-    <div class="cg urgent">
-      <div class="cg-head"><h3>Before the call</h3><span class="cg-when">Sunday and Monday</span></div>
-      <div class="todo"><input type="checkbox" id="t-link"><label for="t-link"><b>Check all nine of us are properly linked in My Disney Experience</b> &mdash; for Lightning Lane, not dining.<span class="sub">Dining doesn't need anyone linked: a table for nine can be booked with eight generic guests. Lightning Lane does. On the website, click each name in your Family &amp; Friends list and check you're allowed to make plans for them, then check that all nine have a park ticket attached under My Plans or Tickets &amp; Passes. Adults must also have <em>accepted</em> the invitation. Needed by Dec 12, so there's time.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-linktest"><label for="t-linktest"><b>Optional: run a dummy dining search for nine.</b><span class="sub">Pick any restaurant and date, choose party size 9, then <em>select a time</em> &mdash; the guest picker only appears on the screen after that, as a dropdown for each seat. If all nine names show up, everyone is linked. It also tells us whether the site will take nine at all. Back out without confirming.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-backups"><label for="t-backups"><b>Settle backup times for each restaurant.</b><span class="sub">The agent will offer alternatives and you'll have seconds to answer. Decide now how far either side of 5:30 you'll accept.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-conf"><label for="t-conf"><b>Have the resort confirmation number and a card to hand.</b></label></div>
-    </div>
-
-    <div class="cg urgent">
-      <div class="cg-head"><h3>Dining &mdash; all four at once</h3><span class="cg-when">Tue Oct 20 &middot; 6:00 AM ET</span></div>
-      <div class="todo"><input type="checkbox" id="t-online"><label for="t-online"><b>6:00 AM &mdash; go online, not to the phone.</b><span class="sub">The phone line doesn't open until 7:00. Calling first would cost us an hour against everyone else. Be logged in and refreshing from about 5:45.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-second"><label for="t-second"><b>Line up a second booker &mdash; Citricos and Raglan Road won't take nine online.</b><span class="sub">Tai books the table of 4 from her own account at the same moment Derek books the 5, since one account can't hold two overlapping reservations. The night before, Tai must check the resort stay shows in her own My Plans &mdash; without it, she can't book Dec 23 on the 20th. 50&rsquo;s Prime Time and Biergarten do take nine, so Tai books 50&rsquo;s while Derek books Biergarten.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-call"><label for="t-call"><b>7:00 AM &mdash; call (407) 939-3463, ask for Group Dining.</b><span class="sub">To merge the split bookings, add a ninth to a table of eight, or fill whatever the app couldn't.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-citricos"><label for="t-citricos"><b>1. Citricos</b> &mdash; Wed Dec 23, around 5:30 PM, <b>Derek 5 + Tai 4</b><span class="sub">First, always, both of us at once. A fine-dining room that seats nine is by far the hardest thing on the list.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-prime"><label for="t-prime"><b>2. 50's Prime Time Caf&eacute;</b> &mdash; Tue Dec 22, around 6:00 PM, <b>Tai, party of 9</b><span class="sub">At the same moment Derek books Biergarten. Nine works online here.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-bier"><label for="t-bier"><b>2. Biergarten</b> &mdash; Mon Dec 21, around 5:30 PM, <b>Derek, party of 9</b><span class="sub">At the same moment Tai books 50&rsquo;s. Nine works online here, and 5:30 leaves time to make the Candlelight queue by 6:50.</span></label></div>
-      <div class="todo"><input type="checkbox" id="t-turf"><label for="t-turf"><b>3. Raglan Road at Disney Springs</b> &mdash; Sat Dec 19, around 6:30 PM, <b>Derek 5 + Tai 4</b><span class="sub">The easiest of the four; online stops at eight, so it&rsquo;s split like Citricos. Travis, Traci and Lydia land at 2:40, so nothing before about 6:00.</span></label></div>
-      <p class="cg-note">Times, cut-offs and the second and third choice for every night are on the <a href="https://dmonkey1001.github.io/disney-2026/tuesday.html"><b>Tuesday morning cheat sheet</b></a>.</p>
-      <p class="cg-note">If we end up on two reservations, <b>don't check in on the app</b> &mdash; that lets the system assign tables at random. Tell the host at the podium that the two bookings are one party and they'll usually seat us together.</p>
+    <div class="cg later">
+      <div class="cg-head"><h3>Dinners &mdash; booked</h3><span class="cg-when">done Tue Oct 20</span></div>
+      <ul class="booked">
+        <li><span class="bd">Sat Dec 19</span><b>Raglan Road</b><span class="bt">6:30 PM &middot; two tables, 5 + 4</span></li>
+        <li><span class="bd">Mon Dec 21</span><b>Biergarten</b><span class="bt">6:10 PM &middot; party of 9</span></li>
+        <li><span class="bd">Tue Dec 22</span><b>50&rsquo;s Prime Time Caf&eacute;</b><span class="bt">7:55 PM &middot; party of 9</span></li>
+        <li><span class="bd">Wed Dec 23</span><b>Citricos</b><span class="bt">5:30 PM for 5 &middot; 5:35 PM for 4</span></li>
+      </ul>
+      <div class="todo"><input type="checkbox" id="t-call"><label for="t-call"><b>Call (407) 939-3463 and ask for Group Dining</b> to note the two Raglan Road tables and the two Citricos tables as one party each.<span class="sub">Give both confirmation numbers for each night, and keep all four bookings until they confirm.</span></label></div>
+      <div class="todo"><input type="checkbox" id="t-earlier"><label for="t-earlier"><b>Optional: watch for an earlier 50&rsquo;s Prime Time table for nine.</b><span class="sub">7:55 was the only time offered. A cancellation-alert service such as MouseDining can text when a 6:00&ndash;7:00 slot opens. Keep the 7:55 booking until a swap is confirmed.</span></label></div>
+      <p class="cg-note">On the night, tell the host at the podium the split tables are one party rather than checking in on the app. Cancel anything we drop at least two hours ahead, or it's $10 a person.</p>
     </div>
 
     <div class="cg soon">
@@ -409,6 +397,11 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
     <div class="cg soon">
       <div class="cg-head"><h3>Optional, if we want bands</h3><span class="cg-when">by about Dec 1</span></div>
       <div class="todo"><input type="checkbox" id="t-bands"><label for="t-bands"><b>Order MagicBands.</b><span class="sub">Order 11 or more days before arrival and they ship to your house; between 6 and 10 days they wait at the resort front desk. Entirely skippable &mdash; MagicMobile on a phone does the same job for free, and either works at the parking booth.</span></label></div>
+    </div>
+
+    <div class="cg soon">
+      <div class="cg-head"><h3>Before Lightning Lane day</h3><span class="cg-when">by Fri Dec 11</span></div>
+      <div class="todo"><input type="checkbox" id="t-link"><label for="t-link"><b>Check all nine of us are properly linked in My Disney Experience.</b><span class="sub">On the website, click each name in your Family &amp; Friends list and check you're allowed to make plans for them, then check all nine have a park ticket attached under My Plans or Tickets &amp; Passes. Adults must also have <em>accepted</em> the invitation. Lightning Lane can't be bought for anyone who isn't set up this way.</span></label></div>
     </div>
 
     <div class="cg later">
@@ -452,7 +445,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
             <td><span class="park">Arrival</span><br><span class="hrs">drive from MCO</span></td>
             <td class="hrs">&mdash;</td>
             <td><span class="park">Disney Springs</span><br><span class="hrs">walk or boat</span></td>
-            <td>Raglan Road <span class="hrs">Disney Springs</span></td>
+            <td>Raglan Road <span class="hrs">6:30 &middot; two tables</span></td>
           </tr>
           <tr>
             <td class="day">Sun 20</td>
@@ -466,21 +459,21 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
             <td><span class="park">Hollywood Studios</span><br><span class="hrs">EE 8:30 &middot; drive</span></td>
             <td class="hrs">1:15&ndash;4:15</td>
             <td><span class="park">EPCOT</span><br><span class="hrs">+ Evening Hours to 11 &middot; drive</span></td>
-            <td>Biergarten</td>
+            <td>Biergarten <span class="hrs">6:10</span></td>
           </tr>
           <tr>
             <td class="day">Tue 22</td>
             <td><span class="park">Magic Kingdom</span><br><span class="hrs">EE 8:30 &middot; <b>bus</b></span></td>
             <td class="hrs">1:30&ndash;4:30</td>
             <td><span class="park">Hollywood Studios</span><br><span class="hrs">to 9:00 &middot; drive</span></td>
-            <td>50's Prime Time</td>
+            <td>50's Prime Time <span class="hrs">7:55</span></td>
           </tr>
           <tr>
             <td class="day">Wed 23</td>
             <td><span class="park">EPCOT</span><br><span class="hrs">EE 8:30 &middot; drive</span></td>
             <td class="hrs">1:15&ndash;4:45</td>
             <td><span class="park">Magic Kingdom</span><br><span class="hrs">to 10:00 &middot; via Grand Floridian</span></td>
-            <td><b>Citricos</b></td>
+            <td><b>Citricos</b> <span class="hrs">5:30 &amp; 5:35</span></td>
           </tr>
           <tr>
             <td class="day">Thu 24</td>
@@ -504,7 +497,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <ul>
         <li><b>Animal Kingdom closes at 6:00&nbsp;PM every day</b>, so it can only ever be a morning. It takes the first day, when the 7:30 Early Entry is easiest to face and a free evening afterwards is most welcome.</li>
         <li><b>Mickey's Very Merry Christmas Party shuts Magic Kingdom to day guests at 6:00&nbsp;PM on Dec 20 and Dec 22.</b> That costs nothing on a morning, so Dec 22 becomes the Magic Kingdom ride morning. Its evening goes to Dec 23, the first night after the parties end, when the Christmas parade typically returns for regular guests.</li>
-        <li><b>Hollywood Studios stays open to 9:00&nbsp;PM only on Dec 20 and Dec 22</b>, and closes at 7:00 on Dec 21 and 23. So its evening is Dec 22, with 50's Prime Time and Fantasmic, and its morning is Dec 21, where the early close doesn't matter.</li>
+        <li><b>Hollywood Studios stays open to 9:00&nbsp;PM only on Dec 20 and Dec 22</b>, and closes at 7:00 on Dec 21 and 23. So its evening is Dec 22, with dinner at 50's Prime Time, and its morning is Dec 21, where the early close doesn't matter.</li>
         <li><b>Saratoga Springs qualifies for Extended Evening Hours</b>, and EPCOT's December session is Mondays, 9&ndash;11&nbsp;PM &mdash; Dec 21. That fixes EPCOT's evening and leaves its morning for Dec 23. Confirm the session in the app once December dates post.</li>
       </ul>
       <p style="font-size:.87rem;color:var(--muted)">The useful accident is that all four dinner reservations were already in the right park for the evening. Nothing booked on Tuesday has to change.</p>
@@ -548,7 +541,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
           <div class="slot drive"><div class="t">On landing</div><div class="what"><b>Collect the rental, drive to Saratoga Springs.</b> <span>About 25&ndash;30 minutes from MCO. Mike and Inge arrive in the van; Travis, Traci and Lydia land at 2:40 and are taking a car service straight to the resort. That leaves four of us on the rental, so a standard car covers it. Between the van's eight seats and the rental, we have room to spare.</span></div></div>
           <div class="slot"><div class="t">Check-in</div><div class="what"><b>Both suites.</b> <span>Saratoga Springs is spread across five sections &mdash; ask to be placed near each other, and note Congress Park is the shortest walk to Disney Springs. Overnight self-parking is free.</span></div></div>
           <div class="slot key"><div class="t">First stop</div><div class="what"><b>Collect all nine refillable mugs</b> at The Artist's Palette, <span>and the groceries from Bell Services. Unlimited mug refills at any resort quick service for the whole stay.</span></div></div>
-          <div class="slot meal"><div class="t">6:30 PM</div><div class="what"><b>Dinner at Raglan Road, Disney Springs.</b> <span>Walk or take the boat from Saratoga Springs &mdash; no driving after a travel day. An Irish pub with live music and step dancers most evenings, a menu that's better than it needs to be, and the room to seat a big party.</span></div></div>
+          <div class="slot meal"><div class="t">6:30 PM</div><div class="what"><b>Dinner at Raglan Road, Disney Springs</b> &mdash; two tables, 5 and 4, both at 6:30. <span>Tell the host at the podium we're one party. Walk or take the boat from Saratoga Springs &mdash; no driving after a travel day. An Irish pub with live music and step dancers most evenings, a menu that's better than it needs to be, and the room to seat a big party.</span></div></div>
           <div class="slot"><div class="t">After</div><div class="what"><b>The Christmas Tree Trail and the lights</b>, <span>no ticket needed, then the walk home. Keep it short &mdash; tomorrow is the earliest start of the week. Saturday before Christmas is the busiest night Disney Springs has, so expect crowds.</span></div></div>
         </div>
         <div class="rowgrid">
@@ -631,19 +624,14 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
           <div class="phase pm"><span class="ph">Evening</span><span class="pk">EPCOT</span><span class="ph-hrs">to 9:00 &middot; Extended Evening Hours 9&ndash;11</span></div>
           <div class="spine">
             <div class="slot drive"><div class="t">4:15 PM</div><div class="what"><b>Drive to EPCOT</b>, about ten minutes. <span>Soarin', Spaceship Earth or Living with the Land before dinner, on whatever Lightning Lanes we picked up after this morning's first tap.</span></div></div>
-            <div class="slot meal"><div class="t">5:30 PM</div><div class="what"><b>Dinner &mdash; Biergarten.</b> <span>Traci asked for this one: family-style, shared long tables, oompah band, and it seats nine without a fight.</span></div></div>
-            <div class="slot"><div class="t">6:50 PM</div><div class="what"><b>The evening splits</b> <span>&mdash; see the tracks below. Everyone converges again at 9:00.</span></div></div>
+            <div class="slot meal"><div class="t">6:10 PM</div><div class="what"><b>Dinner &mdash; Biergarten</b>, party of 9. <span>Traci asked for this one: family-style, shared long tables, oompah band.</span></div></div>
+            <div class="slot"><div class="t">7:30 PM</div><div class="what"><b>World Showcase in the dark, or straight back to rides.</b> <span>Nobody's going to Candlelight, so the whole evening is ours. Luminous runs over the lagoon around close if anyone wants it.</span></div></div>
             <div class="slot key"><div class="t">9&ndash;11 PM</div><div class="what"><b>Extended Evening Hours &mdash; all nine of us.</b> <span>Park open only to Deluxe and Deluxe Villa guests. Pure rides and no shows, so it works for everybody. Test Track, Frozen and Remy at a fraction of the daytime wait. We're back on Wednesday morning for Guardians.</span></div></div>
           </div>
-        </div>
-        <div class="tracks">
-          <div class="track show"><h5>Show track &middot; from 6:50</h5><p>Join the <b>Candlelight standby queue</b> for the 8:00 performance. Roughly an hour's wait, with standing room behind the benches if the seats fill.</p><p>Massed choir, full orchestra and a celebrity narrator. About 40 minutes, and the most genuinely moving thing on the trip.</p></div>
-          <div class="track ride"><h5>Ride track &middot; from 6:50</h5><p>While a third of the park queues for the theatre, <b>everything else empties out</b>. Soarin', Spaceship Earth, Living with the Land and the Mexico boat ride all drop to near walk-on.</p><p>Travis, Traci and Lydia &mdash; this is your window. Meet everyone at 9:00.</p></div>
         </div>
         <div class="rowgrid">
           <div class="mini"><h4>Table service &middot; dinner</h4><p><b>Biergarten</b> &mdash; Traci asked for it: family-style, shared long tables, handles nine easily.<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>Her other EPCOT picks, both one credit:</b> Garden Grill, which rotates and serves family-style, is the better of the two for a group. La Hacienda de San Angel is the other &mdash; though its draw is the lagoon fireworks view, which is the one thing Travis has said he can skip.<span class="credit">9 credits &middot; 1 each</span></p></div>
           <div class="mini"><h4>Quick service</h4><p>Woody's Lunch Box or Docking Bay 7 at Hollywood Studios, before the break.<span class="credit">9 credits &middot; 1 each</span></p></div>
-          <div class="mini"><h4>Candlelight standby</h4><p>Take the <b>last show</b> &mdash; roughly an hour's queue against up to three for the early ones. Send two people to hold places while the rest finish dessert. If the benches fill there's standing room behind them with a clear view, and package cancellations do turn up, so keep checking.</p></div>
           <div class="mini"><h4>Lightning Lane</h4><p><b>Single Pass:</b> Rise of the Resistance &mdash; earliest return.<br><b>Multi Pass</b>, Hollywood Studios &mdash; Tier 1: Slinky Dog Dash. Tier 2: Tower of Terror and Rock 'n' Roller Coaster.<br><b>After the first tap:</b> add EPCOT picks for the evening.<span class="credit">re-stack hard</span></p></div>
         </div>
         <p class="optout"><b>The headliners:</b> Rise of the Resistance, Tower of Terror (repeated freefall drops), Rock 'n' Roller Coaster (0&ndash;57 mph launch with inversions) and Slinky Dog Dash. Rise sounds the most intimidating and is actually the gentlest of the four &mdash; no drops, no inversions. Get everyone on that one.</p>
@@ -678,14 +666,9 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
         <div class="leg">
           <div class="phase pm"><span class="ph">Evening</span><span class="pk">Hollywood Studios</span><span class="ph-hrs">open to 9:00</span></div>
           <div class="spine">
-            <div class="slot drive"><div class="t">4:30 PM</div><div class="what"><b>Drive to Hollywood Studios.</b> <span>Second laps on whatever was best yesterday morning, on the Lightning Lanes picked up after this morning's first tap.</span></div></div>
-            <div class="slot meal"><div class="t">6:00 PM</div><div class="what"><b>Dinner &mdash; 50's Prime Time Caf&eacute;.</b> <span>Traci's pick. The servers play your mother and will tell you off for elbows on the table. It seats in small booths, so nine of us will be split across tables that may not adjoin.</span></div></div>
-            <div class="slot"><div class="t">7:30 PM</div><div class="what"><b>The last ninety minutes split</b> <span>&mdash; see the tracks below. The quietest ride time of the whole day.</span></div></div>
+            <div class="slot drive"><div class="t">4:30 PM</div><div class="what"><b>Drive to Hollywood Studios.</b> <span>Three hours of second laps on whatever was best yesterday morning, on the Lightning Lanes picked up after this morning's first tap. Dinner is late tonight, so spend a snack credit on the way in.</span></div></div>
+            <div class="slot meal"><div class="t">7:55 PM</div><div class="what"><b>Dinner &mdash; 50's Prime Time Caf&eacute;</b>, party of 9. <span>The only time it had for nine, so dinner is the last thing tonight: the park closes at 9:00 while we eat, and we finish our meal regardless. The servers play your mother and will tell you off for elbows on the table. Fantasmic! usually runs around close, so it's off the plan unless the app shows an earlier show.</span></div></div>
           </div>
-        </div>
-        <div class="tracks">
-          <div class="track show"><h5>Show track</h5><p><b>Fantasmic!</b> if it's running &mdash; check the app that morning.</p></div>
-          <div class="track ride"><h5>Ride track</h5><p>Fantasmic! seats several thousand people at once and the park goes quiet while it runs. <b>Tower of Terror and Rock 'n' Roller Coaster drop hard</b> in that window &mdash; the best re-ride opportunity of the trip.</p></div>
         </div>
         <div class="rowgrid">
           <div class="mini"><h4>Table service &middot; dinner</h4><p><b>50's Prime Time Caf&eacute;</b> &mdash; Traci's pick, and the most fun we'll have at a table all week.<span class="credit">9 credits &middot; 1 each</span></p><p class="upg"><b>If nine-at-one-table matters more:</b> Roundup Rodeo BBQ, family-style skillets, built for groups our size.<span class="credit">9 credits &middot; 1 each</span></p></div>
@@ -725,7 +708,7 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
           <div class="phase pm"><span class="ph">Evening</span><span class="pk">Magic Kingdom</span><span class="ph-hrs">open to 10:00</span></div>
           <div class="spine">
             <div class="slot drive"><div class="t">4:45 PM</div><div class="what"><b>Drive to the Grand Floridian.</b> <span>Resort gates normally admit cars for a dining reservation, and from there Magic Kingdom is a 12&ndash;18 minute lakeside walk &mdash; far quicker than going through the TTC.</span></div></div>
-            <div class="slot meal"><div class="t">5:30 PM</div><div class="what"><b>Dinner &mdash; Citricos.</b> <span>The signature: Michelin-recognized and widely called the best plain fine dining on property. This is where the 18 credits from skipping table service at Animal Kingdom and Magic Kingdom go.</span></div></div>
+            <div class="slot meal"><div class="t">5:30 PM</div><div class="what"><b>Dinner &mdash; Citricos</b>, two tables: 5 at 5:30 and 4 at 5:35. <span>Tell the host we're one party. The signature: Michelin-recognized and widely called the best plain fine dining on property. This is where the 18 credits from skipping table service at Animal Kingdom and Magic Kingdom go.</span></div></div>
             <div class="slot key"><div class="t">7:45 PM</div><div class="what"><b>Walk into Magic Kingdom, and the last evening splits</b> <span>&mdash; see the tracks below. At 10:00 it's the same walk back to the car.</span></div></div>
           </div>
         </div>
@@ -782,11 +765,11 @@ footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--line);font-
       <table>
         <thead><tr><th>Day</th><th>Dinner</th><th>Why</th><th>Credits</th></tr></thead>
         <tbody>
-          <tr><td class="day">Sat 19</td><td>Raglan Road <span class="hrs">Disney Springs</span></td><td>A walk or boat ride from the villas. Travis's family lands at 2:40, so an unhurried evening.</td><td class="mono">9</td></tr>
+          <tr><td class="day">Sat 19</td><td>Raglan Road <span class="hrs">6:30 &middot; two tables</span></td><td>A walk or boat ride from the villas. Travis's family lands at 2:40, so an unhurried evening.</td><td class="mono">9</td></tr>
           <tr><td class="day">Sun 20</td><td>&mdash; <span class="hrs">quick service</span></td><td>Traci's steer: no table-service meal at Animal Kingdom is worth a credit.</td><td class="mono">0</td></tr>
-          <tr><td class="day">Mon 21</td><td>Biergarten</td><td>Specifically requested, and it seats nine at shared tables without a fight.</td><td class="mono">9</td></tr>
-          <tr><td class="day">Tue 22</td><td>50's Prime Time Caf&eacute;</td><td>Traci's pick. Splits us across booths, but it's the most fun table of the week.</td><td class="mono">9</td></tr>
-          <tr><td class="day">Wed 23</td><td><b>Citricos</b> <span class="hrs">Grand Floridian</span></td><td>The signature, paid for by the meal we dropped. Drive over after the break, then walk into Magic Kingdom. <b>Dress code applies.</b></td><td class="mono">18</td></tr>
+          <tr><td class="day">Mon 21</td><td>Biergarten <span class="hrs">6:10</span></td><td>Specifically requested, and it seats nine at shared tables without a fight.</td><td class="mono">9</td></tr>
+          <tr><td class="day">Tue 22</td><td>50's Prime Time Caf&eacute; <span class="hrs">7:55</span></td><td>Traci's pick. Splits us across booths, but it's the most fun table of the week.</td><td class="mono">9</td></tr>
+          <tr><td class="day">Wed 23</td><td><b>Citricos</b> <span class="hrs">5:30 &amp; 5:35</span></td><td>The signature, paid for by the meal we dropped. Drive over after the break, then walk into Magic Kingdom. <b>Dress code applies.</b></td><td class="mono">18</td></tr>
           <tr><td class="day"><b>Total</b></td><td>4 dinners</td><td class="hrs">all table service at dinner, none at lunch</td><td class="mono"><b>45 / 45</b></td></tr>
         </tbody>
       </table>
