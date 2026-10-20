@@ -84,6 +84,13 @@ a{color:var(--gold)}
 .alt.first .rank{color:var(--gold);font-weight:600}
 .note{font-size:.84rem;color:var(--muted)}
 .foot{font-size:.8rem;color:var(--muted);text-align:center}
+.who{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+@media(max-width:30rem){.who{grid-template-columns:1fr}}
+.who div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.6rem .7rem;display:grid;gap:.1rem;font-size:.86rem}
+.who .wk{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+.who b{font-size:1.02rem;font-weight:800}
+.who .or{color:var(--muted);font-size:.84rem}
+.split{font-size:.86rem;background:var(--surface-2);border:1px dashed var(--line);border-radius:8px;padding:.5rem .7rem}
 
 /* page tabs (shared with index.html) */
 .tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;flex-wrap:wrap;gap:.45rem;padding-block:.6rem;margin:-.6rem 0 0;background:var(--bg);border-bottom:1px solid var(--line)}
@@ -104,27 +111,45 @@ a{color:var(--gold)}
   <header class="top">
     <div class="kick">Tuesday 20 October &middot; Central and Eastern</div>
     <h1>Tuesday Dining Cheat Sheet</h1>
-    <p>Four dinners, booked online in one sitting, hardest first. Booking times are shown in both zones; dinner times are Florida time.</p>
+    <p>Four dinners, booked online in one sitting, hardest first, by <b>two people at once</b>. Booking times are shown in both zones; dinner times are Florida time.</p>
     <div class="clock">
-      <div><b>4:45 CT</b><em>5:45 ET</em><span>sign in, open tabs</span></div>
+      <div><b>4:45 CT</b><em>5:45 ET</em><span>both signed in</span></div>
       <div><b>5:00 CT</b><em>6:00 ET</em><span>online opens</span></div>
       <div><b>6:00 CT</b><em>7:00 ET</em><span>phone opens</span></div>
     </div>
   </header>
 
+  <section class="box warn">
+    <h2>Why two of us: the site stops at eight</h2>
+    <p>Citricos and Raglan Road show no times at all for nine people online, so those two are booked as <b>a table of 5 and a table of 4</b>, at the same time. One account can't hold two overlapping reservations, so the 4 is booked by a second person on <b>their own account and device</b>.</p>
+    <div class="who">
+      <div><span class="wk">Booker 1</span><b>Derek</b><span>books the 5s, and any table that will take all nine</span></div>
+      <div><span class="wk">Booker 2</span><b>Tai</b> <span class="or">or Travis</span><span>books the 4s, nothing else</span></div>
+    </div>
+  </section>
+
+  <section class="box">
+    <h2>Tonight</h2>
+    <ol>
+      <li><b>Booker 2 checks the resort stay shows in their own My Plans.</b> Being able to book Dec 23 tomorrow depends on it: the window is 60 days from <em>check-in</em> only for accounts the stay is linked to. If it isn't there, use whichever of Tai or Travis it does show for.</li>
+      <li><b>Test 50's Prime Time and Biergarten for 9</b> on any date open now. If either stops at eight, it gets split like the others.</li>
+      <li>Both of us know our card is to hand &mdash; each table is held against the card of whoever booked it.</li>
+    </ol>
+  </section>
+
   <section class="box">
     <h2>Before 5:00 CT / 6:00 ET</h2>
     <ol>
-      <li>Sign in at <b>disneyworld.disney.go.com</b> on the laptop. Dining works in the browser.</li>
-      <li>Open <b>four tabs</b>, one per restaurant below, each with its date, <b>party of 9</b> and the <b>Dinner</b> meal period already set. Then each search is a single click at 5:00.</li>
-      <li>Card ready &mdash; every booking is held against it for the no-show fee.</li>
-      <li>Naming the nine guests in the seat dropdowns is optional. Generic &ldquo;Guest 2&rdquo; seats are fine, and naming people costs seconds you may need.</li>
+      <li>Both sign in at <b>disneyworld.disney.go.com</b>, each on our own device.</li>
+      <li>Each opens <b>a tab per restaurant</b> in the order below, with date and <b>Dinner</b> already set. Derek: party of <b>5</b> for split tables, <b>9</b> where nine works. Booker 2: party of <b>4</b>.</li>
+      <li>Naming guests in the seat dropdowns is optional; generic seats are fine.</li>
     </ol>
   </section>
 
   <section class="box rule">
-    <h2>The one rule</h2>
-    <p>Take a time <b>inside the window</b> at the first choice. If it only offers times outside the window, go straight to the second choice. Spend <b>no more than about two minutes</b> per restaurant before moving down the list &mdash; a good table at the backup beats a lost table at the favourite.</p>
+    <h2>The two rules</h2>
+    <p><b>Same slot, same moment.</b> Both of us go for the same time at the same restaurant. If the second half can't get that exact time, take the nearest one within 15 minutes and keep going.</p>
+    <p><b>Two minutes per restaurant.</b> If the first choice has nothing inside the window, move straight to the second choice &mdash; and the other booker moves with you.</p>
   </section>
 
   <article class="card">
@@ -135,10 +160,11 @@ a{color:var(--gold)}
         <dt>Accept</dt><dd><span class="t">4:30 &ndash; 6:45 PM</span></dd>
         <dt>Why</dt><dd>Later than 6:45 eats the Magic Kingdom parade and fireworks.</dd>
       </dl>
+      <p class="split"><b>Split 5 + 4.</b> Online stops at eight here.</p>
       <div class="alts">
-        <div class="alt first"><span class="rank">1st</span><span><b>Citricos</b> &middot; Grand Floridian<span class="why">Book first, always. Fine-dining rooms rarely seat nine.</span></span><span class="cr">18 cr</span></div>
-        <div class="alt"><span class="rank">2nd</span><span><b>Narcoossee's</b> &middot; Grand Floridian<span class="why">Same hotel, same drive, same walk into the park, same dress code. A like-for-like swap.</span></span><span class="cr">18 cr</span></div>
-        <div class="alt"><span class="rank">3rd</span><span><b>1900 Park Fare</b> &middot; Grand Floridian<span class="why">Cinderella character buffet in the same hotel. Leaves 9 credits spare for a lunch later.</span></span><span class="cr">9 cr</span></div>
+        <div class="alt first"><span class="rank">1st</span><span><b>Citricos</b> &middot; Grand Floridian<span class="why">Book first, always. Dress code applies.</span></span><span class="cr">18 cr</span></div>
+        <div class="alt"><span class="rank">2nd</span><span><b>Be Our Guest</b> &middot; inside Magic Kingdom<span class="why">Same two credits, no transfer before the parade, and park clothes are fine.</span></span><span class="cr">18 cr</span></div>
+        <div class="alt"><span class="rank">3rd</span><span><b>Liberty Tree Tavern</b> &middot; inside Magic Kingdom<span class="why">Family-style holiday feast. Leaves 9 credits spare for a lunch later.</span></span><span class="cr">9 cr</span></div>
       </div>
     </div>
   </article>
@@ -151,6 +177,7 @@ a{color:var(--gold)}
         <dt>Accept</dt><dd><span class="t">5:00 &ndash; 7:00 PM</span></dd>
         <dt>Why</dt><dd>Booked second because its small booths make a table for nine scarce.</dd>
       </dl>
+      <p class="split"><b>Try 9 first.</b> If tonight's test shows it stops at eight, split 5 + 4.</p>
       <div class="alts">
         <div class="alt first"><span class="rank">1st</span><span><b>50's Prime Time Caf&eacute;</b><span class="why">Traci's pick. Expect to be split across neighbouring booths.</span></span><span class="cr">9 cr</span></div>
         <div class="alt"><span class="rank">2nd</span><span><b>Roundup Rodeo BBQ</b> &middot; Toy Story Land<span class="why">Family-style skillets, built for groups. The surest nine-at-one-table in the park.</span></span><span class="cr">9 cr</span></div>
@@ -167,6 +194,7 @@ a{color:var(--gold)}
         <dt>Accept</dt><dd><span class="t">4:30 &ndash; 5:45 PM</span></dd>
         <dt>Why</dt><dd>Hard cut-off. The show track has to be in the Candlelight queue by 6:50, and dinner takes over an hour.</dd>
       </dl>
+      <p class="split"><b>Try 9 first.</b> If tonight's test shows it stops at eight, split 5 + 4.</p>
       <div class="alts">
         <div class="alt first"><span class="rank">1st</span><span><b>Biergarten</b> &middot; Germany<span class="why">Traci asked for it. Long shared tables, right next to the theatre.</span></span><span class="cr">9 cr</span></div>
         <div class="alt"><span class="rank">2nd</span><span><b>Rose &amp; Crown</b> &middot; United Kingdom<span class="why">A short walk round the lagoon to America Gardens.</span></span><span class="cr">9 cr</span></div>
@@ -183,6 +211,7 @@ a{color:var(--gold)}
         <dt>Accept</dt><dd><span class="t">6:00 &ndash; 8:00 PM</span></dd>
         <dt>Why</dt><dd>Travis's family lands at 2:40. Easiest of the four, so it goes last.</dd>
       </dl>
+      <p class="split"><b>Split 5 + 4.</b> Online stops at eight here.</p>
       <div class="alts">
         <div class="alt first"><span class="rank">1st</span><span><b>Raglan Road</b> &middot; Disney Springs<span class="why">Irish pub with live music and dancers. A walk or boat ride from the villas.</span></span><span class="cr">9 cr</span></div>
         <div class="alt"><span class="rank">2nd</span><span><b>Maria &amp; Enzo's</b> &middot; Disney Springs<span class="why">Quieter and dressier Italian.</span></span><span class="cr">9 cr</span></div>
@@ -192,26 +221,26 @@ a{color:var(--gold)}
     </div>
   </article>
 
-  <section class="box warn">
-    <h2>If the site won't take nine</h2>
+  <section class="box">
+    <h2>At 6:00 CT / 7:00 ET: make the halves one party</h2>
     <ol>
-      <li>Book every restaurant for <b>8</b> instead, in the same order. That holds the tables.</li>
-      <li><b>Citricos only:</b> have Travis or Tai book 4 from <em>their</em> account at the same moment while you book 5. One account can't hold two overlapping reservations.</li>
-      <li>At <b>6:00 CT / 7:00 ET</b>, call <b class="mono">(407) 939-3463</b>, ask for <b>Group Dining</b>, and add the ninth to each booking.</li>
+      <li>Call <b class="mono">(407) 939-3463</b> and ask for <b>Group Dining</b>.</li>
+      <li>For each split dinner, give both confirmation numbers and ask them to <b>note the two bookings as one party of nine</b>, or merge them into a single table if one exists.</li>
+      <li>Keep both bookings until they confirm &mdash; don't cancel either half first.</li>
     </ol>
   </section>
 
   <section class="box">
     <h2>Credit check</h2>
-    <p>With every first choice: <span class="mono">9 + 9 + 9 + 18 = 45</span> of 45. Every second choice keeps the same total. A third choice for Citricos drops it to 36 and leaves 9 credits for a table-service lunch later in the week &mdash; never over.</p>
+    <p>Credits come out of the one shared pot whichever table someone sits at. With every first choice: <span class="mono">9 + 9 + 9 + 18 = 45</span> of 45. Be Our Guest keeps the same total. Liberty Tree as the Citricos fallback drops it to 36 and leaves 9 credits for a table-service lunch later &mdash; never over.</p>
   </section>
 
   <section class="box">
     <h2>Once it's done</h2>
     <ul>
-      <li>Screenshot each confirmation and send the four to the family.</li>
-      <li>Cancel at least <b>two hours before</b> any we drop, or it's $10 a person &mdash; $90 a table.</li>
-      <li>If we're split across two bookings, tell the host at the podium rather than checking in on the app.</li>
+      <li>Booker 2 sends Derek every confirmation; Derek screenshots the full set to the family.</li>
+      <li>Cancel at least <b>two hours before</b> any we drop, or it's $10 a person on the card that booked it.</li>
+      <li>On the night, tell the host at the podium the two bookings are one party, rather than checking in on the app.</li>
     </ul>
   </section>
 
