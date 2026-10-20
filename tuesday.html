@@ -84,14 +84,14 @@ a{color:var(--gold)}
 .alt.first .rank{color:var(--gold);font-weight:600}
 .note{font-size:.84rem;color:var(--muted)}
 .foot{font-size:.8rem;color:var(--muted);text-align:center}
-.who{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
-@media(max-width:30rem){.who{grid-template-columns:1fr}}
+.who{display:grid;grid-template-columns:1fr;gap:.6rem}
 .who div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:.6rem .7rem;display:grid;gap:.1rem;font-size:.86rem}
 .who .wk{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
 .who b{font-size:1.02rem;font-weight:800}
 .who .or{color:var(--muted);font-size:.84rem}
 .run{margin:.45rem 0 0;padding-left:1.2rem;display:grid;gap:.5rem;font-size:.92rem}
 .run .rn{font-weight:800}
+@media(min-width:40rem){.run .rn{display:inline-block;min-width:9.5rem}.run .pz{min-width:5.6rem;text-align:center;margin-left:0}}
 .run .pz{display:inline-block;margin-left:.45rem;font-family:var(--mono);font-size:.7rem;font-weight:600;padding:.04rem .45rem;border-radius:999px;background:var(--gold-soft);color:var(--gold);border:1px solid var(--line);white-space:nowrap}
 .run .when2{display:inline-block;margin-left:.55rem;font-family:var(--mono);font-size:.76rem;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
 .run .when2 b{color:var(--fg);font-weight:600;font-size:inherit}
